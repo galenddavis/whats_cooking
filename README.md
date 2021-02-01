@@ -31,30 +31,30 @@ Technical Challenges:
 
 ### Stephen
 
-* Day 1: User auth 
-* Day 2: User login/signup form (multi-step)
-* Day 3: TBD
-* Day 4: Styling
+* Day 1: User auth(backend)
+* Day 2: Ingredients (backend)
+* Day 3: Flex Ingredients (backend)/API help
+* Day 4: Flex
 
 ### Jose 
 
-* Day 1: Ingredients backend
-* Day 2: Ingredients Form/input
-* Day 3: TBD
-* Day 4: Styling
+* Day 1: User Auth (frontend)
+* Day 2: Ingredients (frontend)
+* Day 3: Implementing API
+* Day 4: Flex
 
 ### Galen 
 
-* Day 1: Researching API
-* Day 2: Integrating API
-* Day 3: TBD/something API
-* Day 4: Styling
+* Day 1: User Auth (frontend)
+* Day 2: Researching API
+* Day 3: Implementing API
+* Day 4: Flex
 
 ### Gabe
 
-* Day 1: User Auth
-* Day 2: Integrating API
-* Day 3: TBD
-* Day 4: Styling
+* Day 1: User Auth(backend
+* Day 2: Ingredients (backend)
+* Day 3: Flex Ingredients (backend)/API help
+* Day 4: Flex
 
 
