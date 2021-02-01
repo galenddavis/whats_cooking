@@ -31,16 +31,30 @@ Technical Challenges:
 
 ### Stephen
 
-| Day | Task |
-| Day 1 | User auth |
-| Day 2 | Creating the fridge |
-| Day 3 | Whole CSS |
-| Day 4 | Pushing to Heroku |
+Day 1: User auth 
+Day 2: User login/signup form (multi-step)
+Day 3: TBD
+Day 4: Styling
+
+### Jose 
+
+Day 1: Ingredients backend
+Day 2: Ingredients Form/input
+Day 3: TBD
+Day 4: Styling
+
+### Galen 
+
+Day 1: Researching API
+Day 2: Integrating API
+Day 3: TBD/something API
+Day 4: Styling
 
 ### Gabe
 
-| Day | Task |
-| Day 1 | Css |
-
+Day 1: User Auth
+Day 2: Integrating API
+Day 3: TBD
+Day 4: Styling
 
 
