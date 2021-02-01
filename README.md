@@ -30,15 +30,17 @@ Technical Challenges:
 * Stephen Yim, Jose Mejia, Gabriel Reiter, Galen Davis
 
 ### Stephen
+
 | Day | Task |
 | Day 1 | User auth |
-|Day 2 | Creating the fridge |
+| Day 2 | Creating the fridge |
 | Day 3 | Whole CSS |
 | Day 4 | Pushing to Heroku |
 
 ### Gabe
+
 | Day | Task |
-| Day 1 |  |
+| Day 1 | Css |
 
 
 
