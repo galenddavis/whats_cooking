@@ -17,5 +17,14 @@ On top of basic user auth we will be building:
 ## Technologies and Technical Challenges
 
 What's Cooking is built with the MERN stack including MongoDB, Express, React and Node and styled in using SCSS.
+The user's fridge will be saved to the database and linked to their account. 
+They will also be able to update their ingrdients to match what they have before and after searching. 
+Technical Challenges: 
+* Setting up our selected Recipe Website API to get filtered results based on the selected ingredient parameters. 
+* Setting up user auth in the MERN stack. 
+* Getting user input to connect to both the database and the search API. 
+* Getting a live, asynch search result index that updates as you add ingredients. 
+
+
 
 ## Group Memebers and Work Breakdown
