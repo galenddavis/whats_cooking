@@ -25,6 +25,6 @@ Technical Challenges:
 * Getting user input to connect to both the database and the search API. 
 * Getting a live, asynch search result index that updates as you add ingredients. 
 
-## Group Memebers and Work Breakdown
+## Group Members and Work Breakdown
 
-* 
+* Stephen Yim, Jose Mejia, Gabriel Reiter, Galen Davis
