@@ -6,6 +6,7 @@ import configureStore from './store/store';
 import jwt_decode from 'jwt-decode';
 import { setAuthToken } from './util/session_utils';
 import { logout } from './actions/session_actions';
+import './Stylesheets/App.scss'
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;

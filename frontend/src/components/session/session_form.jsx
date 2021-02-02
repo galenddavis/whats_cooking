@@ -8,7 +8,9 @@ class SessionForm extends React.Component {
             username: '',
             email: '',
             password: '' 
-        }
+        };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     update(field) {
@@ -59,6 +61,7 @@ class SessionForm extends React.Component {
                         onChange={this.update('password')}
                         required
                     />
+                    <button type='submit'>i am a button</button>
                 </form>
             </div>
         )

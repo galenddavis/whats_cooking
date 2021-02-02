@@ -1,4 +1,5 @@
 import React from 'react';
+// import "../../Stylesheets/main_page.scss";
 
 class MainPage extends React.Component {
 
