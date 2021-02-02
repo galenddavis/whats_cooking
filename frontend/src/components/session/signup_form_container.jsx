@@ -3,12 +3,12 @@ import { signup } from '../../actions/session_actions';
 import SessionForm from './session_form'
 
 const mSTP = state => ({
-    errors: state.errors.session,
+    errors: Object.values(state.errors.session),
     formType: 'Sign In'
 })
 
 const mDTP = dispatch => ({
-    signup: user => dispatch(signup(user))
+    processForm: user => dispatch(signup(user))
 })
 
 export default connect(mSTP, mDTP)(SessionForm)

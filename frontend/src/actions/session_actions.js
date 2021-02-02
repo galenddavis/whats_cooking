@@ -45,12 +45,13 @@ export const login = user => dispatch => (
     })
 )
 
-export const signup = user => dispatch => (
-    APISessionUtils.signup(user).then(
+export const signup = user => dispatch => {
+    debugger
+    return APISessionUtils.signup(user).then(
         () => dispatch(receiveUserSignin()),
         errors => dispatch(receiveErrors(errors.response.data))
     )
-)
+    }
 
 export const logout = () => dispatch => {
     localStorage.removeItem('jwtToken')

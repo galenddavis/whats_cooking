@@ -24,25 +24,32 @@ class SessionForm extends React.Component {
             email: this.state.email,
             password: this.state.password
         }
-        this.props.login(user)
+        this.props.processForm(user)
     }
 
-    renderErrors() {
-        const { errors } = this.props;
-        return (
-            <ul>
-                {errors.map((error, i) => (<li key={i} >{error}</li>))}
-            </ul>
-        )
-    }
+    // renderErrors() {
+    //     const { errors } = this.props;
+    //     return (
+    //         <ul>
+    //             {errors.map((error, i) => (<li key={i} >{error}</li>))}
+    //         </ul>
+    //     )
+    // }
 
 
     render() {
 
+        const errors = this.props.errors.map(error => {
+            return (
+                <li>{error}</li>
+            )
+        })
+        const showErrors = this.props.errors.length ? <ul>{errors}</ul> : null
+
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    {this.renderErrors()}
+                    {showErrors}
                     <input 
                         type="text"
                         placeholder="Username"
