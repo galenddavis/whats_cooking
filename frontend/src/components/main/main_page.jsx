@@ -7,15 +7,15 @@ class MainPage extends React.Component {
         return (
             <div className='animation'>
                 <div className="container">
-                    Countless
+                    <span>Countless</span> 
                     <div className="flip">
                         <div><div>pasta</div></div>
                         <div><div>chicken</div></div>
                         <div><div>fish</div></div>
                     </div>
-                    recipes
+                    <span>recipes</span> 
                 </div>
-                what will you make
+                    <span>What will you make?</span>
             </div>
         );
     }

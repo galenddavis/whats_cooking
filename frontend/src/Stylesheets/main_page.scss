@@ -1,11 +1,13 @@
 .animation {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
 }
 
 .container {
+    font-family: sans-serif;
+    // display: flex;
     color: #999;
     // left: 50%;
     text-transform: uppercase;
@@ -14,21 +16,29 @@
     // position: fixed;
     width: 100%;
     // bottom: 45%;
-    // display: block;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    // flex-direction: column;
-    margin-left: 1100px;
+    align-items: left;
+    flex-direction: column;
+    margin-left: 0px;
+
+
+    span {
+        margin-right: 30px;
+    }
 }
 
 .flip {
     height: 50px;
     overflow: hidden;
+    // display: flex;
+    // justify-content: center;
+
 }
 
 .flip > div > div {
     color: #fff;
-    padding: 4px 12px;
+    padding: 4px 0px;
     // height: 45px;
     margin-bottom: 45px;
     display: inline-block;
@@ -39,15 +49,15 @@
 }
 
 .flip div div {
-    background:#c5c342;
+    color:#c5c342;
 }
 
 .flip div:first-child div {
-    background:#4ec7f3;
+    color:#4ec7f3;
 }
 
 .flip div:last-child div {
-    background:#DC143C;
+    color:#DC143C;
 }
 
 @keyframes show {
@@ -61,11 +71,11 @@
   100% {margin-top:-270px;}
 }
 
-// p {
-//   position:fixed;
-//   width:100%;
-//   bottom:30px;
-//   font-size:12px;
-//   color:#999;
-//   margin-top:200px;
-// }
+p {
+  position:fixed;
+  width:100%;
+  bottom:30px;
+  font-size:12px;
+  color:#999;
+  margin-top:200px;
+}

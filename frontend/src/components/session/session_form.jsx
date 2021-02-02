@@ -14,6 +14,10 @@ class SessionForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentWillUnmount() {
+      this.props.removeErrors();
+    }
+
     update(field) {
         // debugger
         return e => {
@@ -24,7 +28,7 @@ class SessionForm extends React.Component {
     }
 
     handleSubmit(event) {
-        debugger
+        // debugger
         event.preventDefault();
         let user = {
             username: this.state.username,
@@ -33,22 +37,10 @@ class SessionForm extends React.Component {
         }
         this.props.processForm(this.state).then(this.props.closeModal)
         
-        // if (this.props.formType === 'Sign Up') {
-        //     this.props.processForm(user).then(this.props.closeModal)
-        // } else {
-        //   this.props.processForm(user).then(this.props.closeModal)
+        // if (this.props.processForm(user)) {
+        //   this.props.closeModal()
         // }
     }
-
-    // renderErrors() {
-    //     const { errors } = this.props;
-    //     return (
-    //         <ul>
-    //             {errors.map((error, i) => (<li key={i} >{error}</li>))}
-    //         </ul>
-    //     )
-    // }
-
 
     render() {
 
