@@ -44,14 +44,25 @@ export const login = user => dispatch => (
         dispatch(receiveErrors(errors.response.data));
     })
 )
+// export const signup = user => dispatch => (
+//     APISessionUtils.signup(user).then(res => {
+//         const { token } = res.data; 
+//         localStorage.setItem('jwtToken', token);
+//         APISessionUtils.setAuthToken(token);
+//         const decoded = jwt_decode(token);
+//         dispatch(receiveUserSignin());
+//     })
+//     .catch(errors => {
+//         dispatch(receiveErrors(errors.response.data));
+//     })
+// )
 
 export const signup = user => dispatch => {
-    debugger
     return APISessionUtils.signup(user).then(
         () => dispatch(receiveUserSignin()),
         errors => dispatch(receiveErrors(errors.response.data))
     )
-    }
+}
 
 export const logout = () => dispatch => {
     localStorage.removeItem('jwtToken')
