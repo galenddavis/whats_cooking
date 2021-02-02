@@ -11,9 +11,9 @@ const validateLoginInput = require('../../validation/login');
 router.get('/test', (req, res) => res.json({ msg: 'Users route' }));
 
 router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
-  res.json({ msg: 'Success' });
+  res.json({ id: req.user.id, username: req.user.username, email: req.user.email });
 })
-
+//sign in
 router.post('/register', (req, res) => {
     const { errors, isValid } = validateRegisterInput(req.body);
 
@@ -34,6 +34,7 @@ router.post('/register', (req, res) => {
             email: req.body.email,
             password: req.body.password
           })
+        
 
         //   newUser.save().then(user => res.send(user)).catch(err => res.send(err));
 
@@ -42,14 +43,24 @@ router.post('/register', (req, res) => {
               if (err) throw err;
               newUser.password = hash;
               newUser.save()
-                .then(user => res.json(user))
+                .then(user => {
+                    const payload = {id: user.id, username: user.username };
+                    
+                    jwt.sign(payload, keys.secretOrKey, {expiresIn: 3600}, (err, token) => {
+                        res.json({
+                            success: true,
+                            token: 'Bearer ' + token
+                        });
+                    });
+                })
                 .catch(err => console.log(err));
+                
             })
           })
         }
       })
   })
-
+//Log In 
   router.post('/login', (req, res) => {
     const {errors, isValid } = validateLoginInput(req.body);
 
