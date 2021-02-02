@@ -45,13 +45,36 @@
     cursor: pointer;
     margin-right: 10px;
     text-decoration: none;
+
+    .bun {
+        background-color: #e5cb7a;
+    }
+
+    .lettuce {
+        background-color: #32c704;
+    }
+
+    .patty {
+       background-color:#450101;
+    }
+
+    .tomato {
+        background-color: #ec3521;
+    }
+
+    .bun {
+        background-color: #e5cb7a;
+    }
 }
 
 .burger div{
-    width: 25px;
+    width: 37px;
     height: 3px;
-    background-color: silver;
+    // background-color: silver;
     margin: 5px;
+    margin-left: 15px;
+
+
 }
 
 @media screen and (max-width:1024px){
