@@ -14,11 +14,11 @@ class NavBar extends React.Component {
 
     render() {
         const authButtons = this.props.loggedIn ? (
-            <div>
-                <button onClick={this.logoutUser}>Log Out</button>
+            <div className='session-button'>
+                <h1 onClick={this.logoutUser}>Log Out</h1>
             </div>
         ) : (
-            <div>
+            <div className='session-button'>
                 {/* <Link to='/login' className='userAuth'>Log In</Link>
                 <Link to='/signup' className='userAuth'>Sign Up</Link> */}
                 <h1 onClick={() => this.props.openModal('signup')}>Sign Up</h1>
@@ -27,8 +27,13 @@ class NavBar extends React.Component {
         )
 
         return (
-            <div>
-                <h2>What's Cooking?</h2>
+            <div className='navbar'>
+                <section className='burger'>
+                    <div className='line1'></div>
+                    <div className='line2'></div>
+                    <div className='line3'></div>
+                </section>
+                <h2 className='logo' >What's Cooking?</h2>
                 {authButtons}
             </div>
         )

@@ -5,8 +5,17 @@ class MainPage extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1 className='logo'>What's Cooking?</h1>
+            <div className='animation'>
+                <div className="container">
+                    Countless
+                    <div className="flip">
+                        <div><div>pasta</div></div>
+                        <div><div>chicken</div></div>
+                        <div><div>fish</div></div>
+                    </div>
+                    recipes
+                </div>
+                what will you make
             </div>
         );
     }

@@ -1,0 +1,61 @@
+.navbar {
+    display: flex;
+    // flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    min-width: fit-content;
+    border-radius: 3px;
+
+    .logo {
+        text-decoration: none;
+        background: -webkit-linear-gradient(120deg, #262626,#eaeaea,#262626);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        // text-shadow: 
+		// -0.0075em 0.0075em 0 mix(#262626, #eaeaea, 94%),
+		// 0.005em 0.005em 0 mix(#262626, #eaeaea, 60%),
+		// 0.01em 0.01em 0 mix(#262626, #eaeaea, 62%), 
+		// 0.015em 0.015em mix(#262626, #eaeaea, 64%), 
+		// 0.02em 0.02em 0 mix(#262626, #eaeaea, 66%), 
+		// 0.025em 0.025em 0 mix(#262626, #eaeaea, 68%),
+		// 0.03em 0.03em 0 mix(#262626, #eaeaea, 70%),
+		// 0.035em 0.035em 0 mix(#262626, #eaeaea, 72%);
+    }
+
+    .session-button {
+        // background-color: crimson;
+        display: flex;
+        justify-content: space-between;
+        font-size: 8px;
+        margin-right: 5px;
+        color: silver;
+        cursor: pointer;
+
+        h1 {
+            padding-left: 5px;
+            padding-right: 2px;
+            text-decoration: none;
+        }
+    }
+}
+
+.burger {
+    // display: none;
+    cursor: pointer;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: silver;
+    margin: 5px;
+}
+
+@media screen and (max-width:1024px){
+    .session-button {
+        width: 15%;
+    }
+}

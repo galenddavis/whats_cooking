@@ -1,4 +1,5 @@
 import React from 'react';
+import "../../Stylesheets/session_form.scss";
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -25,16 +26,17 @@ class SessionForm extends React.Component {
     handleSubmit(event) {
         debugger
         event.preventDefault();
-        // let user = {
-        //     username: this.state.username,
-        //     email: this.state.email,
-        //     password: this.state.password
-        // }
+        let user = {
+            username: this.state.username,
+            email: this.state.email,
+            password: this.state.password
+        }
         this.props.processForm(this.state).then(this.props.closeModal)
         
         // if (this.props.formType === 'Sign Up') {
-        //     this.props.processForm(user).then(this.props.login(user))
+        //     this.props.processForm(user).then(this.props.closeModal)
         // } else {
+        //   this.props.processForm(user).then(this.props.closeModal)
         // }
     }
 
@@ -61,28 +63,30 @@ class SessionForm extends React.Component {
           <div>
             <form onSubmit={this.handleSubmit}>
               {showErrors}
-              <input
-                type="text"
-                placeholder="Username"
-                value={this.state.username}
-                onChange={this.update("username")}
-                required
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.update("email")}
-                required
-              />
-              <input
-                type="password"
-                placeholder="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                required
-              />
-              <input type="submit" value={this.props.formType} />
+              <section className="modal-content">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  value={this.state.username}
+                  onChange={this.update("username")}
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  value={this.state.email}
+                  onChange={this.update("email")}
+                  required
+                />
+                <input
+                  type="password"
+                  placeholder="password"
+                  value={this.state.password}
+                  onChange={this.update("password")}
+                  required
+                />
+                <input type="submit" value={this.props.formType} />
+              </section>
             </form>
           </div>
         );

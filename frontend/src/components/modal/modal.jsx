@@ -24,11 +24,11 @@ function Modal({modal, closeModal, openModal}) {
     return (
         <div className='modal-background' onClick={closeModal}>
             <div className='modal-child' onClick={e => e.stopPropagation()}>
-                <section>
+                <section className='modal-header'>
                     <h1 onClick={() => openModal('signup')}>Sign Up</h1>
                     <h1 onClick={() => openModal('login')}>Log In</h1>
                 </section>
-                {component}
+                <span className='modal-body'>{component}</span>
             </div>
         </div>
     )
