@@ -5,9 +5,9 @@ class SessionForm extends React.Component {
         super(props);
         
         this.state = {
-            username = '',
-            email = '',
-            password = '' 
+            username: '',
+            email: '',
+            password: '' 
         }
     }
 
@@ -25,12 +25,22 @@ class SessionForm extends React.Component {
         this.props.login(user)
     }
 
+    renderErrors() {
+        const { errors } = this.props;
+        return (
+            <ul>
+                {errors.map((error, i) => (<li key={i} >{error}</li>))}
+            </ul>
+        )
+    }
+
 
     render() {
 
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
+                    {this.renderErrors()}
                     <input 
                         type="text"
                         placeholder="Username"
@@ -54,3 +64,5 @@ class SessionForm extends React.Component {
         )
     }
 }
+
+export default SessionForm;

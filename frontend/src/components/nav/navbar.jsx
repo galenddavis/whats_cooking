@@ -13,7 +13,7 @@ class NavBar extends React.Component {
     }
 
     render() {
-        const authButtons = loggedIn ? (
+        const authButtons = this.props.loggedIn ? (
             <div>
                 <button onClick={this.logoutUser}>Log Out</button>
             </div>

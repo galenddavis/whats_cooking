@@ -5,7 +5,7 @@ class MainPage extends React.Component {
     render() {
         return (
             <div>
-                <h1>What's Cooking?</h1>
+                <h1 className='logo'>What's Cooking?</h1>
             </div>
         );
     }
