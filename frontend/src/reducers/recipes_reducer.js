@@ -1,7 +1,8 @@
 import { RECEIVE_RECIPES } from '../actions/search_actions';
 
+const nullState = {recipes: []}
 
-const RecipesReducer = (state = [], action) => {
+const RecipesReducer = (state = nullState, action) => {
     Object.freeze(state);
 
     switch (action.type) {

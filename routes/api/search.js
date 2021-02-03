@@ -23,36 +23,26 @@ const axios = require('axios');
 const baseUrl = 'https://api.spoonacular.com/recipes/findByIngredients?'
 
 router.get('/search', async (req, res, next) => {
-
+    debugger
     try{
-<<<<<<< HEAD
-        const test = ['chicken']
-        const ingredients = test.map(ingredient => {
-            return ingredient
-=======
-        const food = req.params.ingredients
+        console.log(req.query)
+        const food = JSON.stringify(req.query.ingredients)
+        debugger
         console.log(food)
-        const ingredients = food.map(ingred => {
-            return ingred
->>>>>>> 1a81610dd97d83db6684ca8ce728ebd84cf4cc54
-        })
+        // const foodItems = food.map(ingred => {
+        //     debugger
+        //     return ingred
+        // })
 
-        const params = new URLSearchParams({
+        const items = new URLSearchParams({
             apiKey: '8b43d83809b74d12a33756b8eced8aaf',
-            ingredients: ingredients,
-<<<<<<< HEAD
-            number: 5
-        })
-        const request = await axios.get(`${baseUrl}${params}`)
-
-=======
+            ingredients: food,
             number: 2
         })
-        console.log(`${baseUrl}${params}`)
-        const request = await axios.get(`${baseUrl}${params}`)
+        console.log(`${baseUrl}${items}`)
+        const request = await axios.get(`${baseUrl}${items}`)
         console.log(request.data)
         
->>>>>>> 1a81610dd97d83db6684ca8ce728ebd84cf4cc54
         res.json(request.data)
     } catch(error) {
         next(error)
