@@ -28,6 +28,10 @@
     }
 }
 
+.bun {
+    color: #e5cb7a;
+}
+
 .flip {
     height: 50px;
     overflow: hidden;
@@ -49,15 +53,15 @@
 }
 
 .flip div div {
-    color:#c5c342;
+    color:#32c704;
 }
 
 .flip div:first-child div {
-    color:#4ec7f3;
+    color:#450101;
 }
 
 .flip div:last-child div {
-    color:#DC143C;
+    color:#ec3521;
 }
 
 @keyframes show {
