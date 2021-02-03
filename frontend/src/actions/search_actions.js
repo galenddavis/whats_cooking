@@ -1,4 +1,4 @@
-import axios from 'axios';
+
 import * as APISearchUtils from '../util/search_util'
 
 export const RECEIVE_RECIPES = 'RECEIVE_RECIPES'
