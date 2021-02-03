@@ -37,7 +37,7 @@ router.get('/search', async (req, res, next) => {
         })
         console.log(`${baseUrl}${params}`)
         const {request} = await axios.get(`${baseUrl}${params}`)
-        console.log(request)
+        console.log(request.data)
         
         res.json({request})
     } catch(error) {
