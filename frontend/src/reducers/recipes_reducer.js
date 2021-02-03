@@ -4,11 +4,11 @@ const nullState = {recipes: []}
 
 const RecipesReducer = (state = nullState, action) => {
     Object.freeze(state);
-
+    debugger
     switch (action.type) {
         case RECEIVE_RECIPES:
-            // debugger
-            return action.recipe;
+            debugger
+            return action.recipes;
         default:
             return state;
     }

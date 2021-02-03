@@ -9,6 +9,12 @@ export const receiveRecipes = (recipes) => ({
     recipes
 })
 
+// export const findRecipes = ingredients => dispatch => (
+//     APISearchUtils.findRecipes(ingredients).then(
+//         recipes => dispatch(receiveRecipes(recipes))
+//     )
+// )
+
 export const findRecipes = ingredients => dispatch => (
     APISearchUtils.findRecipes(ingredients).then(
         recipes => dispatch(receiveRecipes(recipes))

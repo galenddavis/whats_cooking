@@ -35,7 +35,7 @@ router.get('/search', async (req, res, next) => {
         // })
 
         const items = new URLSearchParams({
-            apiKey: '8b43d83809b74d12a33756b8eced8aaf',
+            apiKey: keys.spoonAPI,
             ingredients: food,
             number: 2
         })
