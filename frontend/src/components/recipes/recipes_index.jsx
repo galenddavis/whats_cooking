@@ -11,14 +11,18 @@ class RecipeIndex extends React.Component {
 
     render() {
         
-        const recipe = this.props.recipes.map((dish) => {
-            return <RecipeIndexItem dish={dish} />
-        });
+        // const recipe = this.props.recipes.map((dish) => {
+        //   return <li>{dish.title}</li>
+        // });
+
+        const mappedItems = this.props.recipes.length ? this.props.recipes.map((dish) => {
+        return <li>{dish.title}</li>}) : null;
+        debugger
         return (
           <div>
               <h1>HELLO</h1>
             <ul>
-              {recipe}
+              {mappedItems}
             </ul>
           </div>
         );

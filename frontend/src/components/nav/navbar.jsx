@@ -27,18 +27,20 @@ class NavBar extends React.Component {
         )
 
         return (
-            <div className='navbar'>
-                <section className='burger'>
-                    <div className='bun'></div>
-                    <div className='tomato'></div>
-                    <div className='lettuce'></div>
-                    <div className='patty'></div>
-                    <div className='bun'></div>
-                </section>
-                
-                {authButtons}
-            </div>
-        )
+          <div className="navbar">
+            <section className="burger">
+              <div className="bun"></div>
+              <div className="tomato"></div>
+              <div className="lettuce"></div>
+              <div className="patty"></div>
+              <div className="bun"></div>
+            </section>
+            <Link to="/" className="logo">
+              What's Cooking
+            </Link>
+            {authButtons}
+          </div>
+        );
     }
 }
 
