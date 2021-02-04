@@ -23,6 +23,7 @@ class NavBar extends React.Component {
                 <Link to='/signup' className='userAuth'>Sign Up</Link> */}
                 <h2 onClick={() => this.props.openModal('signup')}>Sign Up</h2>
                 <h2 onClick={() => this.props.openModal('login')}>Log In</h2>
+                
             </div>
         )
 
@@ -35,7 +36,7 @@ class NavBar extends React.Component {
                     <div className='patty'></div>
                     <div className='bun'></div>
                 </section>
-                <Link to='/search'><h2 className='logo' >What's Cooking?</h2></Link>
+                
                 {authButtons}
             </div>
         )

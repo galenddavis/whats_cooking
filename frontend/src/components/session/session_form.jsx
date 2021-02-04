@@ -19,7 +19,7 @@ class SessionForm extends React.Component {
     }
 
     update(field) {
-        // debugger
+        // #debugger
         return e => {
             this.setState({
                 [field]: e.currentTarget.value
@@ -28,7 +28,7 @@ class SessionForm extends React.Component {
     }
 
     handleSubmit(event) {
-        // debugger
+        // #debugger
         event.preventDefault();
         let user = {
             username: this.state.username,

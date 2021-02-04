@@ -18,7 +18,7 @@ class MainPage extends React.Component {
                     </div>
                     <span className='bun'>recipes</span> 
                 </div>
-                    <span>What will you make?</span>
+                    {/* <span>What will you make?</span> */}
             </div>
         );
     }

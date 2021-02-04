@@ -6,7 +6,7 @@ import RecipeIndex from './recipes_index';
 
 class Recipes extends React.Component {
     constructor(props) {
-        debugger
+        #debugger
         super(props);
 
         this.state = {ingredients: []};
@@ -16,7 +16,7 @@ class Recipes extends React.Component {
 
 
     update(field) {
-        debugger
+        #debugger
         
         return e => {
             
@@ -30,7 +30,7 @@ class Recipes extends React.Component {
             
              
         }
-        // debugger
+        // #debugger
         // let copy = Object.assign([], this.state)
         // copy.push(field)
         // return e => this.setState(copy)
@@ -38,17 +38,17 @@ class Recipes extends React.Component {
     }
 
     handleSubmit(event) {
-        debugger
+        #debugger
         event.preventDefault();
         const ingredients = this.state;
         this.props.search(ingredients);
-        this.props.history.push('/index')
+        // this.props.history.push('/index')
     }
 
 
 
     render() {
-        debugger
+        #debugger
         // const { recipes } = this.props
         // const recipeListItem = recipes.map(recipe => (
         //     <RecipeItem />
@@ -135,6 +135,7 @@ class Recipes extends React.Component {
                     <input type="submit" value="What's cooking?"/>
 
                 </form>
+                {index}
             </div>
         )
     }

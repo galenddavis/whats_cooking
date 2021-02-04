@@ -23,14 +23,14 @@ const axios = require('axios');
 const baseUrl = 'https://api.spoonacular.com/recipes/findByIngredients?'
 
 router.get('/search', async (req, res, next) => {
-    debugger
+    #debugger
     try{
         console.log(req.query)
         const food = JSON.stringify(req.query.ingredients)
-        debugger
+        #debugger
         console.log(food)
         // const foodItems = food.map(ingred => {
-        //     debugger
+        //     #debugger
         //     return ingred
         // })
 
