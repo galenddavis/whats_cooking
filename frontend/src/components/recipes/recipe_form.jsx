@@ -59,10 +59,7 @@ class Recipes extends React.Component {
         ) : null;
 
         return (
-<<<<<<< HEAD
         
-=======
->>>>>>> Merge Index with sidebar
             <div className='sidebar-body'>
                 <form onSubmit={this.handleSubmit}>
                     <div className='food-group'>
@@ -137,10 +134,6 @@ class Recipes extends React.Component {
                     
                     
                     <input type="submit" value="What's cooking?"/>
-<<<<<<< HEAD
-=======
-
->>>>>>> Merge Index with sidebar
                 </form>
             </div>
         )

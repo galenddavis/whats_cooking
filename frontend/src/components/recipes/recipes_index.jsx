@@ -5,8 +5,8 @@ import RecipeIndexItem from './recipe_index_item'
 class RecipeIndex extends React.Component {
     constructor(props) {
         super(props)
-        // this.state = {food: this.props.recipes}
-        debugger
+        this.state = {food: this.props.recipes}
+        
 
         
     }
