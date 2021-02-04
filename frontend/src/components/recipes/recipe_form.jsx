@@ -53,9 +53,9 @@ class Recipes extends React.Component {
         //     <RecipeItem />
         // ))
 
-        // const index = this.props.recipes.length ? (
-        //     <div><RecipeIndex recipe = {this.props.recipes}/></div>
-        // ) : null;
+        const index = this.props.recipes.length ? (
+            <div><RecipeIndex recipe = {this.props.recipes}/></div>
+        ) : null;
 
         return (
             <div className='sidebar-body'>

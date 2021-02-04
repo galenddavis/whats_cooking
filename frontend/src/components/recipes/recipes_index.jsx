@@ -17,7 +17,7 @@ class RecipeIndex extends React.Component {
         return (
           <div>
               <h1>HELLO</h1>
-              {recipe}
+              {/* {recipe} */}
           </div>
         );
     }
