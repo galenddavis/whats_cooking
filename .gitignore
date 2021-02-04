@@ -1,4 +1,4 @@
 /node_modules
-/config/keys.js
 /frontend/node_modules
 /frontend/src/.eslintcache
+/config/keys_dev.js
