@@ -14,11 +14,13 @@ const App = () => (
     <div>
         <Modal />
         <NavBar />
-        <Sidebar />
-        <Switch>
-            <AuthRoute exact path='/' component={MainPage} />
-            {/* <Route path='/search' component={RecipesContainer} /> */}
-        </Switch>
+        <div className='main-content'>
+            <Sidebar />
+            <Switch>
+                <AuthRoute exact path='/' component={MainPage} />
+                {/* <Route path='/search' component={RecipesContainer} /> */}
+            </Switch>`
+        </div>
     </div>
     
 );

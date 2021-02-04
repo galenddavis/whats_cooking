@@ -2,7 +2,16 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    
+
+    
     // align-items: center;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container {
@@ -25,11 +34,13 @@
 
     span {
         margin-right: 30px;
+        font-size: 130px;
     }
 }
 
 .bun {
     color: #e5cb7a;
+    margin: 15px 0px;
 }
 
 .flip {
@@ -40,12 +51,15 @@
 
 }
 
+
+
 .flip > div > div {
     color: #fff;
-    padding: 4px 0px;
+    padding: 15px 0px;
     // height: 45px;
     margin-bottom: 45px;
     display: inline-block;
+    font-size: 130px;
 }
 
 .flip div:first-child {
