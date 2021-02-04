@@ -1,22 +1,30 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const RecipeIndexItem = ({recipe}) => {
+const RecipeIndexItem = ({dish}) => {
 
-    const url = () => {
-      return (
-        'https://ap.spoonacular.com/${recipe.title}${recipe.id}'
-      )
-    };
+    // const url = () => {
+    //   return (
+    //     // 'https://api.spoonacular.com/${dish.title}${dish.id}'
+    //     'https://www.google.com'
+    //   )
+    // };
+
+    const url = `https://api.spoonacular.com/recipes/${dish.title}-${dish.id}`
+
   return (
-    <div>
+    <div className = 'recipecards'>
       {/* <h1>HELLO from the recipe index item component</h1> */}
-      <li>
-        <h1>{recipe.title}</h1>
-        <a href="{url}">
-          <img src="{recipe.image}" alt="{recipe.title}" />
-        </a>
-        <section>{recipe.likes}</section>
-      </li>
+      <a rel={'external'} className="fab fa-instagram" target="_blank" href={url}>
+        <h1>{dish.title}</h1>
+      </a>
+        {/* // <a href = 'www.google.com'><h1>{dish.title}</h1></a> */}
+        
+          <img src={dish.image} alt={dish.title} />
+        
+        <h1>{dish.likes}</h1>
+        <h1>TEST</h1>
+        
     </div>
   );
 }

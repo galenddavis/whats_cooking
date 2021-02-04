@@ -15,15 +15,15 @@ class RecipeIndex extends React.Component {
         //   return <li>{dish.title}</li>
         // });
 
-        const mappedItems = this.props.recipes.length ? this.props.recipes.map((dish) => {
-        return <li>{dish.title}</li>}) : null;
+        const mappedItems = this.props.recipes !== undefined ? this.props.recipes.map((dish) => {
+        return <RecipeIndexItem dish = {dish} />}) : null;
         debugger
         return (
-          <div>
+          <div id = 'index-container'>
               <h1>HELLO</h1>
-            <ul>
-              {mappedItems}
-            </ul>
+                <div className ='search-container'>
+                    <ul className='search-results'>{mappedItems}</ul>
+                </div>
           </div>
         );
     }

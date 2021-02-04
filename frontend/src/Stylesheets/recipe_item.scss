@@ -1,0 +1,46 @@
+#index-container {
+    display: grid;
+    flex-direction: column;
+
+    .search-continer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        
+        // display: grid;
+        
+    }
+
+
+        .search-results {
+            // flex: 0 0 32%;
+            // height: 50px;
+            // margin-bottom: 5px;
+            // background-color: aqua;
+
+
+            // display: flex;
+            // flex-direction: row;
+            // flex-wrap: wrap;
+            // overflow-x: hidden;
+            
+        }
+
+
+            .recipeindexcontainer {
+                // display: flex;
+                // flex-wrap: wrap;
+                // align-items: center;
+                // justify-content: space-around;
+                // overflow-x: hidden;
+
+                // .recipecards {
+                //     display: flex;
+                    
+                // }
+
+
+
+                }
+}
