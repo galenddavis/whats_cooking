@@ -1,5 +1,7 @@
 import React from 'react';
-import RecipeItem from './recipes_item'
+import RecipeItem from './recipes_item';
+import {Link} from 'react-router-dom';
+import RecipeIndex from './recipes_index';
 
 
 class Recipes extends React.Component {
@@ -40,6 +42,7 @@ class Recipes extends React.Component {
         event.preventDefault();
         const ingredients = this.state;
         this.props.search(ingredients);
+        this.props.history.push('/index')
     }
 
 
@@ -50,7 +53,36 @@ class Recipes extends React.Component {
         // const recipeListItem = recipes.map(recipe => (
         //     <RecipeItem />
         // ))
+
+        const index = this.props.recipes.length ? (
+            <div><RecipeIndex recipe = {this.props.recipes}/></div>
+        ) : null;
+
         return (
+<<<<<<< HEAD
+
+            
+            <div>
+                <form onSubmit={this.handleSubmit}>
+                    <label>Chicken
+                    <input onClick={this.update('chicken')} type="checkbox" value='chicken'/>
+                    </label>
+                    <label>Beans
+                    <input onClick={this.update('beans')} type="checkbox" value='beans'/>
+                    </label>
+                    <label>Rice
+                    <input onClick={this.update('rice')} type="checkbox" value='rice'/>
+                    </label>
+                    <label>Onions
+                    <input onClick={this.update('onions')} type="checkbox" value='onions'/>
+                    </label>
+                    <label>Tomatoes
+                    <input onClick={this.update('tomatoes')} type="checkbox" value='tomatoes'/>
+                    </label>
+                    {/* <Link to={`/index`}><input type="submit" value="What's cooking?"/></Link> */}
+                    <input type="submit" value='submit'/>
+                    {/* <button onClick={`/index`}>What's cooking?</button> */}
+=======
         
             <div className='sidebar-body'>
                 <form onSubmit={this.handleSubmit}>
@@ -126,6 +158,7 @@ class Recipes extends React.Component {
                     
                     
                     <input type="submit" value="What's cooking?"/>
+>>>>>>> 0b24f195d2e4d9169aa1d0f567218b14429ec4eb
                 </form>
             </div>
         )
