@@ -6,7 +6,7 @@ import RecipeIndex from './recipes_index';
 
 class Recipes extends React.Component {
     constructor(props) {
-        debugger
+    
         super(props);
 
         this.state = {ingredients: []};
@@ -16,7 +16,7 @@ class Recipes extends React.Component {
 
 
     update(field) {
-        debugger
+    
         
         return e => {
             
@@ -30,7 +30,7 @@ class Recipes extends React.Component {
             
              
         }
-        // debugger
+        //
         // let copy = Object.assign([], this.state)
         // copy.push(field)
         // return e => this.setState(copy)
@@ -38,50 +38,102 @@ class Recipes extends React.Component {
     }
 
     handleSubmit(event) {
-        debugger
+    
         event.preventDefault();
         const ingredients = this.state;
-        this.props.search(ingredients);
-        this.props.history.push('/index')
+        this.props.search(ingredients).then(this.props.history.push('/index'))
     }
 
 
 
     render() {
-        debugger
+    
         // const { recipes } = this.props
         // const recipeListItem = recipes.map(recipe => (
         //     <RecipeItem />
         // ))
 
-        const index = this.props.recipes.length ? (
-            <div><RecipeIndex recipe = {this.props.recipes}/></div>
-        ) : null;
+        // const index = this.props.recipes.length ? (
+        //     <div><RecipeIndex recipe = {this.props.recipes}/></div>
+        // ) : null;
 
         return (
-
-            
-            <div>
+            <div className='sidebar-body'>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Chicken
-                    <input onClick={this.update('chicken')} type="checkbox" value='chicken'/>
-                    </label>
-                    <label>Beans
-                    <input onClick={this.update('beans')} type="checkbox" value='beans'/>
-                    </label>
-                    <label>Rice
-                    <input onClick={this.update('rice')} type="checkbox" value='rice'/>
-                    </label>
-                    <label>Onions
-                    <input onClick={this.update('onions')} type="checkbox" value='onions'/>
-                    </label>
-                    <label>Tomatoes
-                    <input onClick={this.update('tomatoes')} type="checkbox" value='tomatoes'/>
-                    </label>
-                    {/* <Link to={`/index`}><input type="submit" value="What's cooking?"/></Link> */}
-                    <input type="submit" value='submit'/>
-                    {/* <button onClick={`/index`}>What's cooking?</button> */}
+                    <div className='food-group'>
+                        <section className='notes'>
+                            <h3>Protein:</h3>
+                        
+                            <label>Chicken
+                            <input onClick={this.update('chicken')} type="checkbox" value='chicken'/>
+                            </label>
+
+                            <label>Beef
+                            <input onClick={this.update('beef')} type="checkbox" value='beef'/>
+                            </label>
+
+                            <label>Tofu
+                            <input onClick={this.update('tofu')} type="checkbox" value='tofu'/>
+                            </label>
+
+                            <label>Turkey
+                            <input onClick={this.update('turkey')} type="checkbox" value='turkey'/>
+                            </label>
+
+                            <label>Pork
+                            <input onClick={this.update('pork')} type="checkbox" value='pork'/>
+                            </label>
+                        </section>
+                    </div>
+
+                    <div className='food-group'>
+                    <section className='notes'>
+                        <h3>Veggies: </h3>
+                            <label>Beans
+                            <input onClick={this.update('beans')} type="checkbox" value='beans'/>
+                            </label>
+
+                            <label>Onions
+                            <input onClick={this.update('onions')} type="checkbox" value='onions'/>
+                            </label>
+
+                            <label>Tomatoes
+                            <input onClick={this.update('tomatoes')} type="checkbox" value='tomatoes'/>
+                            </label>
+
+                            <label>Mushrooms
+                            <input onClick={this.update('mushrooms')} type="checkbox" value='mushrooms'/>
+                            </label>
+
+                            <label>Okra
+                            <input onClick={this.update('okra')} type="checkbox" value='okra'/>
+                            </label>
+                    
+                    </section>
+                    </div>
+
+                    <div className='food-group'>
+                    <section className='notes'>
+                        <h3>Carbs: </h3>
+                            <label>Rice
+                            <input onClick={this.update('rice')} type="checkbox" value='rice'/>
+                            </label>
+
+                            <label>Bread
+                            <input onClick={this.update('bread')} type="checkbox" value='bread'/>
+                            </label>
+
+                            <label>Pasta
+                            <input onClick={this.update('Pasta')} type="checkbox" value='Pasta'/>
+                            </label>
+                        
+                    </section>
+                    </div>
+                    
+                    <input type="submit" value="What's cooking?"/>
+
                 </form>
+                {/* {index} */}
             </div>
         )
     }

@@ -5,6 +5,7 @@ const db = require('./config/keys').mongoURI;
 const User = require('./models/User');
 const bodyParser = require('body-parser');
 const passport = require("passport");
+const path = require('path');
 
 const users = require('./routes/api/users')
 const search = require('./routes/api/search')
@@ -33,6 +34,14 @@ require("./config/passport")(passport);
 app.use('/api/users', users)
 app.use('/api/search', search)
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('frontend/build'));
+    app.get('/', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+    })
+  }
+
+  
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));

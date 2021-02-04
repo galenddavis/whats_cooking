@@ -1,9 +1,12 @@
 import React from 'react';
-// import "../../Stylesheets/main_page.scss";
+import "../../Stylesheets/main_page.scss";
 
 class MainPage extends React.Component {
 
     render() {
+        // return (
+        //     <span></span>
+        // )
         return (
             <div className='animation'>
                 <div className="container">
@@ -15,7 +18,7 @@ class MainPage extends React.Component {
                     </div>
                     <span className='bun'>recipes</span> 
                 </div>
-                    <span>What will you make?</span>
+                    {/* <span>What will you make?</span> */}
             </div>
         );
     }

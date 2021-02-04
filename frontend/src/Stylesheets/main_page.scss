@@ -2,54 +2,69 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    
+
+    
     // align-items: center;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container {
     font-family: sans-serif;
     // display: flex;
-    color: #999;
+    // color: #999;
     // left: 50%;
     text-transform: uppercase;
-    font-size: 36px;
+    font-size: 130px;
     font-weight: bold;
     // position: fixed;
     width: 100%;
     // bottom: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    flex-direction: column;
-    margin-left: 0px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: left;
+    // flex-direction: column;
+    // margin-left: 0px;
 
 
     span {
-        margin-right: 30px;
+        // margin-right: 30px;
+        // position: fixed;
     }
 }
 
 .bun {
     color: #e5cb7a;
+    margin: 15px 0px;
 }
 
 .flip {
-    height: 50px;
+    height: 105px;
     overflow: hidden;
     // display: flex;
     // justify-content: center;
-
+    // margin-bottom: 200px;
+    // padding-bottom: 130px;
 }
+
+
 
 .flip > div > div {
     color: #fff;
-    padding: 4px 0px;
-    // height: 45px;
-    margin-bottom: 45px;
     display: inline-block;
+    // padding: 15px 0px;
+    // height: 45px;
+    // margin-bottom: 45px;
+    // font-size: 130px;
 }
 
 .flip div:first-child {
-    animation: show 7.5s linear infinite;
+    animation: show 6s linear infinite;
 }
 
 .flip div div {
@@ -65,21 +80,22 @@
 }
 
 @keyframes show {
-  0% {margin-top:-270px;}
-  5% {margin-top:-180px;}
-  33% {margin-top:-180px;}
-  38% {margin-top:-90px;}
-  66% {margin-top:-90px;}
-  71% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-270px;}
+  0% {margin-top:-20px;}
+  5% {margin-top:-20px;}
+  33% {margin-top:-170px;}
+  38% {margin-top:-170px;}
+//   50% {margin-top: -90px;}
+  66% {margin-top:-324px;}
+  71% {margin-top:-324px;}
+  99.99% {margin-top:-20px;}
+  100% {margin-top:-20px;}
 }
 
-p {
-  position:fixed;
-  width:100%;
-  bottom:30px;
-  font-size:12px;
-  color:#999;
-  margin-top:200px;
-}
+// p {
+//   position:fixed;
+//   width:100%;
+//   bottom:30px;
+//   font-size:12px;
+//   color:#999;
+//   margin-top:200px;
+// }

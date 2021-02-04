@@ -1,0 +1,112 @@
+
+
+.sidebar-parent {
+    
+    // background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    // box-shadow: 20px 18px 33px grey;
+    // box-shadow: 2px 6px 10px grey;
+
+    .welcome {
+        display: flex;
+        border: 2px lightgrey solid;;
+        height: 185px;
+        border-bottom: 6px silver solid;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Fugaz One', cursive;
+        // color: black;
+        // text-shadow: 2px 2px #d6d5d5;
+
+        color: #000000;
+        text-shadow: 2px 0px 0px #c2c2c2, 2px 1px #afa7a7;
+
+        // background: -webkit-linear-gradient(271deg, #262626, #262626, #d8d8d8);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+    }
+
+    span {
+        width: 390px;
+        height: 3px;
+        background-color: black;
+        margin-left: 5px;
+    }
+}
+
+.sidebar-body {
+    border: 2px lightgrey solid;
+    border-top: 6px silver solid;
+    min-height: 800px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgb(125, 204, 211);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 43px;
+    padding-top: 71px;
+
+    
+
+    div {
+        margin-bottom: 20px;
+        // width: 50%;
+    }
+    
+    food-group:first-child {
+        padding: 7px;
+    }
+
+    .food-group:nth-child(2) {
+        transform: rotate(-4deg);
+        padding-bottom: 5px;
+    }
+
+    
+    .food-group section {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0px; 
+        background-color: white;
+        border-radius: 7px;
+        width: 110%;
+        padding-left: 13px;
+        // box-shadow: 0px 5px 0px;
+        box-shadow: 0px 1px 4px;
+        transform: rotate(2deg);
+
+
+        h3 {
+            margin: 3px;
+        }
+        
+        
+        label {
+            display: inline-block;
+            margin-left: 25px;
+            // background-color: white;
+        }
+
+        
+    }
+    
+    
+}
+
+label + input[type=checkbox]:checked {
+    text-decoration: line-through;
+    // width: 500px;
+}
+
