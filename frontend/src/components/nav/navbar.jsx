@@ -35,7 +35,7 @@ class NavBar extends React.Component {
                     <div className='patty'></div>
                     <div className='bun'></div>
                 </section>
-                
+                <Link to='/' className='logo'>What's Cooking</Link>
                 {authButtons}
             </div>
         )
