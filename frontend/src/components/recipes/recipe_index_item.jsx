@@ -9,6 +9,7 @@ const RecipeIndexItem = ({recipe}) => {
     };
   return (
     <div>
+      {/* <h1>HELLO from the recipe index item component</h1> */}
       <li>
         <h1>{recipe.title}</h1>
         <a href="{url}">
