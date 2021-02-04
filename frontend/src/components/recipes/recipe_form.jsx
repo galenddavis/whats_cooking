@@ -41,8 +41,7 @@ class Recipes extends React.Component {
     
         event.preventDefault();
         const ingredients = this.state;
-        this.props.search(ingredients);
-        // this.props.history.push('/index')
+        this.props.search(ingredients).then(this.props.history.push('/index'))
     }
 
 
@@ -54,9 +53,9 @@ class Recipes extends React.Component {
         //     <RecipeItem />
         // ))
 
-        const index = this.props.recipes.length ? (
-            <div><RecipeIndex recipe = {this.props.recipes}/></div>
-        ) : null;
+        // const index = this.props.recipes.length ? (
+        //     <div><RecipeIndex recipe = {this.props.recipes}/></div>
+        // ) : null;
 
         return (
             <div className='sidebar-body'>
@@ -131,11 +130,10 @@ class Recipes extends React.Component {
                     </section>
                     </div>
                     
-                    
                     <input type="submit" value="What's cooking?"/>
 
                 </form>
-                {index}
+                {/* {index} */}
             </div>
         )
     }

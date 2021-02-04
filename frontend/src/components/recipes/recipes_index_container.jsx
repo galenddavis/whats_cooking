@@ -9,10 +9,10 @@ const mSTP = function (store, ownProps) {
   };
 };
 
-const mDTP = dispatch => {
-  return {
+// const mDTP = dispatch => {
+//   return {
 
-  }
-}
+//   }
+// }
 
-export default connect(mSTP, mDTP)(RecipeIndex);
+export default connect(mSTP, null)(RecipeIndex);

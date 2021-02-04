@@ -8,6 +8,7 @@ import MainPage from './main/main_page';
 import RecipesContainer from '../components/recipes/recipes_container'
 import Modal from './modal/modal';
 import Sidebar from './sidebar/sidebar'
+import RecipeIndex from './recipes/recipes_index_container'
 
 
 const App = () => (
@@ -18,6 +19,7 @@ const App = () => (
             <Sidebar />
             <Switch>
                 <AuthRoute exact path='/' component={MainPage} />
+                <Route path="/index" component={RecipeIndex} />
                 {/* <Route path='/search' component={RecipesContainer} /> */}
             </Switch>`
         </div>
