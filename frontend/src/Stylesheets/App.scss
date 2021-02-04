@@ -1,4 +1,9 @@
 @import 'main_page';
 @import 'modal';
 @import 'navbar';
-@import 'sidebar'
+@import 'sidebar';
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+}
