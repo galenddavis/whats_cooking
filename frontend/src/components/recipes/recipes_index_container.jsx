@@ -3,9 +3,9 @@ import RecipeIndex from './recipes_index'
 
 
 const mSTP = function (store, ownProps) {
-  
+  debugger
   return {
-    recipes: store.recipes.data
+    recipes: store.recipes.recipes.data
   };
 };
 
