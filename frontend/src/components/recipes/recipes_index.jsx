@@ -5,18 +5,14 @@ import RecipeIndexItem from './recipe_index_item'
 class RecipeIndex extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {food: this.props.recipes}
-        
-
-        
+        // this.state = {food: this.props.recipes}
+              
     }
 
     render() {
-        debugger
-        const recipe = this.props.recipe.data.map((dish) => {
-          debugger
-          return <RecipeIndexItem recipe = {dish}/>
-            debugger
+        
+        const recipe = this.props.recipes.map((dish) => {
+            return <RecipeIndexItem dish={dish} />
         });
         return (
           <div>
