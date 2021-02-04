@@ -4,6 +4,7 @@ import "../../Stylesheets/main_page.scss";
 class MainPage extends React.Component {
 
     render() {
+     
         return (
             <div className='animation'>
                 <div className="container">

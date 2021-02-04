@@ -7,7 +7,6 @@ import NavBar from './nav/navbar_container';
 import MainPage from './main/main_page';
 import RecipesContainer from '../components/recipes/recipes_container'
 import Modal from './modal/modal';
-import recipe_index_container from '../components/recipes/recipes_index_container'
 import Sidebar from './sidebar/sidebar'
 import RecipeIndex from './recipes/recipes_index_container'
 
