@@ -19,11 +19,11 @@ class RecipeIndex extends React.Component {
         return <RecipeIndexItem dish={dish} />}) : null;
         debugger
         return (
-          <div>
+          <div id = 'index-container'>
               <h1>HELLO</h1>
-            <ul>
-             <li>{mappedItems}</li>
-            </ul>
+                <div className ='search-container'>
+                    <ul className='search-results'>{mappedItems}</ul>
+                </div>
           </div>
           // <div>
           //     <h1>HELLO</h1>

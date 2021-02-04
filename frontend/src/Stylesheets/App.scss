@@ -1,7 +1,9 @@
+@import 'reset';
 @import 'main_page';
 @import 'modal';
 @import 'navbar';
 @import 'sidebar';
+@import 'recipe_item';
 
 .main-content {
     display: flex;
