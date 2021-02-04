@@ -1,21 +1,18 @@
 import React from 'react';
 
-const RecipeIndexItem = ({recipe}) => {
+const RecipeIndexItem = ({dish}) => {
 
-    const url = () => {
-      return (
-        'https://ap.spoonacular.com/${recipe.title}${recipe.id}'
-      )
-    };
+  const splitTitle = dish.title.split(' ').join('-')
+    const url = `https://spoonacular.com/recipes/${splitTitle}-${dish.id}`
   return (
     <div>
-      {/* <h1>HELLO from the recipe index item component</h1> */}
+      {/* <h1>HELLO from the dish index item component</h1> */}
       <li>
-        <h1>{recipe.title}</h1>
-        <a href="{url}">
-          <img src="{recipe.image}" alt="{recipe.title}" />
+        <a href={url}>
+        <h1>{dish.title}</h1>
+          <img src={dish.image} alt={dish.title} />
+        <section>{dish.likes}</section>
         </a>
-        <section>{recipe.likes}</section>
       </li>
     </div>
   );
