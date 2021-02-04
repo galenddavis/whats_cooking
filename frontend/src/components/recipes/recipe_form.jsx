@@ -1,5 +1,7 @@
 import React from 'react';
-import RecipeItem from './recipes_item'
+import RecipeItem from './recipes_item';
+import {Link} from 'react-router-dom';
+import RecipeIndex from './recipes_index';
 
 
 class Recipes extends React.Component {
@@ -40,6 +42,7 @@ class Recipes extends React.Component {
         event.preventDefault();
         const ingredients = this.state;
         this.props.search(ingredients);
+        this.props.history.push('/index')
     }
 
 
@@ -50,7 +53,14 @@ class Recipes extends React.Component {
         // const recipeListItem = recipes.map(recipe => (
         //     <RecipeItem />
         // ))
+
+        const index = this.props.recipes.length ? (
+            <div><RecipeIndex recipe = {this.props.recipes}/></div>
+        ) : null;
+
         return (
+
+            
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Chicken
@@ -68,7 +78,8 @@ class Recipes extends React.Component {
                     <label>Tomatoes
                     <input onClick={this.update('tomatoes')} type="checkbox" value='tomatoes'/>
                     </label>
-                    <Link to={`/index`}><input type="submit" value="What's cooking?"/></Link>
+                    {/* <Link to={`/index`}><input type="submit" value="What's cooking?"/></Link> */}
+                    <input type="submit" value='submit'/>
                     {/* <button onClick={`/index`}>What's cooking?</button> */}
                 </form>
             </div>
