@@ -68,7 +68,8 @@ class Recipes extends React.Component {
                     <label>Tomatoes
                     <input onClick={this.update('tomatoes')} type="checkbox" value='tomatoes'/>
                     </label>
-                    <input type="submit" value="What's cooking?"/>
+                    <Link to={`/index`}><input type="submit" value="What's cooking?"/></Link>
+                    {/* <button onClick={`/index`}>What's cooking?</button> */}
                 </form>
             </div>
         )
