@@ -11,15 +11,18 @@ import recipe_index_container from '../components/recipes/recipes_index_containe
 
 
 const App = () => (
-  <div>
-    <Modal />
-    <NavBar />
-    <Switch>
-      <AuthRoute exact path="/" component={MainPage} />
-      <Route path="/search" component={RecipesContainer} />
-      <Route path="/index" component={recipe_index_container} />
-    </Switch>
-  </div>
+    <div>
+        <Modal />
+        <NavBar />
+        <div className='main-content'>
+            <Sidebar />
+            <Switch>
+                <AuthRoute exact path='/' component={MainPage} />
+                {/* <Route path='/search' component={RecipesContainer} /> */}
+            </Switch>`
+        </div>
+    </div>
+    
 );
 
 export default App;

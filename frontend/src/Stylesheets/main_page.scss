@@ -2,7 +2,16 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    
+
+    
     // align-items: center;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container {
@@ -24,13 +33,19 @@
 
 
     span {
+<<<<<<< HEAD
         // margin-right: 30px;
         // position: fixed;
+=======
+        margin-right: 30px;
+        font-size: 130px;
+>>>>>>> Basic sidebar styling
     }
 }
 
 .bun {
     color: #e5cb7a;
+    margin: 15px 0px;
 }
 
 .flip {
@@ -42,12 +57,19 @@
     // padding-bottom: 130px;
 }
 
+
+
 .flip > div > div {
     color: #fff;
+<<<<<<< HEAD
     // padding: 4px 0px;
+=======
+    padding: 15px 0px;
+>>>>>>> Basic sidebar styling
     // height: 45px;
     // margin-bottom: 45px;
     display: inline-block;
+    font-size: 130px;
 }
 
 .flip div:first-child {
