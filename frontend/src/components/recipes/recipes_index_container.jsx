@@ -3,11 +3,10 @@ import { findRecipes } from '../../actions/search_actions'
 import RecipeIndex from './recipes_index'
 
 
-const mSTP = (state) => {
+const mSTP = function (store, ownProps) {
   debugger
-  // console.log(Object.values(state.recipes.data))
   return {
-    recipes: state.recipes
+    recipes: store.recipes.recipes.data
   };
 };
 

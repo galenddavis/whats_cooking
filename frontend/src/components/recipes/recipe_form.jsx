@@ -36,8 +36,7 @@ class Recipes extends React.Component {
     
         event.preventDefault();
         const ingredients = this.state;
-        this.props.search(ingredients).then(
-            this.props.history.push('/index'))
+        this.props.search(ingredients).then(this.props.history.push('/index'))
     }
 
 
