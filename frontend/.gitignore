@@ -23,7 +23,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .eslintcache
-<<<<<<< HEAD
-=======
 ../config/keys_dev.js
->>>>>>> 8e7de46af14ddc2294d30efe414d96783aaba5f2
