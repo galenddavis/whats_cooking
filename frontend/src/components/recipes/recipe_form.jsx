@@ -9,21 +9,6 @@ class Recipes extends React.Component {
 
     this.state = {
       ingredients: [],
-<<<<<<< HEAD
-    //   chickenchecked: false,
-    //   beefchecked: false,
-    //   tofuchecked: false,
-    //   turkeychecked: false,
-    //   porkchecked: false,
-    //   beanschecked: false,
-    //   onionschecked: false,
-    //   tomatoeschecked: false,
-    //   mushroomschecked: false,
-    //   okrachecked: false,
-    //   ricechecked: false,
-    //   breadchecked: false,
-    //   pastachecked: false,
-=======
       checkbox: [
         {chickenchecked: false},
         {beefchecked: false},
@@ -40,7 +25,6 @@ class Recipes extends React.Component {
         {pastachecked: false},
       ]
     
->>>>>>> main
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCheck = this.handleCheck.bind(this);
@@ -93,19 +77,7 @@ class Recipes extends React.Component {
     // }
    
   render() {
-<<<<<<< HEAD
-  
-    // const { recipes } = this.props
-    // const recipeListItem = recipes.map(recipe => (
-    //     <RecipeItem />
-    // ))
-
-    // const index = this.props.recipes.length ? (
-    //     <div><RecipeIndex recipe = {this.props.recipes}/></div>
-    // ) : null;
-=======
   debugger
->>>>>>> main
 
     return (
       <div className="sidebar-body">
@@ -269,12 +241,9 @@ class Recipes extends React.Component {
 
           <input type="submit" value="What's cooking?" />
           {/* <input onClick={this.uncheckAll}>Reset</input> */}
-<<<<<<< HEAD
         
           {/* <input type="submit" value="What's cooking?" /> */}
           {/* <input onClick={this.unCheck()}>Reset</input> */}
-=======
->>>>>>> main
           {/* <button onClick ={this.uncheckAll}>RESET</button> */}
         </form>
         {/* {index} */}
