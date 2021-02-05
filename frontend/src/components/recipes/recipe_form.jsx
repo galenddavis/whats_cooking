@@ -9,10 +9,23 @@ class Recipes extends React.Component {
 
     this.state = {
       ingredients: [],
-      checked: false
+    //   chickenchecked: false,
+    //   beefchecked: false,
+    //   tofuchecked: false,
+    //   turkeychecked: false,
+    //   porkchecked: false,
+    //   beanschecked: false,
+    //   onionschecked: false,
+    //   tomatoeschecked: false,
+    //   mushroomschecked: false,
+    //   okrachecked: false,
+    //   ricechecked: false,
+    //   breadchecked: false,
+    //   pastachecked: false,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCheck = this.handleCheck.bind(this);
+    // this.uncheckAll = this.uncheckAll.bind(this);
   }
 
   //   componentWillUnmount() {
@@ -57,15 +70,15 @@ class Recipes extends React.Component {
     // }
 
    
+    // uncheckAll(){
+    //    let items = document.getElementById('radio');
+    //    for (let i = 0; i < items.length; i++){
+    //      if (items[i].type === 'checkbox')
+    //      items[i].checked = false
+    //    }
+    // }
    
   render() {
-     function uncheckAll(){
-        let items = document.getElementById('radio');
-        for (let i = 0; i < items.clientHeight; i++){
-          if (items[i].type === 'checkbox')
-          items[i].checked = false
-        }
-     }
   
     // const { recipes } = this.props
     // const recipeListItem = recipes.map(recipe => (
@@ -236,7 +249,7 @@ class Recipes extends React.Component {
           </div>
 
           <input type="submit" value="What's cooking?" />
-          <input onClick={this.uncheckAll()}>Reset</input>
+          {/* <input onClick={this.uncheckAll}>Reset</input> */}
           {/* <button onClick ={this.uncheckAll}>RESET</button> */}
         </form>
         {/* {index} */}
