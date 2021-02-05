@@ -92,12 +92,13 @@ class Recipes extends React.Component {
     return (
       <div className="sidebar-body">
         <form onSubmit={this.handleSubmit}>
+        <input type="submit" value="What's cooking?" className='submit' />
           <div className="food-group">
             <section className="notes">
               <h3>Protein:</h3>
 
               <label>
-                Chicken
+                
                 <input
                   id='radio'
                   onClick={this.update("chicken")}
@@ -106,10 +107,10 @@ class Recipes extends React.Component {
                     // onChange = {this.handleCheck}
                     // checked = {this.state.check}
                 />
-              </label>
+              Chicken</label>
 
               <label>
-                Beef
+                
                 <input
                   id='radio'
                   onClick={this.update("beef")}
@@ -118,10 +119,10 @@ class Recipes extends React.Component {
                 //   onChange = {this.handleCheck}
                 //     checked = {this.state.check}
                 />
-              </label>
+              Beef</label>
 
               <label>
-                Tofu
+                
                 <input
                   id='radio'
                   onClick={this.update("tofu")}
@@ -130,10 +131,10 @@ class Recipes extends React.Component {
                 //   onChange = {this.handleCheck}
                 //     checked = {this.state.check}
                 />
-              </label>
+              Tofu</label>
 
               <label>
-                Turkey
+                
                 <input
                   id='radio'
                   onClick={this.update("turkey")}
@@ -142,10 +143,10 @@ class Recipes extends React.Component {
                 //   onChange = {this.handleCheck}
                 //     checked = {this.state.check}
                 />
-              </label>
+              Turkey</label>
 
               <label>
-                Pork
+                
                 <input
                   id='radio'
                   onClick={this.update("pork")}
@@ -154,7 +155,7 @@ class Recipes extends React.Component {
                 //   onChange = {this.handleCheck}
                 //     checked = {this.state.check}
                 />
-              </label>
+              Pork</label>
             </section>
           </div>
 
@@ -162,94 +163,97 @@ class Recipes extends React.Component {
             <section className="notes">
               <h3>Veggies: </h3>
               <label>
-                Beans
+                
                 <input
                 id='radio'
                   onClick={this.update("beans")}
                   type="checkbox"
                   value="beans"
                 />
-              </label>
+              Beans</label>
 
               <label>
-                Onions
+                
                 <input
                 id="radio"
                   onClick={this.update("onions")}
                   type="checkbox"
                   value="onions"
                 />
-              </label>
+              Onions</label>
 
               <label>
-                Tomatoes
+                
                 <input
                  id='radio'
                   onClick={this.update("tomatoes")}
                   type="checkbox"
                   value="tomatoes"
                 />
-              </label>
+              Tomatoes</label>
 
               <label>
-                Mushrooms
+                
                 <input
                   id="radio"
                   onClick={this.update("mushrooms")}
                   type="checkbox"
                   value="mushrooms"
                 />
-              </label>
+              Mushrooms</label>
 
               <label>
-                Okra
+                
                 <input
                   id="radio"
                   onClick={this.update("okra")}
                   type="checkbox"
                   value="okra"
                 />
-              </label>
-            </section>
+              Okra</label>
+              </section>
           </div>
 
           <div className="food-group">
             <section className="notes">
               <h3>Carbs: </h3>
               <label>
-                Rice
+                
                 <input
                   id="radio"
                   onClick={this.update("rice")}
                   type="checkbox"
                   value="rice"
                 />
-              </label>
+             Rice</label>
 
               <label>
-                Bread
+                
                 <input
                   id="radio"
                   onClick={this.update("bread")}
                   type="checkbox"
                   value="bread"
                 />
-              </label>
+              Bread</label>
 
               <label>
-                Pasta
+                
                 <input
                   id="radio"
                   onClick={this.update("Pasta")}
                   type="checkbox"
                   value="Pasta"
                 />
-              </label>
+              Pasta</label>
             </section>
           </div>
 
           <input type="submit" value="What's cooking?" />
           {/* <input onClick={this.uncheckAll}>Reset</input> */}
+        
+          {/* <input type="submit" value="What's cooking?" /> */}
+          {/* <input onClick={this.unCheck()}>Reset</input> */}
           {/* <button onClick ={this.uncheckAll}>RESET</button> */}
         </form>
         {/* {index} */}

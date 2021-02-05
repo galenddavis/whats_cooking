@@ -21,7 +21,7 @@ const App = () => (
                 <Route exact path='/' component={MainPage} />
                 <Route path="/index" component={RecipeIndex} />
                 {/* <Route path='/search' component={RecipesContainer} /> */}
-            </Switch>`
+            </Switch>
         </div>
         <Footer />
     </div>
