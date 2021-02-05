@@ -8,6 +8,7 @@ import MainPage from './main/main_page';
 import Modal from './modal/modal';
 import Sidebar from './sidebar/sidebar'
 import RecipeIndex from './recipes/recipes_index_container'
+import Footer from './footer/footer';
 
 
 const App = () => (
@@ -22,6 +23,7 @@ const App = () => (
                 {/* <Route path='/search' component={RecipesContainer} /> */}
             </Switch>`
         </div>
+        <Footer />
     </div>
     
 );
