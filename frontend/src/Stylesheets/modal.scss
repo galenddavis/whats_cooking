@@ -9,7 +9,7 @@
 }
 
 .modal-child {
-  font-family: 'Lobster', cursive;
+  font-family: 'Big Shoulders Display', cursive;
   position: absolute;
   top: 45%;
   left: 50%;
@@ -18,23 +18,39 @@
   border-radius: 3px;
   border-top: 1px solid black;
   /* padding: 20px; */
-  height: 500px;
-  width: 392px;
+  height: 410px;
+  width: 500px;
   box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0 0px 50px rgba(0,0,0,0.2);
-
 }
 
 .modal-header {
+  margin-top: 50px;
+  font-size: 40px;
   display: flex;
   text-decoration: none;
   justify-content: space-around;
+  text-shadow: 3px 2px rgb(224, 195, 195), 4px 3px salmon;
   cursor: pointer;
+}
+.selected-signup {
+  -webkit-transform: matrix(1, 0.20, 0, 1, 0, 0);
+  border-bottom: 5px solid salmon;
+}
+.non-selected-signup {
+  -webkit-transform: matrix(1, 0.20, 0, 1, 0, 0);
+}
+.selected-login {
+  -webkit-transform: matrix(1, -0.20, 0, 1, 0, 0);
+  border-bottom: 5px solid salmon;
+}
+.non-selected-login {
+  -webkit-transform: matrix(1, -0.20, 0, 1, 0, 0);
 }
 
 .modal-body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 30px;
   
 }

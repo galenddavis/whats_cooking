@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -13,7 +13,18 @@ class NavBar extends React.Component {
         console.log(this.props)
         this.props.logout()
         this.props.history.push('/');
+
     }
+
+
+
+    sidebarSlide = () => {  
+        const slidebar = document.querySelector('.sidebar-parent')
+        debugger
+
+        slidebar.classList.toggle('sidebar-parent-active');
+    }
+    
 
     // handleSubmit(e) {
     //   e.preventDefault();
@@ -36,20 +47,19 @@ class NavBar extends React.Component {
         )
 
         return (
-          <div className="navbar">
-            <section className="burger">
-              <div className="bun"></div>
-              <div className="tomato"></div>
-              <div className="lettuce"></div>
-              <div className="patty"></div>
-              <div className="bun"></div>
-            </section>
-            <Link to="/" className="logo">
-              What's Cooking
-            </Link>
-            {authButtons}
-          </div>
-        );
+            <div className='navbar'>
+                <section className='burger' onClick={this.sidebarSlide}>
+                    <div className='bun'></div>
+                    <div className='tomato'></div>
+                    <div className='lettuce'></div>
+                    <div className='patty'></div>
+                    <div className='bun'></div>
+                </section>
+                
+                <Link to='/' className='logo'>What's Cooking</Link>
+                {authButtons}
+            </div>
+        )
     }
 }
 

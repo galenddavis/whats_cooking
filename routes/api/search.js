@@ -24,20 +24,14 @@ const baseUrl = 'https://api.spoonacular.com/recipes/findByIngredients?'
 
 router.get('/search', async (req, res, next) => {
     try{
-        console.log(req.query)
         const food = JSON.stringify(req.query.ingredients)
-
-        console.log(food)
-        
 
         const items = new URLSearchParams({
             apiKey: keys.spoonAPI,
             ingredients: food,
             number: 9
         })
-        console.log(`${baseUrl}${items}`)
         const request = await axios.get(`${baseUrl}${items}`)
-        console.log(request.data)
         
         res.json(request.data)
     } catch(error) {

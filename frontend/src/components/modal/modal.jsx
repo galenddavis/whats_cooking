@@ -22,17 +22,29 @@ function Modal({modal, closeModal, openModal}) {
     }
 
     return (
-        <div className='modal-background' onClick={closeModal}>
-            <div className='modal-child' onClick={e => e.stopPropagation()}>
-                <section className='modal-header'>
-                    <h1 onClick={() => openModal('signup')}>Sign Up</h1>
-                    <h1 onClick={() => openModal('login')}>Log In</h1>
-                </section>
-                <span className='modal-body'>{component}</span>
-            </div>
+      <div className="modal-background" onClick={closeModal}>
+        <div className="modal-child" onClick={(e) => e.stopPropagation()}>
+          <section className="modal-header">
+            <h1
+              onClick={() => openModal("signup")}
+              className={modal === "signup" ? "selected-signup" : "non-selected-signup"}
+            >
+              Sign Up{" "}
+            </h1>
+            <h1
+              onClick={() => openModal("login")}
+              className={modal === "login" ? "selected-login" : "non-selected-login"}
+            >
+              Log In
+            </h1>
+          </section>
+          <span className="modal-body">{component}</span>
         </div>
-    )
+      </div>
+    );
 }
+
+
 
 const mSTP = state => {
     return {

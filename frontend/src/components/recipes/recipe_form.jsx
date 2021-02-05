@@ -1,7 +1,6 @@
 import React from 'react';
-import RecipeItem from './recipes_item';
-import {Link} from 'react-router-dom';
-import RecipeIndex from './recipes_index';
+// import {Link} from 'react-router-dom';
+
 
 
 class Recipes extends React.Component {

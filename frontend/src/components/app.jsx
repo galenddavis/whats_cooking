@@ -1,14 +1,14 @@
 import React from 'react';
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { AuthRoute } from '../util/route_util';
 import { Switch } from 'react-router-dom';
 import {Route} from 'react-router-dom'
-
+ 
 import NavBar from './nav/navbar_container';
 import MainPage from './main/main_page';
-import RecipesContainer from '../components/recipes/recipes_container'
 import Modal from './modal/modal';
 import Sidebar from './sidebar/sidebar'
 import RecipeIndex from './recipes/recipes_index_container'
+import Footer from './footer/footer';
 
 
 const App = () => (
@@ -23,6 +23,7 @@ const App = () => (
                 {/* <Route path='/search' component={RecipesContainer} /> */}
             </Switch>`
         </div>
+        <Footer />
     </div>
     
 );

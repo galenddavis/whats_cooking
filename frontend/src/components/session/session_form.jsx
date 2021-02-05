@@ -33,11 +33,11 @@ class SessionForm extends React.Component {
     handleSubmit(event) {
         
         event.preventDefault();
-        let user = {
-            username: this.state.username,
-            email: this.state.email,
-            password: this.state.password
-        }
+        // let user = {
+        //     username: this.state.username,
+        //     email: this.state.email,
+        //     password: this.state.password
+        // }
         this.props.processForm(this.state).then(this.props.closeModal)
         
         // if (this.props.processForm(user)) {
@@ -59,28 +59,34 @@ class SessionForm extends React.Component {
             <form onSubmit={this.handleSubmit}>
               {showErrors}
               <section className="modal-content">
-                <input
-                  type="text"
-                  placeholder="Username"
-                  value={this.state.username}
-                  onChange={this.update("username")}
-                  required
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  value={this.state.email}
-                  onChange={this.update("email")}
-                  required
-                />
-                <input
-                  type="password"
-                  placeholder="password"
-                  value={this.state.password}
-                  onChange={this.update("password")}
-                  required
-                />
-                <input type="submit" value={this.props.formType} />
+                <label>Username
+                  <input
+                    type="text"
+                    // placeholder="Username"
+                    value={this.state.username}
+                    onChange={this.update("username")}
+                    required
+                  />
+                </label>
+                <label>Email
+                  <input
+                    type="email"
+                    // placeholder="Email"
+                    value={this.state.email}
+                    onChange={this.update("email")}
+                    required
+                  />
+                </label>
+                <label>Password
+                  <input
+                    type="password"
+                    // placeholder="password"
+                    value={this.state.password}
+                    onChange={this.update("password")}
+                    required
+                  />
+                </label>
+                <input type="submit" value='Lets Get Cookin!' id='modal-submit' />
               </section>
             </form>
           </div>

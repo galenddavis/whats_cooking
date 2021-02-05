@@ -2,15 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Big Shoulders Display', cursive;
-    padding-bottom: 7px;
+    padding: 7px 7px;
     
     a{
         text-decoration: none ;
-        font-size: 25px;
+        font-size: 45px;
         color: salmon;
+        padding-left: 0px;
     }
 
     h2 {
@@ -45,6 +45,10 @@
         background-color: #e5cb7a;
     }
 }
+
+.burger:hover {
+    transform: scale(0.9, 0.9);
+}
     
 .burger div{
     width: 37px;
@@ -66,21 +70,21 @@
 //     width: 100%;
 //     border-radius: 3px;
 
-    .logo {
-        text-decoration: none;
-        background: -webkit-linear-gradient(272deg, #262626, #d8d8d8, #262626);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        // text-shadow: 
-		// -0.0075em 0.0075em 0 mix(#262626, #eaeaea, 94%),
-		// 0.005em 0.005em 0 mix(#262626, #eaeaea, 60%),
-		// 0.01em 0.01em 0 mix(#262626, #eaeaea, 62%), 
-		// 0.015em 0.015em mix(#262626, #eaeaea, 64%), 
-		// 0.02em 0.02em 0 mix(#262626, #eaeaea, 66%), 
-		// 0.025em 0.025em 0 mix(#262626, #eaeaea, 68%),
-		// 0.03em 0.03em 0 mix(#262626, #eaeaea, 70%),
-		// 0.035em 0.035em 0 mix(#262626, #eaeaea, 72%);
-    }
+    // .logo {
+    //     text-decoration: none;
+    //     background: -webkit-linear-gradient(272deg, #262626, #d8d8d8, #262626);
+    //     -webkit-background-clip: text;
+    //     -webkit-text-fill-color: transparent;
+    //     text-shadow: 
+	// 	-0.0075em 0.0075em 0 mix(#262626, #eaeaea, 94%),
+	// 	0.005em 0.005em 0 mix(#262626, #eaeaea, 60%),
+	// 	0.01em 0.01em 0 mix(#262626, #eaeaea, 62%), 
+	// 	0.015em 0.015em mix(#262626, #eaeaea, 64%), 
+	// 	0.02em 0.02em 0 mix(#262626, #eaeaea, 66%), 
+	// 	0.025em 0.025em 0 mix(#262626, #eaeaea, 68%),
+	// 	0.03em 0.03em 0 mix(#262626, #eaeaea, 70%),
+	// 	0.035em 0.035em 0 mix(#262626, #eaeaea, 72%);
+    // }
 
 //     .session-button {
 //         // background-color: crimson;
