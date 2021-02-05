@@ -2,7 +2,50 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: tomato;
+    // background-color: tomato;
     justify-content: center;
-    width: 180px;
+    width: fit-content;
+
+    label {
+        font-family: 'Big Shoulders Display', cursive;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 15px;
+        border-bottom: 1px solid blue;
+    }
+
+    input {
+        border: 0;
+        background: none;
+        box-shadow: none;
+        width: 363px;
+        height: 30px;
+        // background-color: #F6870F;
+        // border: 1px solid blue;
+        color: black;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        margin-left: 7px;
+        font-size: large;
+    }
+    input:focus {
+        outline: none;
+    }
+}
+#modal-submit {
+        border: 0;
+        background: none;
+        box-shadow: none;
+        width: 363px;
+        height: 30px;
+        // background-color: #F6870F;
+        border: 1px solid blue;
+        color: black;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        margin-left: 7px;
+        font-size: large;
 }
