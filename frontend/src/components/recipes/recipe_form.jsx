@@ -56,16 +56,17 @@ class Recipes extends React.Component {
     // document.getElementById("radio").checked = false;
     // }
 
-    // uncheckAll(){
-    //     ('input[type="checkbox"]:checked').prop('checked',false);
-    //  }
+   
    
   render() {
-    //  const UnCheckAll = (chk) => {
-    //     for (i = 0; i < chk.length; i++){
-    //     chk[i].checked = false 
-    //   }
-    // }   
+     function uncheckAll(){
+        let items = document.getElementById('radio');
+        for (let i = 0; i < items.clientHeight; i++){
+          if (items[i].type === 'checkbox')
+          items[i].checked = false
+        }
+     }
+  
     // const { recipes } = this.props
     // const recipeListItem = recipes.map(recipe => (
     //     <RecipeItem />
@@ -235,7 +236,7 @@ class Recipes extends React.Component {
           </div>
 
           <input type="submit" value="What's cooking?" />
-          {/* <input onClick={this.unCheck()}>Reset</input> */}
+          <input onClick={this.uncheckAll()}>Reset</input>
           {/* <button onClick ={this.uncheckAll}>RESET</button> */}
         </form>
         {/* {index} */}
