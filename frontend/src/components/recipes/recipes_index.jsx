@@ -15,8 +15,8 @@ class RecipeIndex extends React.Component {
         //   return <li>{dish.title}</li>
         // });
 
-        const mappedItems = this.props.recipes.length ? this.props.recipes.map((dish) => {
-        return <li>{dish.title}</li>}) : null;
+        const mappedItems = this.props.recipes !== undefined ? this.props.recipes.map((dish) => {
+        return <li><RecipeIndexItem dish={dish}/></li>}) : null;
         debugger
         return (
           <div>
