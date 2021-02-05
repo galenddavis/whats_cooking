@@ -18,7 +18,7 @@ const App = () => (
         <div className='main-content'>
             <Sidebar />
             <Switch>
-                <AuthRoute exact path='/' component={MainPage} />
+                <Route exact path='/' component={MainPage} />
                 <Route path="/index" component={RecipeIndex} />
                 {/* <Route path='/search' component={RecipesContainer} /> */}
             </Switch>`
