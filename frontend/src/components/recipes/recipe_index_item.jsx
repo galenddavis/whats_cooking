@@ -6,13 +6,14 @@ const RecipeIndexItem = ({dish}) => {
   const splitTitle = dish.title.split(' ').join('-')
     const url = `https://spoonacular.com/recipes/${splitTitle}-${dish.id}`
   return (
-    <div>
-      {/* <h1>HELLO from the dish index item component</h1> */}
+    <div className='card'>
       <li>
         <a href={url}>
-        <h1>{dish.title}</h1>
           <img src={dish.image} alt={dish.title} />
-        <section>{dish.likes}</section>
+          <section className='details'>
+            <h1>{dish.title}</h1>
+            <h1><i class="fas fa-heart"></i> {dish.likes}</h1>
+          </section>
         </a>
       </li>
     </div>
