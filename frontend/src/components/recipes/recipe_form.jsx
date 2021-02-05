@@ -60,50 +60,50 @@ class Recipes extends React.Component {
                         <section className='notes'>
                             <h3>Protein:</h3>
                         
-                            <label>Chicken
+                            <label>
                             <input onClick={this.update('chicken')} type="checkbox" value='chicken'/>
-                            </label>
+                            Chicken</label>
 
-                            <label>Beef
+                            <label>
                             <input onClick={this.update('beef')} type="checkbox" value='beef'/>
-                            </label>
+                            Beef</label>
 
-                            <label>Tofu
+                            <label>
                             <input onClick={this.update('tofu')} type="checkbox" value='tofu'/>
-                            </label>
+                            Tofu</label>
 
-                            <label>Turkey
+                            <label>
                             <input onClick={this.update('turkey')} type="checkbox" value='turkey'/>
-                            </label>
+                            Turkey</label>
 
-                            <label>Pork
+                            <label>
                             <input onClick={this.update('pork')} type="checkbox" value='pork'/>
-                            </label>
+                            Pork</label>
                         </section>
                     </div>
 
                     <div className='food-group'>
                     <section className='notes'>
                         <h3>Veggies: </h3>
-                            <label>Beans
+                            <label>
                             <input onClick={this.update('beans')} type="checkbox" value='beans'/>
-                            </label>
+                            Beans</label>
 
-                            <label>Onions
+                            <label>
                             <input onClick={this.update('onions')} type="checkbox" value='onions'/>
-                            </label>
+                            Onions</label>
 
-                            <label>Tomatoes
+                            <label>
                             <input onClick={this.update('tomatoes')} type="checkbox" value='tomatoes'/>
-                            </label>
+                            Tomatoes</label>
 
-                            <label>Mushrooms
+                            <label>
                             <input onClick={this.update('mushrooms')} type="checkbox" value='mushrooms'/>
-                            </label>
+                            Mushrooms</label>
 
-                            <label>Okra
+                            <label>
                             <input onClick={this.update('okra')} type="checkbox" value='okra'/>
-                            </label>
+                            Okra</label>
                     
                     </section>
                     </div>
@@ -111,17 +111,17 @@ class Recipes extends React.Component {
                     <div className='food-group'>
                     <section className='notes'>
                         <h3>Carbs: </h3>
-                            <label>Rice
+                            <label>
                             <input onClick={this.update('rice')} type="checkbox" value='rice'/>
-                            </label>
+                            Rice</label>
 
-                            <label>Bread
+                            <label>
                             <input onClick={this.update('bread')} type="checkbox" value='bread'/>
-                            </label>
+                            Bread</label>
 
-                            <label>Pasta
+                            <label>
                             <input onClick={this.update('Pasta')} type="checkbox" value='Pasta'/>
-                            </label>
+                            Pasta</label>
                         
                     </section>
                     </div>

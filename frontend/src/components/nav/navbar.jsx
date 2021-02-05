@@ -12,6 +12,14 @@ class NavBar extends React.Component {
         this.props.logout();
     }
 
+    sidebarSlide = () => {  
+        const slidebar = document.querySelector('.sidebar-parent')
+        debugger
+
+        slidebar.classList.toggle('sidebar-parent-active');
+    }
+    
+
     render() {
         const authButtons = this.props.loggedIn ? (
             <div className='session-button'>
@@ -28,13 +36,14 @@ class NavBar extends React.Component {
 
         return (
             <div className='navbar'>
-                <section className='burger'>
+                <section className='burger' onClick={this.sidebarSlide}>
                     <div className='bun'></div>
                     <div className='tomato'></div>
                     <div className='lettuce'></div>
                     <div className='patty'></div>
                     <div className='bun'></div>
                 </section>
+                
                 <Link to='/' className='logo'>What's Cooking</Link>
                 {authButtons}
             </div>

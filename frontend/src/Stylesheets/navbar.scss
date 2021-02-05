@@ -2,15 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Big Shoulders Display', cursive;
-    padding-bottom: 7px;
+    padding: 7px 7px;
     
     a{
         text-decoration: none ;
-        font-size: 25px;
+        font-size: 45px;
         color: salmon;
+        padding-left: 0px;
     }
 
     h2 {
@@ -44,6 +44,10 @@
     .bun {
         background-color: #e5cb7a;
     }
+}
+
+.burger:hover {
+    transform: scale(0.9, 0.9);
 }
     
 .burger div{
