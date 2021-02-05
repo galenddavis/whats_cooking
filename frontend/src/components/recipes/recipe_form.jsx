@@ -1,7 +1,6 @@
 import React from 'react';
-import RecipeItem from './recipes_item';
-import {Link} from 'react-router-dom';
-import RecipeIndex from './recipes_index';
+// import {Link} from 'react-router-dom';
+
 
 
 class Recipes extends React.Component {
@@ -16,17 +15,13 @@ class Recipes extends React.Component {
 
 
     update(field) {
-    
-        
         return e => {
             
             const copy = Object.assign({}, this.state)
             
             copy.ingredients.push(e.currentTarget.value)
             // let copy = Object.assign([], this.state)
-            this.setState({
-               copy
-            })
+            this.setState({copy})
             
              
         }
