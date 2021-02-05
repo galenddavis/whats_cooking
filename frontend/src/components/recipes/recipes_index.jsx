@@ -1,19 +1,16 @@
-import React from 'react';
-import RecipeIndexItem from './recipe_index_item'
-
+import React from "react";
+import RecipeIndexItem from "./recipe_index_item";
 
 class RecipeIndex extends React.Component {
-    constructor(props) {
-        super(props)
-        // this.state = {food: this.props.recipes}
-              
-    }
+  constructor(props) {
+    super(props);
+    // this.state = {food: this.props.recipes}
+  }
 
-    render() {
-        
-        // const recipe = this.props.recipes.map((dish) => {
-        //   return <li>{dish.title}</li>
-        // });
+  render() {
+    // const recipe = this.props.recipes.map((dish) => {
+    //   return <li>{dish.title}</li>
+    // });
 
         const mappedItems = this.props.recipes !== undefined ? this.props.recipes.map((dish) => {
         return <RecipeIndexItem dish={dish} />}) : null;

@@ -1,16 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 class NavBar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.logoutUser = this.logoutUser.bind(this);
-    }
+  constructor(props) {
+    super(props);
+    this.logoutUser = this.logoutUser.bind(this);
+  }
 
-    logoutUser(event) {
-        event.preventDefault();
-        this.props.logout();
-    }
+  logoutUser(event) {
+    event.preventDefault();
+    this.props.logout();
+  }
 
     sidebarSlide = () => {  
         const slidebar = document.querySelector('.sidebar-parent')
@@ -29,10 +29,10 @@ class NavBar extends React.Component {
             <div className='session-button'>
                 {/* <Link to='/login' className='userAuth'>Log In</Link>
                 <Link to='/signup' className='userAuth'>Sign Up</Link> */}
-                <h2 onClick={() => this.props.openModal('signup')}>Sign Up</h2>
-                <h2 onClick={() => this.props.openModal('login')}>Log In</h2>
-            </div>
-        )
+        <h2 onClick={() => this.props.openModal("signup")}>Sign Up</h2>
+        <h2 onClick={() => this.props.openModal("login")}>Log In</h2>
+      </div>
+    );
 
         return (
             <div className='navbar'>
