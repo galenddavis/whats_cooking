@@ -20,8 +20,8 @@ class NavBar extends React.Component {
 
     sidebarSlide = () => {  
         const slidebar = document.querySelector('.sidebar-parent')
+        document.getElementsByClassName
         debugger
-
         slidebar.classList.toggle('sidebar-parent-active');
     }
     

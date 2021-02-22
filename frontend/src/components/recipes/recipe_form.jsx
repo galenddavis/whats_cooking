@@ -52,9 +52,6 @@ class Recipes extends React.Component {
     this.setState({ check: e.target.checked });
   }
 
-    // unCheck() {
-    // document.getElementById("radio").checked = false;
-    // }
 
     // uncheckAll(){
     //     ('input[type="checkbox"]:checked').prop('checked',false);
@@ -83,8 +80,7 @@ class Recipes extends React.Component {
             <section className="notes">
               <h3>Protein:</h3>
 
-              <label>
-                
+              <label for='radio' className='label'>
                 <input
                   id='radio'
                   onClick={this.update("chicken")}
@@ -95,7 +91,7 @@ class Recipes extends React.Component {
                 />
               Chicken</label>
 
-              <label>
+              <label className='label'>
                 
                 <input
                   id='radio'
