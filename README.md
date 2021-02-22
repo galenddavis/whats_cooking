@@ -48,6 +48,7 @@ Technical Challenges:
 
 * Construction of Sidebar menu
 * Styling and design
+* Backend API search route setup
 
 
 ### Gabe
