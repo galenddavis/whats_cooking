@@ -10,7 +10,7 @@ class RecipeIndex extends React.Component {
     // });
 
         const mappedItems = this.props.recipes !== undefined ? this.props.recipes.map((dish) => {
-        return <RecipeIndexItem key={dish.id} dish={dish} />}) : null;
+        return <RecipeIndexItem key={dish.id} dish={dish} recipeInfo={this.props.recipeInfo}/>}) : null;
         return (
           <div className='index-container'>
               {/* <h1 className='blurb'>Let us know what you have in your fridge, and we'll tell you what to cook!</h1> */}

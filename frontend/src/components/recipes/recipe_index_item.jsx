@@ -1,9 +1,12 @@
 import React from 'react';
 
-const RecipeIndexItem = ({dish}) => {
+const RecipeIndexItem = ({dish, recipeInfo}) => {
 
-  const splitTitle = dish.title.split(' ').join('-')
-    const url = `https://spoonacular.com/recipes/${splitTitle}-${dish.id}`
+  // const splitTitle = dish.title.split(' ').join('-')
+  // const url = `https://spoonacular.com/recipes/${splitTitle}-${dish.id}`
+  const info = recipeInfo(dish.id) || null;
+  const url = info.sourceUrl;
+  debugger
   return (
     <div className='card'>
       <li>
