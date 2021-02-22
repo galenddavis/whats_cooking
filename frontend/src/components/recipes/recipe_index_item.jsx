@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const RecipeIndexItem = ({dish}) => {
 
@@ -12,7 +11,7 @@ const RecipeIndexItem = ({dish}) => {
           <img src={dish.image} alt={dish.title} />
           <section className='details'>
             <h1>{dish.title}</h1>
-            <h1><i class="fas fa-heart"></i> {dish.likes}</h1>
+            <h1><i className="fas fa-heart"></i> {dish.likes}</h1>
           </section>
         </a>
       </li>

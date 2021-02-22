@@ -138,6 +138,14 @@
 
         
     }
+
+    #radio:checked ~ .label::after {
+        text-decoration: overline;
+    }
+
+    // label:focus {
+    //     text-decoration: line-through;
+    // }
     
     
 }

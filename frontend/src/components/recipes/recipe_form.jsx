@@ -44,7 +44,6 @@ class Recipes extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const ingredients = this.state;
-    console.log(ingredients);
     this.props.search(ingredients).then(this.props.history.push("/index"));
   }
 
@@ -52,9 +51,6 @@ class Recipes extends React.Component {
     this.setState({ check: e.target.checked });
   }
 
-    // unCheck() {
-    // document.getElementById("radio").checked = false;
-    // }
 
     // uncheckAll(){
     //     ('input[type="checkbox"]:checked').prop('checked',false);
@@ -83,8 +79,7 @@ class Recipes extends React.Component {
             <section className="notes">
               <h3>Protein:</h3>
 
-              <label>
-                
+              <label htmlFor='radio' className='label'>
                 <input
                   id='radio'
                   onClick={this.update("chicken")}
@@ -95,7 +90,7 @@ class Recipes extends React.Component {
                 />
               Chicken</label>
 
-              <label>
+              <label className='label'>
                 
                 <input
                   id='radio'
