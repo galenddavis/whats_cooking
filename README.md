@@ -1,5 +1,8 @@
 # whats_cooking
 
+![website-img](https://user-images.githubusercontent.com/66323451/108756260-46a6d100-7516-11eb-8cf6-3a9dc38f0a18.png)
+
+
 ## Background and Overview
 
 What's Cooking? is a minimal viable product that addresses the age old question of what's for dinner. With our app, you select what ingredients you already have and returns recipes that match the ingredients selected. 
@@ -31,30 +34,25 @@ Technical Challenges:
 
 ### Stephen
 
-* Day 1: User auth(backend)
-* Day 2: Ingredients (backend)
-* Day 3: Flex Ingredients (backend)/API help
-* Day 4: Flex
+* Backend Routing and User auth(backend)
+* Front end integration with API
+
 
 ### Jose 
 
-* Day 1: User Auth (frontend)
-* Day 2: Ingredients (frontend)
-* Day 3: Implementing API
-* Day 4: Flex
+* Creating of Log-In / Sign-Up modal 
+* Styling and design
+
 
 ### Galen 
 
-* Day 1: User Auth (frontend)
-* Day 2: Researching API
-* Day 3: Implementing API
-* Day 4: Flex
+* Construction of Sidebar menu
+* Styling and design
+
 
 ### Gabe
 
-* Day 1: User Auth(backend
-* Day 2: Ingredients (backend)
-* Day 3: Flex Ingredients (backend)/API help
-* Day 4: Flex
+* Backend Routing and User auth(backend)
+* Front end integration with API
 
 
