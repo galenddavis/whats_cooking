@@ -1,5 +1,4 @@
 import React from 'react';
-import { AuthRoute } from '../util/route_util';
 import { Switch } from 'react-router-dom';
 import {Route} from 'react-router-dom'
  
