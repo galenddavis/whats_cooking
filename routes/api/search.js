@@ -5,7 +5,6 @@ const axios = require('axios');
 
 
 const searchUrl = 'https://api.spoonacular.com/recipes/findByIngredients?'
-const infoUrl = 'https://api.spoonacular.com/recipes/'
 
 router.get('/search', async (req, res, next) => {
     try{
@@ -14,7 +13,7 @@ router.get('/search', async (req, res, next) => {
         const items = new URLSearchParams({
             apiKey: keys.spoonAPI,
             ingredients: food,
-            number: 9
+            number: 1
         })
         const request = await axios.get(`${searchUrl}${items}`)
         
@@ -24,22 +23,7 @@ router.get('/search', async (req, res, next) => {
     }
 })
 
-router.get('/info', async (req, res, next) => {
-    try{
-        debugger
-        const id = req.query.id
-        const params = newURLSearchParams({
-            apiKey: keys.spoonAPI,
-            includeNutrition: false
-        })
-        const request = await axios.get(`${infoUrl}${id}information${params}`)
-        console.log(request)
-        debugger
-        res.json(request.data)
-    } catch(error) {
-        next(error)
-    }
-})
+
 
 
 

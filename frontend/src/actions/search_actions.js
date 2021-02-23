@@ -28,9 +28,10 @@ export const findRecipes = ingredients => dispatch => (
     )
 )
 
-export const getInfo = id => dispatch => (
-    APISearchUtils.getRecipeInfo(id).then(
+export const getInfo = id => dispatch => {
+    debugger
+    return APISearchUtils.getRecipeInfo(id).then(
         info => dispatch(recipeInfo(info))
     )
-)
+}
 
