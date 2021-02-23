@@ -85,6 +85,8 @@
 .footer-personal div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     a {
         text-decoration: none;
         font-size: 15px;

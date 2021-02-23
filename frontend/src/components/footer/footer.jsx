@@ -4,7 +4,7 @@ const Footer = () => {
     return (
       <div className="footer">
         <section className="footer-repo">
-          <a href="https://github.com/galenddavis/whats_cooking">
+          <a href="https://github.com/galenddavis/whats_cooking" target="_blank" rel="noreferrer">
             <h1>Github Repo</h1>
           </a>
         </section>
