@@ -18,7 +18,7 @@
   border-radius: 3px;
   border-top: 1px solid black;
   /* padding: 20px; */
-  height: 410px;
+  height: 500px;
   width: 500px;
   box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0 0px 50px rgba(0,0,0,0.2);
 }
@@ -53,4 +53,14 @@
   align-items: center;
   padding-top: 30px;
   
+}
+
+.errors-container li {
+  font-weight: bold;
+  padding: 10px 0px;
+  color: rgb(247, 85, 67);
+}
+
+.errors-container :last-child {
+  padding-bottom: 15px;
 }
