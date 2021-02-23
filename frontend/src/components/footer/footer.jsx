@@ -11,44 +11,44 @@ const Footer = () => {
         <section className="footer-mern">
           <h3>this site uses</h3>
           <div>
-            <i class="fab fa-envira">MongoDB</i>
+            <i className="fab fa-envira">MongoDB</i>
             <label>
               E<h3>Express</h3>
             </label>
-            <i class="fab fa-react">React</i>
-            <i class="fab fa-node-js">Node</i>
+            <i className="fab fa-react">React</i>
+            <i className="fab fa-node-js">Node</i>
           </div>
         </section>
         <section className="footer-personal">
           <div>
-            <h1>Stephen "cool cool cool" Yim</h1>
-            <a href="https://github.com/stephenhyim">Github</a>
-            <a href="">LinkedIn</a>
-            <a href="">Personal Website</a>
-            <a href="">Rails/React project</a>
+            <h1>Stephen Yim</h1>
+            <a href="https://github.com/stephenhyim" target="_blank" rel="noreferrer">Github</a>
+            <a href="https://www.linkedin.com/in/stephenhyim/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://angel.co/u/stephen-yim" target="_blank" rel="noreferrer">AngelList</a>
+            <a href="https://github.com/stephenhyim/YouTube-Project" target="_blank" rel="noreferrer">Rails/React project</a>
           </div>
           <div>
-            <h1>Gabriel "bigtime" Reiter</h1>
-            <a href="https://github.com/greiter18">Github</a>
-            <a href="">LinkedIn</a>
-            <a href="">Personal Website</a>
-            <a href="https://github.com/greiter18/Trace">Rails/React project</a>
+            <h1>Gabriel Reiter</h1>
+            <a href="https://github.com/greiter18" target="_blank" rel="noreferrer">Github</a>
+            <a href="https://www.linkedin.com/in/gabriel-reiter-7352b2b7/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://angel.co/u/gabriel-reiter" target="_blank" rel="noreferrer">AngelList</a>
+            <a href="https://github.com/greiter18/Trace" target="_blank" rel="noreferrer">Rails/React project</a>
           </div>
           <div>
-            <h1>Galen "lets take a look at it" Davis</h1>
-            <a href="https://github.com/galenddavis">Github</a>
-            <a href="">LinkedIn</a>
-            <a href="">Personal Website</a>
-            <a href="https://github.com/galenddavis/final_project">
+            <h1>Galen Davis</h1>
+            <a href="https://github.com/galenddavis" target="_blank" rel="noreferrer">Github</a>
+            <a href="https://www.linkedin.com/in/galenddavis/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://angel.co/u/galen-davis-1" target="_blank" rel="noreferrer">AngelList</a>
+            <a href="https://github.com/galenddavis/final_project" target="_blank" rel="noreferrer">
               Rails/React project
             </a>
           </div>
           <div>
-            <h1>Jose "Jose Mejia" Mejia</h1>
-            <a href="https://github.com/jmejia247">Github</a>
-            <a href="">LinkedIn</a>
-            <a href="">Personal Website</a>
-            <a href="https://github.com/jmejia247/Harmonic">
+            <h1>Jose Mejia</h1>
+            <a href="https://github.com/jmejia247" target="_blank" rel="noreferrer">Github</a>
+            <a href="https://www.linkedin.com/in/jose-mejia-531907206/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://angel.co/u/jose-mejia-15" target="_blank" rel="noreferrer">AngelList</a>
+            <a href="https://github.com/jmejia247/Harmonic" target="_blank" rel="noreferrer">
               Rails/React project
             </a>
           </div>

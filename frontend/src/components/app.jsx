@@ -1,5 +1,4 @@
 import React from 'react';
-import { AuthRoute } from '../util/route_util';
 import { Switch } from 'react-router-dom';
 import {Route} from 'react-router-dom'
  
@@ -21,7 +20,7 @@ const App = () => (
                 <Route exact path='/' component={MainPage} />
                 <Route path="/index" component={RecipeIndex} />
                 {/* <Route path='/search' component={RecipesContainer} /> */}
-            </Switch>`
+            </Switch>
         </div>
         <Footer />
     </div>
