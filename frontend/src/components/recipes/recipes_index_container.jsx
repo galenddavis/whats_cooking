@@ -1,17 +1,19 @@
 import { connect } from "react-redux";
-import { findRecipes } from '../../actions/search_actions'
+import { findRecipes, getInfo } from '../../actions/search_actions'
 import RecipeIndex from './recipes_index'
 
 
 const mSTP = function (store, ownProps) {
   return {
-    recipes: store.recipes.recipes.data
+    recipes: store.recipes.recipes.data, 
+    info: store.recipes.info.data
   };
 };
 
 const mDTP = dispatch => {
   return {
-    findRecipes: (ingredients) => dispatch(findRecipes(ingredients))
+    findRecipes: (ingredients) => dispatch(findRecipes(ingredients)), 
+    recipeInfo: (id) => dispatch(getInfo(id))
   }
 }
 

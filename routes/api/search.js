@@ -4,7 +4,7 @@ const keys = require('../../config/keys');
 const axios = require('axios');
 
 
-const baseUrl = 'https://api.spoonacular.com/recipes/findByIngredients?'
+const searchUrl = 'https://api.spoonacular.com/recipes/findByIngredients?'
 
 router.get('/search', async (req, res, next) => {
     try{
@@ -13,15 +13,17 @@ router.get('/search', async (req, res, next) => {
         const items = new URLSearchParams({
             apiKey: keys.spoonAPI,
             ingredients: food,
-            number: 9
+            number: 1
         })
-        const request = await axios.get(`${baseUrl}${items}`)
+        const request = await axios.get(`${searchUrl}${items}`)
         
         res.json(request.data)
     } catch(error) {
         next(error)
     }
 })
+
+
 
 
 
