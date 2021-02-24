@@ -36,9 +36,9 @@ class SessionForm extends React.Component {
       this.props.processForm(chef).then(this.close)
   }
   close() {
-    debugger
+    // debugger
     if (this.props.user === true) {
-      debugger
+      // debugger
       this.props.closeModal()
     }
   }
@@ -46,10 +46,10 @@ class SessionForm extends React.Component {
 
       const errors = this.props.errors.map(error => {
           return (
-              <li>{error}</li>
+              <li className="error-msg">{error}</li>
           )
       })
-      const showErrors = this.props.errors.length > 0 ? <ul>{errors}</ul> : null
+      const showErrors = this.props.errors.length > 0 ? <ul className='errors-container'>{errors}</ul> : null
 
     const signupForm = <label>Username
                 <input

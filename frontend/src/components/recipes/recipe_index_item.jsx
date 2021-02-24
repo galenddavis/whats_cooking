@@ -10,16 +10,16 @@ const RecipeIndexItem = ({dish, recipeInfo}) => {
   return (
     <div className='card'>
       <li>
-        <a href={url}>
-          <img src={dish.image} alt={dish.title} />
+        {/* <a href={url}> */}
+          <img src={dish.image} alt={dish.title} onClick={() => this.getInfo(dish.id)} />
           <section className='details'>
             <h1>{dish.title}</h1>
             <h1><i className="fas fa-heart"></i> {dish.likes}</h1>
           </section>
-        </a>
+        {/* </a> */}
       </li>
     </div>
-  );
-}
+  )};
+
 
 export default RecipeIndexItem

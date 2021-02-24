@@ -14,7 +14,7 @@ router.get('/search', async (req, res, next) => {
         const items = new URLSearchParams({
             apiKey: keys.spoonAPI,
             ingredients: food,
-            number: 9
+            number: 1
         })
         const request = await axios.get(`${searchUrl}${items}`)
         
@@ -40,6 +40,8 @@ router.get('/info', async (req, res, next) => {
         next(error)
     }
 })
+
+
 
 
 

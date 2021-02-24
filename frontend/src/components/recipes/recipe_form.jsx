@@ -9,21 +9,27 @@ class Recipes extends React.Component {
 
     this.state = {
       ingredients: [],
-      checked: false
+      checkbox: [
+        {chickenchecked: false},
+        {beefchecked: false},
+        {tofuchecked: false},
+        {turkeychecked: false},
+        {porkchecked: false},
+        {beanschecked: false},
+        {onionschecked: false},
+        {tomatoeschecked: false},
+        {mushroomschecked: false},
+        {okrachecked: false},
+        {ricechecked: false},
+        {breadchecked: false},
+        {pastachecked: false},
+      ]
+    
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCheck = this.handleCheck.bind(this);
+    // this.uncheckAll = this.uncheckAll.bind(this);
   }
-
-  //   componentWillUnmount() {
-  //     this.state = { ingredients: [] };
-  //     document.getElementById("checkbox").checked = false;
-  //   }
-
-//   componentDidMount() {
-//     this.state = { ingredients: [] };
-//     document.getElementById("checkbox").checked = false;
-//   }
 
   update(field) {
     return (e) => {
@@ -48,28 +54,29 @@ class Recipes extends React.Component {
   }
 
   handleCheck(e) {
-    this.setState({ check: e.target.checked });
+      debugger
+    if (this.state.chicken === false) {
+        this.setState( {chickenchecked: e.target.chickenchecked = true });
+    } else {
+        this.setState( {chickenchecked: e.target.chickenchecked = false });
+    }
   }
 
+//   uncheckAll(){
+//     ('input[type="checkbox"]:checked').prop('checked',false);
+//   }
 
+   
     // uncheckAll(){
-    //     ('input[type="checkbox"]:checked').prop('checked',false);
-    //  }
+    //    let items = document.getElementById('radio');
+    //    for (let i = 0; i < items.length; i++){
+    //      if (items[i].type === 'checkbox')
+    //      items[i].checked = false
+    //    }
+    // }
    
   render() {
-    //  const UnCheckAll = (chk) => {
-    //     for (i = 0; i < chk.length; i++){
-    //     chk[i].checked = false 
-    //   }
-    // }   
-    // const { recipes } = this.props
-    // const recipeListItem = recipes.map(recipe => (
-    //     <RecipeItem />
-    // ))
-
-    // const index = this.props.recipes.length ? (
-    //     <div><RecipeIndex recipe = {this.props.recipes}/></div>
-    // ) : null;
+  debugger
 
     return (
       <div className="sidebar-body">
@@ -85,8 +92,8 @@ class Recipes extends React.Component {
                   onClick={this.update("chicken")}
                   type="checkbox"
                   value="chicken"
-                    // onChange = {this.handleCheck}
-                    // checked = {this.state.check}
+                    onChange = {this.handleCheck}
+                    chickenchecked = {this.state.chickencheck}
                 />
               Chicken</label>
 
@@ -230,9 +237,8 @@ class Recipes extends React.Component {
             </section>
           </div>
 
-        
-          {/* <input type="submit" value="What's cooking?" /> */}
-          {/* <input onClick={this.unCheck()}>Reset</input> */}
+          <input type="submit" value="What's cooking?" />
+          {/* <input onClick={this.uncheckAll}>Reset</input> */}
           {/* <button onClick ={this.uncheckAll}>RESET</button> */}
         </form>
         {/* {index} */}

@@ -26,6 +26,9 @@
 .session-button {
     display: flex;
 }
+.session-button h1:hover {
+    cursor: pointer;
+}
 
 .burger {
     // display: none;

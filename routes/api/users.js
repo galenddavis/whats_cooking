@@ -75,7 +75,7 @@ router.post('/register', (req, res) => {
     User.findOne({ email })
     .then(user => {
       if(!user) {
-        return res.status(404).json({email: 'This user does not exist.'})
+        return res.status(404).json({email: 'This user does not exist'})
       }
       
       bcrypt.compare(password, user.password)
