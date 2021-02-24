@@ -5,5 +5,5 @@ export const findRecipes = (ingredients) => (
 )  
 
 export const getRecipeInfo = (id) => (
-    axios.get('/api/search/info', {params: id})
+    axios.get('/api/search/info', {params: {query: id}})
 )
