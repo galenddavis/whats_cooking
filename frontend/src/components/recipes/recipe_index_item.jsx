@@ -11,10 +11,10 @@ class RecipeIndexItem extends React.Component{
   // const splitTitle = dish.title.split(' ').join('-')
   // const url = `https://spoonacular.com/recipes/${splitTitle}-${dish.id}`
   
-  getInfo(id) {
-    const info = this.props.recipeInfo(id);
-    // const url = info.sourceUrl;
-    this.handleModal();
+   getInfo(id) {
+    this.props.recipeInfo(id)
+    setTimeout(this.handleModal(), 2000)
+    debugger
   }
   handleModal() {
     debugger

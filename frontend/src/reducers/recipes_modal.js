@@ -6,6 +6,7 @@ const recipesModalReducer = (state = null, action) => {
         case OPEN_MODAL:
             return action.modal;
         case OPEN_RECIPE_MODAL:
+            debugger
             return action.modal;
         case CLOSE_MODAL:
             return null

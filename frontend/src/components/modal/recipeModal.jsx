@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { closeModal, openRecipeModal } from '../../actions/modal_actions';
+import RecipeShowComponent from '../recipes/recipe_show'
 
-function recipesModal({ modal, closeModal, openRecipeModal }) {
+function recipesModal({ modal, closeModal, openRecipeModal, info, recipes }) {
     if (!modal) {
         return null;
     }
@@ -10,9 +11,10 @@ function recipesModal({ modal, closeModal, openRecipeModal }) {
     let component;
     switch (modal) {
         case `recipe`:
+            debugger
             component = <RecipeShowComponent 
-                dish={this.props.info} 
-                recipe={this.props.recipes}/>;
+                dish={info} 
+                recipe={recipes}/>;
             break;
         default:
             return null;
@@ -30,14 +32,16 @@ function recipesModal({ modal, closeModal, openRecipeModal }) {
 
 
 const mSTP = state => {
+    debugger
     return {
         modal: state.ui.recipes, 
-        recipes: store.recipes.recipes.data,
-        info: store.recipes.info.data
+        recipes: state.recipes.recipes.data,
+        info: state.recipes.info.data || null
     };
 };
 
 const mDTP = dispatch => {
+    debugger
     return {
         closeModal: () => dispatch(closeModal()),
         openModal: modal => dispatch(openRecipeModal(modal))
