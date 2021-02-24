@@ -10,6 +10,8 @@ const path = require('path');
 const users = require('./routes/api/users')
 const search = require('./routes/api/search')
 const info = require('./routes/api/info')
+const recipes = require('./routes/api/recipe')
+const grocerylist = require('./routes/api/grocerylist')
 
 mongoose
     .connect(db, { useNewUrlParser: true })
@@ -35,7 +37,8 @@ require("./config/passport")(passport);
 app.use('/api/users', users)
 app.use('/api/search', search)
 app.use('/api/info', info)
-// app.use('/api/recipes', recipes)
+app.use('/api/recipes', recipes)
+app.use('/api/grocerylist', grocerylist)
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'));

@@ -7,6 +7,15 @@ router.get("/test", (req, res) => {
   res.json({ msg:"This is the recipe route"});
 });
 
+router.get("/user/:user_id",
+passport.authenticate("jwt", { session: false}),
+(req, res) => {
+    Recipe.find({user: req.params.user_id})
+        .sort({ date: -1 })
+        .then(recipes => res.json(recipes))
+        .catch(err => res.status(400).json(err));
+})
+
 router.post("/",
 passport.authenticate("jwt", { session: false}),
 (req, res) => {

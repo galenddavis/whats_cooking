@@ -7,7 +7,7 @@ const RecipeSchema = new Schema({
     ref: 'users'                    // reference name of model - users
   },
   apiRecipeId:{
-    type: Integer,
+    type: String,
     required: true
   },
   date: {
