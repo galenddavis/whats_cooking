@@ -35,6 +35,7 @@ require("./config/passport")(passport);
 app.use('/api/users', users)
 app.use('/api/search', search)
 app.use('/api/info', info)
+// app.use('/api/recipes', recipes)
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'));
