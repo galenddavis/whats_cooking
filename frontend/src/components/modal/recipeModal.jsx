@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { closeModal, openModal } from '../../actions/modal_actions';
+import { closeModal, openRecipeModal } from '../../actions/modal_actions';
 
-function recipesModal({ modal, closeModal, openModal }) {
+function recipesModal({ modal, closeModal, openRecipeModal }) {
     if (!modal) {
         return null;
     }
@@ -10,7 +10,9 @@ function recipesModal({ modal, closeModal, openModal }) {
     let component;
     switch (modal) {
         case `recipe`:
-            component = <recipeShowComponent />;
+            component = <RecipeShowComponent 
+                dish={this.props.info} 
+                recipe={this.props.recipes}/>;
             break;
         default:
             return null;
@@ -38,7 +40,7 @@ const mSTP = state => {
 const mDTP = dispatch => {
     return {
         closeModal: () => dispatch(closeModal()),
-        openModal: modal => dispatch(openModal(modal))
+        openModal: modal => dispatch(openRecipeModal(modal))
     };
 };
 

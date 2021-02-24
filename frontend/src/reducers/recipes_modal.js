@@ -1,9 +1,11 @@
-import { OPEN_MODAL, CLOSE_MODAL } from '../actions/modal_actions';
+import { OPEN_MODAL, CLOSE_MODAL, OPEN_RECIPE_MODAL } from '../actions/modal_actions';
 
 const recipesModalReducer = (state = null, action) => {
     Object.freeze(state);
     switch (action.type) {
         case OPEN_MODAL:
+            return action.modal;
+        case OPEN_RECIPE_MODAL:
             return action.modal;
         case CLOSE_MODAL:
             return null

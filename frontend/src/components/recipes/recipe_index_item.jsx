@@ -12,13 +12,14 @@ class RecipeIndexItem extends React.Component{
   // const url = `https://spoonacular.com/recipes/${splitTitle}-${dish.id}`
   
   getInfo(id) {
-    debugger
     const info = this.props.recipeInfo(id);
-    const url = info.sourceUrl;
-    debugger
+    // const url = info.sourceUrl;
+    this.handleModal();
   }
   handleModal() {
-    this.props.openRecipeModal(`recipe`);
+    debugger
+    this.props.recipeModal();
+
   }
 
   render(){
