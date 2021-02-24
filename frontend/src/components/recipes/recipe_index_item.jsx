@@ -15,6 +15,7 @@ class RecipeIndexItem extends React.Component{
     debugger
     const info = this.props.recipeInfo(id);
     const url = info.sourceUrl;
+    debugger
   }
 
   render(){

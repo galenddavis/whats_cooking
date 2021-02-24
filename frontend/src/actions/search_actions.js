@@ -11,16 +11,10 @@ export const receiveRecipes = (recipes) => ({
 })
 
 export const recipeInfo = (info) => ({
-    
     type: RECIPE_INFO, 
     info
 })
 
-// export const findRecipes = ingredients => dispatch => (
-//     APISearchUtils.findRecipes(ingredients).then(
-//         recipes => dispatch(receiveRecipes(recipes))
-//     )
-// )
 
 export const findRecipes = ingredients => dispatch => (
     APISearchUtils.findRecipes(ingredients).then(

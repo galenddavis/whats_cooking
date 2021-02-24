@@ -5,20 +5,24 @@ const axios = require('axios');
 
 const infoUrl = 'https://api.spoonacular.com/recipes/'
 
-router.get('/info', (req, res) => {
-    debugger
+router.get('/info', async (req, res, next) => {
     try{
-        debugger
-        const id = req.query.id
+
+        const recipe = req.query.query
+        // console.log(req.query.query)
+
         const params = new URLSearchParams({
-            apiKey: keys.spoonAPI,
+            includeNutrition: false,
+            apiKey: keys.spoonAPI
         })
-        const request = axios.get(`${infoUrl}${id}/information?includeNutrition=false${params}`)
-        console.log(request)
-        debugger
-        res.json(request.sourceUrl)
+        const request = await axios.get(`${infoUrl}${recipe}/information?${params}`)
+
+        // console.log(request)
+        // console.log(`${infoUrl}${recipe}/information?${params}`)
+        // console.log(request.sourceUrl)
+        res.json(request.data.sourceUrl)
     } catch(error) {
-        console.log(error)
+        next(error)
     }
 })
 

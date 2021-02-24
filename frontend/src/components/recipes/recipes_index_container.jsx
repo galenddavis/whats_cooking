@@ -5,7 +5,8 @@ import RecipeIndex from './recipes_index'
 
 const mSTP = function (store, ownProps) {
   return {
-    recipes: store.recipes.recipes.data
+    recipes: store.recipes.recipes.data, 
+    info: store.recipes.info.data
   };
 };
 

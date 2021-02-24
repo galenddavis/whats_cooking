@@ -6,5 +6,6 @@ export const findRecipes = (ingredients) => (
 
 export const getRecipeInfo = (id) => {
     debugger
-    return axios.get('/api/info/info', {params: id})
+    console.log(id)
+    return axios.get('/api/info/info', {params: {query: id}})
 }
