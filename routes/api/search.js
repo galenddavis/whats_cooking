@@ -14,7 +14,7 @@ router.get('/search', async (req, res, next) => {
         const items = new URLSearchParams({
             apiKey: keys.spoonAPI,
             ingredients: food,
-            number: 1
+            number: 9
         })
         const request = await axios.get(`${searchUrl}${items}`)
         

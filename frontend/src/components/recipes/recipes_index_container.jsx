@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { findRecipes, getInfo } from '../../actions/search_actions'
 import RecipeIndex from './recipes_index'
+import { openRecipeModal, closeModal } from '../../actions/modal_actions';
 
 
 const mSTP = function (store, ownProps) {
@@ -13,7 +14,9 @@ const mSTP = function (store, ownProps) {
 const mDTP = dispatch => {
   return {
     findRecipes: (ingredients) => dispatch(findRecipes(ingredients)), 
-    recipeInfo: (id) => dispatch(getInfo(id))
+    recipeInfo: (id) => dispatch(getInfo(id)),
+    openRecipeModal: () => dispatch(openRecipeModal(`recipe`)),
+    closeModal: () => dispatch(closeModal())
   }
 }
 
