@@ -8,6 +8,13 @@ export const openModal = modal => {
     };
 };
 
+export const openRecipeModal = modal => {
+    return {
+        type: OPEN_MODAL,
+        modal
+    }
+}
+
 export const closeModal = () => {
     return {
         type: CLOSE_MODAL
