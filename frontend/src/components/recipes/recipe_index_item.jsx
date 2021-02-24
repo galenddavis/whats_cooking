@@ -17,6 +17,9 @@ class RecipeIndexItem extends React.Component{
     const url = info.sourceUrl;
     debugger
   }
+  handleModal() {
+    this.props.openRecipeModal(`recipe`);
+  }
 
   render(){
     const { dish } = this.props

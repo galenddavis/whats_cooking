@@ -2,96 +2,93 @@ import React from 'react';
 import "../../Stylesheets/session_form.scss";
 
 class SessionForm extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+      super(props);
+      
+      this.state = {
+          username: '',
+          email: '',
+          password: '',
+        };
         
-        this.state = {
-            username: '',
-            email: '',
-            password: '',
-          };
-          
-        this.handleSubmit = this.handleSubmit.bind(this);
-        
+      this.handleSubmit = this.handleSubmit.bind(this);
+      this.close = this.close.bind(this);
+      
+  }
+  
+  componentWillUnmount() {
+    this.props.removeErrors();
+  }
+
+  update(field) {
+      
+    return e => {
+        this.setState({
+            [field]: e.currentTarget.value
+        });
     }
-
-    
-
-    componentWillUnmount() {
-      this.props.removeErrors();
+  }
+  handleSubmit(event) {
+    // debugger
+      
+      event.preventDefault();
+      const chef = Object.assign({}, this.state);
+      this.props.processForm(chef).then(this.close)
+  }
+  close() {
+    // debugger
+    if (this.props.user === true) {
+      // debugger
+      this.props.closeModal()
     }
+  }
+  render() {
 
-    update(field) {
-        
-        return e => {
-            this.setState({
-                [field]: e.currentTarget.value
-            });
-        }
-    }
+      const errors = this.props.errors.map(error => {
+          return (
+              <li className="error-msg">{error}</li>
+          )
+      })
+      const showErrors = this.props.errors.length > 0 ? <ul className='errors-container'>{errors}</ul> : null
 
-    handleSubmit(event) {
-        
-        event.preventDefault();
-        // let user = {
-        //     username: this.state.username,
-        //     email: this.state.email,
-        //     password: this.state.password
-        // }
-        this.props.processForm(this.state).then(this.props.closeModal)
-        
-        // if (this.props.processForm(user)) {
-        //   this.props.closeModal()
-        // }
-    }
+    const signupForm = <label>Username
+                <input
+        type="text"
+        value={this.state.username}
+        onChange={this.update("username")}
+        required
+      />
+    </label>
 
-    render() {
+      return (
+        <div>
+          <form onSubmit={this.handleSubmit}>
 
-        const errors = this.props.errors.map(error => {
-            return (
-                <li>{error}</li>
-            )
-        })
-        const showErrors = this.props.errors.length ? <ul>{errors}</ul> : null
-
-        return (
-          <div>
-            <form onSubmit={this.handleSubmit}>
+            <section className="modal-content">
               {showErrors}
-              <section className="modal-content">
-                <label>Username
-                  <input
-                    type="text"
-                    // placeholder="Username"
-                    value={this.state.username}
-                    onChange={this.update("username")}
-                    required
-                  />
-                </label>
-                <label>Email
-                  <input
-                    type="email"
-                    // placeholder="Email"
-                    value={this.state.email}
-                    onChange={this.update("email")}
-                    required
-                  />
-                </label>
-                <label>Password
-                  <input
-                    type="password"
-                    // placeholder="password"
-                    value={this.state.password}
-                    onChange={this.update("password")}
-                    required
-                  />
-                </label>
-                <input type="submit" value='Lets Get Cookin!' id='modal-submit' />
-              </section>
-            </form>
-          </div>
-        );
-    }
+              {this.props.formType === 'Sign Up' ? signupForm : null}
+              <label>Email
+                <input
+                  type="email"
+                  value={this.state.email}
+                  onChange={this.update("email")}
+                  required
+                />
+              </label>
+              <label>Password
+                <input
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update("password")}
+                  required
+                />
+              </label>
+              <input type="submit" value='Lets Get Cookin!' id='modal-submit' />
+            </section>
+          </form>
+        </div>
+      );
+  }
 }
 
 export default SessionForm;
