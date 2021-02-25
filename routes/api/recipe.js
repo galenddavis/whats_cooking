@@ -32,7 +32,7 @@ passport.authenticate("jwt", { session: false}),
 router.delete("/:recipeId",
 passport.authenticate("jwt", { session: false}),
   (req,res) => {
-      delete req.body.recipeID
+      Recipe.findByIdAndRemove(req.params._id)
       .then(id => res.json(id))
       .catch(err => res.status(400).json(err));
   })
