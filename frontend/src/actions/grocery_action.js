@@ -19,13 +19,15 @@ export const receiveGroceryItem = (item) => ({
 
 
 
-export const addGroceryItem = item => dispatch => (
-  APIGroceries.addGroceryItem(item)
-  .then(gorceryItem => dispatch(addGroceryItem(gorceryItem)))
-)
+export const addGroceryItem = item => dispatch => {
+  debugger
+  return APIGroceries.addGroceryItem(item)
+  .then(groceryItem => dispatch(addGroceryItem(groceryItem)))
+  
+}
 export const fetchGroceryList = () => dispatch => (
   APIGroceries.fetchGroceryList()
-  .then(gorceryItems => dispatch(receiveGroceries(gorceryItems)))
+  .then(groceryItems => dispatch(receiveGroceries(groceryItems)))
 )
 
 export const deleteGroceryItem = itemId => dispatch => (

@@ -1,8 +1,9 @@
 import axios from 'axios';
 
-export const addGroceryItem = item => (
-  axios.post('/api/groceryList/', item)
-)
+export const addGroceryItem = item => {
+  debugger
+  return axios.post('/api/groceryList/', item)
+}
 
 export const deleteGroceryItem = item => (
   axios.delete('/api/groceryList/users/', item)
