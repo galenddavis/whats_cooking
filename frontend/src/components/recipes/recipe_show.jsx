@@ -4,25 +4,61 @@ import { getInfo } from '../../actions/search_actions';
 class RecipeShowComponent extends React.Component {
     constructor(props) {
         super(props)
+
+        this.state = {
+            isLoading: true
+        }
+    }
+
+    componentWillUnmount() {
+        this.setState({isLoading: true})
     }
 
 
     render() {
         let { dish, recipe } = this.props;
-        debugger
-        let ingredients = recipe.map(ingredient => (
-            <li>{ingredient.title}</li>
+
+        let match;
+        recipe.forEach(food => {
+            debugger
+            if (this.props.dish.id === food.id) {
+                match = food
+            }
+        })
+
+        let ingredients = match.missedIngredients.map(ingredient => (
+            <li>{ingredient.amount} {ingredient.unit} {ingredient.name}</li>
         ))
-        return (
-            <div>
-                <ul>
-                    <h3>Grocery List</h3>
-                    {ingredients}
-                </ul>
-                <img src={dish.image} alt={dish.title} />
-                <h1>{dish.creditsText}</h1>
-            </div>
-        )
+        // if (dish) {this.state.isLoading = false}
+        if (this.state.isLoading === false) {
+            return (<div>
+                <h1>Loading Recipe Info...</h1>
+            </div>)
+        } else {
+            return (
+                <div className='recipe-show'>
+                    <section className='ingredients'>
+                        <h1>{dish.title}</h1>
+                        <a href={dish.sourceUrl} target="_blank" rel="noreferrer">
+                            <h3>Full Recipe</h3>
+                        </a>
+                        <div className='grocery-list'>
+                            <h3>Grocery List</h3>
+                            <ul>
+                                {ingredients}
+                            </ul>
+                        </div>
+                        <div className='buttons'>
+                            <button>Add to Grocery List</button>
+                            <button>Save this Recipe!</button>
+                        </div>
+                    </section>
+                    <section className='recipe'>
+                        <img src={dish.image} alt={dish.title} />
+                    </section>
+                </div>
+            )
+        }  
     }
 }
 
