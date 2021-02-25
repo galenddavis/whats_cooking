@@ -32,8 +32,9 @@ passport.authenticate("jwt", { session: false }),
 router.delete("/:_id", //turky Id 
 passport.authenticate("jwt", {session:false}),
 (req,res) => {
-  GroceryList.findByIdAndRemove(req.params._id)
-  .then(id => res.json(id))
+  Groceries.findByIdAndRemove(req.params._id)
+  .then((groceries) => res.json(groceries))
+  // .then(id => res.json(id))
   .catch(err => res.status(400).json(err));
 })
 
