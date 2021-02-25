@@ -12,13 +12,114 @@
   font-family: 'Big Shoulders Display', cursive;
   position: absolute;
   top: 45%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
   background-color: whitesmoke;
-  border-radius: 3px;
+  border-radius: 15px;
   border-top: 1px solid black;
-  /* padding: 20px; */
-  height: 500px;
-  width: 500px;
+  // height: 500px;
+  // width: 800px;
+  height: 370px;
+  width: 556px;
   box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0 0px 50px rgba(0,0,0,0.2);
+  // padding: 20px 0px 20px 20px;
+  
 }
+
+
+
+.recipe-show {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 20px;
+  // overflow: hidden;
+
+  .grocery-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    ul {
+      height: 100px;
+      overflow-y: scroll;
+      
+    }
+  }
+
+
+  .ingredients {
+    // margin: 0px 100px 0px 30px;
+    min-width: 70%;
+    justify-content: space-between;
+    
+
+    h3 {
+      font-size: 23px;
+      text-decoration: underline;
+      margin-bottom: 10px;
+      background: linear-gradient(180deg, #7dccd3ab 60%, #f5f5f5 40%); 
+     
+    }
+
+    a {
+      color: black;
+    }
+
+    .buttons {
+      display: flex;
+
+      button:hover {
+        background-color: #94e8f0;
+
+      }
+    
+    }
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 30px;
+      padding: 10px;
+      background: linear-gradient(180deg, #7dccd3ab 60%, #f5f5f5 40%); 
+    }
+
+    // ul{
+    //   background: linear-gradient(348deg, #f5f5f5 50%, #7dccd3ab 50%); 
+    // }
+
+    li {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      margin: 6px 0px;
+    }
+
+    img {
+      height: auto;
+      width: auto;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      box-shadow: -8px 0px 1px lightgrey;
+    }
+
+    button {
+      margin: 15px;
+      border-radius: 6px;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #7dccd3ab;
+      border: none;
+      padding: 8px;
+    }
+
+
+  }
+}
+
+
+
