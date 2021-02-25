@@ -29,4 +29,12 @@ passport.authenticate("jwt", { session: false }),
   .then(grocery => res.json(grocery))
 })
 
+router.delete("/:_id", //turky Id 
+passport.authenticate("jwt", {session:false}),
+(req,res) => {
+  GroceryList.findByIdAndRemove(req.params._id)
+  .then(id => res.json(id))
+  .catch(err => res.status(400).json(err));
+})
+
 module.exports = router
