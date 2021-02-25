@@ -29,10 +29,12 @@ passport.authenticate("jwt", { session: false}),
   .then(recipe => res.json(recipe));
 })
 
-router.delete('/:id',
+router.delete("/:recipeId",
 passport.authenticate("jwt", { session: false}),
-(req, res) => {
-  res.send('Delete Author ' + req.params.id)
-})
+  (req,res) => {
+      Recipe.findByIdAndRemove(req.params._id)
+      .then(id => res.json(id))
+      .catch(err => res.status(400).json(err));
+  })
 
 module.exports = router
