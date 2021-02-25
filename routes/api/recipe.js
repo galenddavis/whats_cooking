@@ -22,7 +22,7 @@ passport.authenticate("jwt", { session: false}),
   
   const newRecipe = new Recipe({
     user: req.user.id,
-    apiRecipeId: req.body.apiRecipeId
+    recipeId: req.body.recipeId
   })
 
   newRecipe.save()
