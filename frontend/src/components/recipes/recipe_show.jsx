@@ -21,15 +21,13 @@ class RecipeShowComponent extends React.Component {
         let match;
         recipe.forEach(food => {
             debugger
-            console.log(dish.id)
-            console.log(food.id)
             if (this.props.dish.id === food.id) {
                 match = food
             }
         })
 
         let ingredients = match.missedIngredients.map(ingredient => (
-            <li>{ingredient.name}</li>
+            <li>{ingredient.amount} {ingredient.unit} {ingredient.name}</li>
         ))
         // if (dish) {this.state.isLoading = false}
         if (this.state.isLoading === false) {
@@ -39,12 +37,17 @@ class RecipeShowComponent extends React.Component {
         } else {
             return (
                 <div className='recipe-show'>
-                    <section className='grocery-list'>
+                    <section className='ingredients'>
                         <h1>{dish.title}</h1>
-                        <ul>
-                        <h3>Grocery List</h3>
-                            {ingredients}
-                        </ul>
+                        <a href={dish.sourceUrl} target="_blank" rel="noreferrer">
+                            <h3>Full Recipe</h3>
+                        </a>
+                        <div className='grocery-list'>
+                            <h3>Grocery List</h3>
+                            <ul>
+                                {ingredients}
+                            </ul>
+                        </div>
                         <div className='buttons'>
                             <button>Add to Grocery List</button>
                             <button>Save this Recipe!</button>
