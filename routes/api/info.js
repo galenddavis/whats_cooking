@@ -20,7 +20,7 @@ router.get('/info', async (req, res, next) => {
         // console.log(request)
         // console.log(`${infoUrl}${recipe}/information?${params}`)
         // console.log(request.sourceUrl)
-        res.json(request.data.sourceUrl)
+        res.json(request.data)
     } catch(error) {
         next(error)
     }

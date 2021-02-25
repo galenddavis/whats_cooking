@@ -8,11 +8,13 @@ import Modal from './modal/modal';
 import Sidebar from './sidebar/sidebar'
 import RecipeIndex from './recipes/recipes_index_container'
 import Footer from './footer/footer';
+import RecipesModal from './modal/recipeModal'
 
 
 const App = () => (
     <div>
         <Modal />
+        <RecipesModal />
         <NavBar />
         <div className='main-content'>
             <Sidebar />
