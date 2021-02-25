@@ -9,11 +9,10 @@ const RecipesReducer = (state = nullState, action) => {
         case RECEIVE_RECIPES:
             // return [recipes].push(action.recipes);
             return Object.assign({}, state, {recipes: action.recipes});
+            // return action.recipes;
+
         case RECIPE_INFO:
-            console.log(action.info)
-            return Object.assign({}, state, {info: action.info});
-            // let src = action.info  
-            // return src
+            return Object.assign({}, state, {info: action.info});  
         default:
             return state;
     }

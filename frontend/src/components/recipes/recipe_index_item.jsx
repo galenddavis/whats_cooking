@@ -1,11 +1,9 @@
 import React from 'react';
 
-
 // const RecipeIndexItem = ({dish, recipeInfo}) => {
-class RecipeIndexItem extends React.Component{
+class RecipeIndexItem extends React.Component {
   constructor(props) {
     super(props)
-
     this.getInfo = this.getInfo.bind(this)
   }
   // const splitTitle = dish.title.split(' ').join('-')
@@ -39,5 +37,6 @@ class RecipeIndexItem extends React.Component{
     </div>
   )};
 }
+
 
 export default RecipeIndexItem

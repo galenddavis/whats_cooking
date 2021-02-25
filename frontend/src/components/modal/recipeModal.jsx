@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { closeModal, openRecipeModal } from '../../actions/modal_actions';
-import RecipeShowComponent from '../recipes/recipe_show'
+import { openModal, closeModal, openRecipeModal } from '../../actions/modal_actions';
+import { addGroceryItem } from '../../actions/grocery_action';
+import RecipeShowComponent from '../recipes/recipe_show';
 
-function recipesModal({ modal, closeModal, openRecipeModal, info, recipes }) {
+function recipesModal({ addGroceryItem, modal, openModal, closeModal, openRecipeModal, info, recipes, user }) {
     if (!modal) {
         return null;
     }
@@ -13,7 +14,10 @@ function recipesModal({ modal, closeModal, openRecipeModal, info, recipes }) {
         case `recipe`:
             debugger
             component = <RecipeShowComponent 
+                openModal = {openModal}
                 dish={info} 
+                user = {user}
+                addGroceryItem ={addGroceryItem}
                 recipe={recipes}/>;
             break;
         default:
@@ -36,7 +40,8 @@ const mSTP = state => {
     return {
         modal: state.ui.recipes, 
         recipes: state.recipes.recipes.data,
-        info: state.recipes.info.data || null
+        info: state.recipes.info.data || null,
+        user: state.session.isAuthenticated,
     };
 };
 
@@ -44,7 +49,9 @@ const mDTP = dispatch => {
     debugger
     return {
         closeModal: () => dispatch(closeModal()),
-        openModal: modal => dispatch(openRecipeModal(modal))
+        openRecipeModal: modal => dispatch(openRecipeModal(modal)),
+        openModal: () => dispatch(openModal('signup')),
+        addGroceryItem: item => dispatch(addGroceryItem(item))
     };
 };
 

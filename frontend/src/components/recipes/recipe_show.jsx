@@ -6,12 +6,32 @@ class RecipeShowComponent extends React.Component {
         super(props)
 
         this.state = {
-            isLoading: true
+            isLoading: true,
+            
         }
+        this.grocerylist = this.grocerylist.bind(this)
     }
 
     componentWillUnmount() {
         this.setState({isLoading: true})
+    }
+
+    grocerylist() {
+        let match;
+        this.props.recipe.forEach(food => {
+            debugger
+            if (this.props.dish.id === food.id) {
+                match = food
+            }
+        })
+        console.log(this.props.user)
+        if (!this.props.user) {
+            this.props.openModal();
+        } else {
+          match.missedIngredients.forEach(ingredient => {
+              this.props.addGroceryItem(ingredient)
+          })
+        }
     }
 
 
@@ -35,6 +55,7 @@ class RecipeShowComponent extends React.Component {
                 <h1>Loading Recipe Info...</h1>
             </div>)
         } else {
+            
             return (
                 <div className='recipe-show'>
                     <section className='ingredients'>
@@ -49,7 +70,8 @@ class RecipeShowComponent extends React.Component {
                             </ul>
                         </div>
                         <div className='buttons'>
-                            <button>Add to Grocery List</button>
+
+                            <button onClick={this.grocerylist}>Add to Grocery List</button>
                             <button>Save this Recipe!</button>
                         </div>
                     </section>
