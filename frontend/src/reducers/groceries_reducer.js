@@ -17,7 +17,7 @@ import {REMOVEGROCERYITEM,
       case REMOVEGROCERYITEM:
         const newState = Object.assign({},state);
         debugger
-        delete newState[action.groceryId];
+        delete newState[action.item];
         return newState
       default:
         return state;
