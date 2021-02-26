@@ -5,7 +5,7 @@ import {REMOVEGROCERYITEM,
 
 
 
-   const groceryReducer = (state ={groceries:{}, user: {}}, action ) => {
+   const groceryReducer = (state ={data: []}, action ) => {
      Object.freeze(state);
      let newState = Object.assign({}, state);
      switch (action.type) {
