@@ -5,7 +5,7 @@ import {REMOVEGROCERYITEM,
 
 
 
-   const groceryReducer = (state ={groceries: {}}, action ) => {
+   const groceryReducer = (state ={data: []}, action ) => {
      Object.freeze(state);
 
      switch (action.type) {
