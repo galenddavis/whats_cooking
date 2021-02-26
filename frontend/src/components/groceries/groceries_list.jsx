@@ -34,7 +34,6 @@ class GroceryList extends React.Component {
 
   render(){
     debugger
-    
     console.log(this.props.groceries)
     // const mappedItems = this.props.groceries.data.length > 0 ? this.props.groceries.data.map((item) => {
     //   return <GroceryListItem item={item} removeItem={this.props.removeItem}/>
@@ -43,7 +42,7 @@ class GroceryList extends React.Component {
     return (
       <div>
         <ul>
-          {this.props.groceries ==={} ? this.test() : this.mappedItems()}
+          {this.props.groceries ==={} ? this.test() : this.mappedItems() }
           {/* {mappedItems} */}
         </ul>
       </div>
