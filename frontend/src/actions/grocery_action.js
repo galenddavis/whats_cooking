@@ -23,15 +23,17 @@ export const addGroceryItem = item => dispatch => {
   debugger
   return APIGroceries.addGroceryItem(item)
   .then(groceryItem => dispatch(addGroceryItem(groceryItem)))
-  
+  .catch(err => console.log(err))
 }
 export const fetchGroceryList = (userId) => dispatch => {
   debugger
   return APIGroceries.fetchGroceryList(userId)
   .then(groceryItems => dispatch(receiveGroceries(groceryItems)))
+  .catch(err => console.log(err))
 }
 
 export const deleteGroceryItem = itemId => dispatch => (
   APIGroceries.deleteGroceryItem(itemId)
-  .then(item => dispatch(removeGroceryItem(item.id)) )
+  .then(item => dispatch(removeGroceryItem(item.id)))
+  .catch(err => console.log(err))
 )

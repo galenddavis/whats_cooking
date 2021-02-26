@@ -5,7 +5,9 @@ class GroceryList extends React.Component {
   constructor(props){
     debugger
     super(props)
-
+    this.state = {
+      groceries: []
+    }
     this.mappedItems = this.mappedItems.bind(this);
     this.test = this.test.bind(this)
   }
