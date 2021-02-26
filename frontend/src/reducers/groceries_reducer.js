@@ -16,8 +16,16 @@ import {REMOVEGROCERYITEM,
         return action.items;
       case REMOVEGROCERYITEM:
         const newState = Object.assign({},state);
+        let index;
+        state.data.forEach((ele, idx) => {
+          debugger
+          if (ele.id === action.item.id) {
+              index = idx
+          }
+        })
+
         debugger
-        delete newState[action.item];
+        delete newState.data[index];
         return newState
       default:
         return state;

@@ -32,5 +32,5 @@ export const fetchGroceryList = (userId) => dispatch => {
 export const deleteGroceryItem = itemId => dispatch => {
   debugger
   return APIGroceries.deleteGroceryItem(itemId)
-  .then(item => dispatch(removeGroceryItem(item.id)) )
+  .then(item => dispatch(removeGroceryItem(item)) )
 }
