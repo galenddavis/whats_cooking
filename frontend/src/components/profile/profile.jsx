@@ -10,8 +10,10 @@ class Profile extends React.Component {
     }
     
     componentWillMount() {
-        console.log(this.props.currentUser.id)
-        this.props.fetchUserRecipes(this.props.currentUser.id);
+        debugger
+        // console.log(this.props.currentUser.id)
+        // this.props.fetchUserRecipes(this.props.currentUser.id);
+        this.props.fetchGroceryList(this.props.currentUser.id)
     }
 
     componenentWillReceiveProps(nextState) {
@@ -19,20 +21,25 @@ class Profile extends React.Component {
     }
     
     render() {
-        if (this.state.recipes.length === 0) {
-            return (
-                <div>Are you not eating dinner?</div>
-            )
-        } else {
+        let {groceries} = this.props;
+        debugger
+        // if (this.state.recipes.length === 0) {
+        //     return (
+        //         <div>Are you not eating dinner?</div>
+        //     )
+        // } else {
             return (
                 <div>
                     <h2>Saved Recipes</h2>
+                    <ul>
+                        {groceries}
+                    </ul>
                     {this.state.recipes.map(recipe => (
                         <UserRecipes key={recipe._id} recipeId ={recipe.recipeId} /> 
                     ))}
                 </div>
             );
-        }
+        // }
     }
 }
 

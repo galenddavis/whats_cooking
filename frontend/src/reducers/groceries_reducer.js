@@ -3,20 +3,24 @@ import {REMOVEGROCERYITEM,
    RECIEVE_GROCERY_ITEM } 
    from '../actions/grocery_action'
 
-   const groceryReducer = (state ={}, action ) => {
+
+
+   const groceryReducer = (state ={groceries: {}}, action ) => {
      Object.freeze(state);
 
      switch (action.type) {
        case RECIEVE_GROCERY_ITEM:
-         return action.grocery
-       case RECIEVE_ALL_GROCERIES:
-         return Object.assign({}, state, {groceries: action.groceries});
-       case REMOVEGROCERYITEM:
-         const newState = Object.assign({},state);
-         delete newState[action.groceryId];
-         return newState
-       default:
-         return state;
+         return action.item
+      case RECIEVE_ALL_GROCERIES:
+        debugger
+        console.log(action.items)
+        return action.items;
+      case REMOVEGROCERYITEM:
+        const newState = Object.assign({},state);
+        delete newState[action.groceryId];
+        return newState
+      default:
+        return state;
      }
    }
 
