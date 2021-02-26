@@ -9,10 +9,12 @@ router.get("/test", (req, res) => {
 
 
 router.get("/user/:user_id",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
+passport.authenticate("jwt", { session: false }),
+(req, res) => {
+  debugger
+  console.log(req.params.user_id),
     Groceries.find({ user: req.params.user_id })
-      .then((groceries) => res.json(groceries))
+      .then((grocerylists) => res.json(grocerylists))
       .catch((err) => res.status(400).json(err));
   }
 );

@@ -15,7 +15,7 @@ const mDTP = dispatch => ({
     closeModal: () => dispatch(closeModal()),
     openModal: modal => dispatch(openModal(modal)),
     login: (user) => dispatch(login(user)),
-    fetchUserRecipes: () => dispatch(fetchUserRecipes)
+    // fetchUserRecipes: () => dispatch(fetchUserRecipes)
 })
 
 export default withRouter(connect(mSTP, mDTP)(NavBar));
