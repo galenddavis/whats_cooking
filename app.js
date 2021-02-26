@@ -10,7 +10,7 @@ const path = require('path');
 const users = require('./routes/api/users')
 const search = require('./routes/api/search')
 const info = require('./routes/api/info')
-const recipes = require('./routes/api/recipe')
+const recipes = require('./routes/api/recipes')
 const grocerylist = require('./routes/api/grocerylist')
 
 mongoose

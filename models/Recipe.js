@@ -6,9 +6,15 @@ const RecipeSchema = new Schema({
     type: Schema.Types.ObjectId,    //user object id
     ref: 'users'                    // reference name of model - users
   },
-  apiRecipeId:{
+  recipeTitle:{
     type: String,
     required: true
+  },
+  recipeSource: {
+    type: String,
+  },
+  recipeImage: {
+    type: String
   },
   date: {
     type: Date,

@@ -9,3 +9,9 @@ export const destroyUserRecipe = recipeID => {
     // axios.delete(`/api/recipes/user/${id}`)
     axios.delete(`/api/recipes/${recipeID}`)
 }
+
+export const addRecipe = recipe => {
+    debugger
+    
+    return axios.post('/api/recipes/', recipe)
+}

@@ -19,14 +19,19 @@ passport.authenticate("jwt", { session: false}),
 router.post("/",
 passport.authenticate("jwt", { session: false}),
 (req, res) => {
+  debugger
   
   const newRecipe = new Recipe({
     user: req.user.id,
-    recipeId: req.body.recipeId
+    recipeTitle: req.body.title,
+    recipeSource: req.body.sourceUrl,
+    recipeImage: req.body.image
   })
-
+  
+  console.log(newRecipe)
   newRecipe.save()
-  .then(recipe => res.json(recipe));
+  // .then(recipe => res.json(recipe))
+  .catch(err => res.status(400).json(err));
 })
 
 router.delete("/:recipeId",
