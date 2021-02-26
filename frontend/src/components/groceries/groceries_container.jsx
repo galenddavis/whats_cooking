@@ -5,8 +5,8 @@ import GroceryList from './groceries_list'
 
 const mstp = state => ({
   currentUser: state.session.user,
-  // groceries: state.groceries
-  groceries: Object.values(state.groceries.user)
+  groceries: state.groceries
+  // groceries: Object.values(state.groceries.user)
 })
 
 const mdtp = dispatch => ({

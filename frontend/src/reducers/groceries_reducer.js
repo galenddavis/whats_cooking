@@ -14,10 +14,10 @@ import {REMOVEGROCERYITEM,
       case RECIEVE_ALL_GROCERIES:
         // debugger
         // console.log(action.items)
-        // return action.items;
+        return action.items.data;
         
-        newState.user = action.items.data;
-        return newState;
+        // newState.user = action.items.data;
+        // return newState;
       case REMOVEGROCERYITEM:
         delete newState[action.groceryId];
         return newState

@@ -24,7 +24,7 @@ class GroceryList extends React.Component {
   mappedItems() {
     console.log(this.props.groceries)
     debugger
-    const items = this.props.groceries.data.map((item) => {
+    const items = this.props.groceries.map((item) => {
       return <GroceryListItem item={item} removeItem={this.props.removeItem}/>
     })
     return items;
