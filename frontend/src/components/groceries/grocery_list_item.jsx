@@ -2,12 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const GroceryListItem =({item, removeGroceryItem}) => {
-  debugger
+const GroceryListItem =({item, deleteGroceryItem}) => {
   return (
     <li>
       <p>{item.name}</p>
-      <button onClick={() => removeGroceryItem(item.id)}>Remove From Grocery List</button>
+      <button onClick={() => deleteGroceryItem(item)}>Remove From Grocery List</button>
     </li>
   )
 }

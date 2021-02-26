@@ -5,18 +5,18 @@ import {REMOVEGROCERYITEM,
 
 
 
-   const groceryReducer = (state ={groceries: {}}, action ) => {
+   const groceryReducer = (state ={data: []}, action ) => {
      Object.freeze(state);
 
      switch (action.type) {
        case RECIEVE_GROCERY_ITEM:
          return action.item
       case RECIEVE_ALL_GROCERIES:
-        debugger
         console.log(action.items)
         return action.items;
       case REMOVEGROCERYITEM:
         const newState = Object.assign({},state);
+        debugger
         delete newState[action.groceryId];
         return newState
       default:

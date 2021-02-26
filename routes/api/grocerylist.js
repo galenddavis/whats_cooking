@@ -7,12 +7,9 @@ router.get("/test", (req, res) => {
   res.json({ msg: "This is the grocery route" });
 });
 
-
 router.get("/user/:user_id",
 passport.authenticate("jwt", { session: false }),
 (req, res) => {
-  debugger
-  console.log(req.params.user_id),
     Groceries.find({ user: req.params.user_id })
       .then((grocerylists) => res.json(grocerylists))
       .catch((err) => res.status(400).json(err));
@@ -34,6 +31,8 @@ passport.authenticate("jwt", { session: false }),
 router.delete("/:_id", //turky Id 
 passport.authenticate("jwt", {session:false}),
 (req,res) => {
+  console.log(req.params)
+  debugger
   Groceries.findByIdAndRemove(req.params._id)
   .then((groceries) => res.json(groceries))
   // .then(id => res.json(id))
