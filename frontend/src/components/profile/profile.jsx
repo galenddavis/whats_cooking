@@ -1,5 +1,5 @@
 import React from 'react';
-import UserRecipes from './user_recipes';
+import UserRecipes from '../user_recipe/user_recipes';
 
 class Profile extends React.Component {
     constructor(props) {
@@ -12,8 +12,8 @@ class Profile extends React.Component {
     componentWillMount() {
         debugger
         // console.log(this.props.currentUser.id)
-        // this.props.fetchUserRecipes(this.props.currentUser.id);
-        this.props.fetchGroceryList(this.props.currentUser.id)
+        this.props.fetchUserRecipes(this.props.currentUser.id);
+        // this.props.fetchGroceryList(this.props.currentUser.id)
     }
 
     componenentWillReceiveProps(nextState) {
