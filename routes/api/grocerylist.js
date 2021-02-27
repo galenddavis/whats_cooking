@@ -3,10 +3,6 @@ const router = express.Router();
 const passport = require("passport");
 const Groceries = require("../../models/GroceryList");
 
-router.get("/test", (req, res) => {
-  res.json({ msg: "This is the grocery route" });
-});
-
 router.get("/user/:user_id",
 passport.authenticate("jwt", { session: false }),
 (req, res) => {
@@ -34,9 +30,12 @@ passport.authenticate("jwt", {session:false}),
   console.log(req.params)
   debugger
   Groceries.findByIdAndRemove(req.params._id)
-  .then((groceries) => res.json(groceries))
+  .then((groceries) => {
+    console.log("=======================",groceries )
+    return res.json(groceries)
+  })
   // .then(id => res.json(id))
   .catch(err => res.status(400).json(err));
 })
 
-module.exports = router
+module.exports = router;
