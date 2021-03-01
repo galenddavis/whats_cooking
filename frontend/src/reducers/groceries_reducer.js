@@ -4,8 +4,6 @@ import {REMOVEGROCERYITEM,
    from '../actions/grocery_action'
 import groceries_container from '../components/groceries/groceries_container';
 
-
-
    const groceryReducer = (state ={data: []}, action ) => {
      Object.freeze(state);
 
@@ -26,3 +24,5 @@ import groceries_container from '../components/groceries/groceries_container';
    }
 
    export default groceryReducer;
+
+   const groceries = (items) =>  items

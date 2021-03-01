@@ -15,14 +15,21 @@ passport.authenticate("jwt", { session: false }),
 router.post("/",
 passport.authenticate("jwt", { session: false }),
 (req, res) => {
-  const newGrocery = new Groceries({
-    user: req.user.id,
-    name: req.body.name
+  Groceries.findOne({name: req.body.name})
+  .then(name => {
+    if(name){
+      // console.log('..................................', name)
+    } else {
+      const newGrocery = new Groceries({
+      user: req.user.id,
+      name: req.body.name
+      })
+      newGrocery.save()
+      .then(grocery => res.json(grocery))
+    }
   })
-
-  newGrocery.save()
-  .then(grocery => res.json(grocery))
 })
+  
 
 router.delete("/:_id", //turky Id 
 passport.authenticate("jwt", {session:false}),
@@ -31,7 +38,7 @@ passport.authenticate("jwt", {session:false}),
   debugger
   Groceries.findByIdAndRemove(req.params._id)
   .then((groceries) => {
-    console.log("=======================",groceries )
+    // console.log("=======================",groceries )
     return res.json(groceries)
   })
   // .then(id => res.json(id))
