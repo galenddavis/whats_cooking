@@ -1,10 +1,12 @@
 import React from 'react';
 
-const UserRecipeList = ({recipes, deleteRecipe}) => {
+const UserRecipeList = ({recipe, deleteRecipe}) => {
+    debugger
     return (
-        <li>
-            <p>User Recipe List</p>
-        </li>
+        <div>
+            <p>{recipe.recipeTitle}</p>
+            <button onClick={() => deleteRecipe(recipe._id)}>Delete Recipe</button>
+        </div>
     )
 }
 

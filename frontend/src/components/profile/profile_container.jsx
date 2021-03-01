@@ -1,12 +1,12 @@
 import {connect} from 'react-redux';
-import {fetchUserRecipes} from '../../actions/recipe_action'
+import {fetchUserRecipes, deleteRecipe} from '../../actions/recipe_action'
 import { removeGroceryItem, fetchGroceryList } from '../../actions/grocery_action';
 import Profile from './profile'
 
 
 const mSTP = (state) => {
     return {
-        recipes: state.recipes.user,
+        recipes: state.userRecipes.user,
         currentUser: state.session.user,
         groceries: state.groceries 
     };
@@ -15,6 +15,7 @@ const mSTP = (state) => {
 const mDTP = dispatch => {
     return {
         fetchUserRecipes: id => dispatch(fetchUserRecipes(id)),
+        deleteRecipe: id => dispatch(deleteRecipe(id)),
         removeGroceryItem: item => dispatch(removeGroceryItem(item)),
         fetchGroceryList: (id) => dispatch(fetchGroceryList(id))
     };
