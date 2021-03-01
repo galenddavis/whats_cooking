@@ -11,12 +11,13 @@ import groceries_container from '../components/groceries/groceries_container';
        case RECIEVE_GROCERY_ITEM:
          return action.item
       case RECIEVE_ALL_GROCERIES:
+        debugger
         console.log('receiveall+++++++++++++',action.items.data)
         return {data: action.items.data};
       case REMOVEGROCERYITEM:
         const newState = Object.assign({},state);
-        console.log('action===========',action)
-        console.log('actionIIIIIIIIIIIIII',state)
+        // console.log('action===========',action)
+        // console.log('actionIIIIIIIIIIIIII',state)
         return {data: newState.data.filter(ele => ele._id !== action.item )};
       default:
         return state;
@@ -25,4 +26,3 @@ import groceries_container from '../components/groceries/groceries_container';
 
    export default groceryReducer;
 
-   const groceries = (items) =>  items
