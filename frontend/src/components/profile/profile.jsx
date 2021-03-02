@@ -1,5 +1,6 @@
 import React from 'react';
 import UserRecipeList from '../user_recipe/user_recipe_list';
+import GroceryList from '../groceries/groceries_container'
 
 class Profile extends React.Component {
     constructor(props) {
@@ -33,11 +34,16 @@ class Profile extends React.Component {
     render() {
       debugger
       return (
-        <div>
+        <div className='user-profile'>
+          <section>
+            <GroceryList />
+          </section>
+          <section className='recipe-array'>
             <h1>Saved Recipes</h1>
-            <ul>
-                <li>{this.getUserRecipes()}</li>
+            <ul className='saved-recipes'>
+                {this.getUserRecipes()}
             </ul>
+          </section>
         </div>
       );
     }

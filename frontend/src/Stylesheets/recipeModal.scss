@@ -44,6 +44,7 @@
     ul {
       height: 100px;
       overflow-y: scroll;
+      margin-bottom: 20px;
       
     }
   }
@@ -71,8 +72,9 @@
       display: flex;
 
       button:hover {
-        background-color: #94e8f0;
-
+        background-color: #fa8072b6;
+        cursor: pointer;
+        //  
       }
     
     }
@@ -117,9 +119,20 @@
       padding: 8px;
     }
 
+    
+    .grocery-button-active {
+      background-color: #fa8072;
+      // color: black;
+    }
 
+    
+    .recipe-button-active {
+      background-color: #fa8072;
+      // color: black;
+    }
   }
 }
+
 
 
 

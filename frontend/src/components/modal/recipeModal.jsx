@@ -20,7 +20,8 @@ function recipesModal({ addRecipe, addGroceryItem, modal, openModal, closeModal,
                 user = {user}
                 addGroceryItem ={addGroceryItem}
                 addRecipe = {addRecipe}
-                recipe={recipes}/>;
+                recipe={recipes}
+                closeModal={closeModal}/>;
             break;
         default:
             return null;

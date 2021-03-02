@@ -6,6 +6,7 @@ class NavBar extends React.Component {
         super(props);
         this.logoutUser = this.logoutUser.bind(this);
         // this.handleSubmit = this.handleSubmit.bind(this);
+        this.sidebarSlide = this.sidebarSlide.bind(this);
     }
 
     logoutUser(event) {
@@ -21,6 +22,13 @@ class NavBar extends React.Component {
     sidebarSlide = () => {  
         const slidebar = document.querySelector('.sidebar-parent')
         slidebar.classList.toggle('sidebar-parent-active');
+        // console.log(this.props.currentPath);
+        
+        if (this.props.currentPath === '/') {
+            console.log(this.props.currentPath);
+            const text = document.querySelector('.animation')
+            text.classList.toggle('animation-active');
+        }
     }
     
 
@@ -32,8 +40,8 @@ class NavBar extends React.Component {
     render() {
         const authButtons = this.props.loggedIn ? (
             <div className='session-button'>
-                <h1 onClick={this.logoutUser}>Log Out</h1>
-                <h1 onClick={this.logoutUser}>Log Out</h1>
+                <h2><Link to='/profile'>Profile</Link></h2>
+                <h2 onClick={this.logoutUser}>Log Out</h2>
             </div>
         ) : (
             <div className='session-button'>
@@ -55,7 +63,7 @@ class NavBar extends React.Component {
                     <div className='bun'></div>
                 </section>
                 
-                <Link to='/' className='logo'>What's Cooking</Link>
+                <Link to='/' onClick={this.sidebarSlide} className='logo'>What's Cooking</Link>
                 {authButtons}
             </div>
         )

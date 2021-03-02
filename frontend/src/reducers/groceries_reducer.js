@@ -2,7 +2,6 @@ import {REMOVEGROCERYITEM,
    RECIEVE_ALL_GROCERIES, 
    RECIEVE_GROCERY_ITEM } 
    from '../actions/grocery_action'
-import groceries_container from '../components/groceries/groceries_container';
 
    const groceryReducer = (state ={data: []}, action ) => {
      Object.freeze(state);

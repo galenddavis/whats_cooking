@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import { logout, login } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
-import { fetchUserRecipes } from '../../actions/recipe_action'
 import { withRouter } from 'react-router-dom';
 
 import NavBar from './navbar';
 
-const mSTP = state => ({
-    loggedIn: state.session.isAuthenticated
+const mSTP = (state, ownProps) => ({
+    loggedIn: state.session.isAuthenticated,
+    currentPath: ownProps.history.location.pathname
 });
 
 const mDTP = dispatch => ({

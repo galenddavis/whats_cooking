@@ -237,7 +237,7 @@ class Recipes extends React.Component {
             </section>
           </div>
 
-          <input type="submit" value="What's cooking?" />
+          {/* <input type="submit" value="What's cooking?" /> */}
           {/* <input onClick={this.uncheckAll}>Reset</input> */}
           {/* <button onClick ={this.uncheckAll}>RESET</button> */}
         </form>
