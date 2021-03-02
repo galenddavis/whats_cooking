@@ -17,6 +17,11 @@
     position: absolute;
     top: 30%;
     right: 10%;
+    transition: transform 0.8s;
+}
+
+.animation-active {
+    transform: translateX(200px);
 }
 
 .container {
