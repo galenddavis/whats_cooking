@@ -28,8 +28,9 @@ class GroceryList extends React.Component {
     // }) : null;
     console.log('more groceriesssssssssssssssssss-',this.props.groceries)
     return (
-      <div>
-        <ul>
+      <div className='grocery'>
+        <h1>Grocery List</h1>
+        <ul className='list'>
           {this.mappedItems()}
           {/* {items} */}
         </ul>
