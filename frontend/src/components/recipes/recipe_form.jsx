@@ -54,7 +54,7 @@ class Recipes extends React.Component {
   }
 
   handleCheck(e) {
-      debugger
+      // debugger
     if (this.state.chicken === false) {
         this.setState( {chickenchecked: e.target.chickenchecked = true });
     } else {
@@ -76,7 +76,7 @@ class Recipes extends React.Component {
     // }
    
   render() {
-  debugger
+  // debugger
 
     return (
       <div className="sidebar-body">

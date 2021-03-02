@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const GroceryListItem =({item, deleteGroceryItem, state}) => {
+const GroceryListItem =({item, deleteGroceryItem}) => {
   return (
     <li>
       <p>{item.name}</p>

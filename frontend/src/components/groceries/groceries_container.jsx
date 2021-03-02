@@ -3,10 +3,13 @@ import { deleteGroceryItem, fetchGroceryList } from '../../actions/grocery_actio
 import { withRouter } from 'react-router-dom'
 import GroceryList from './groceries_list'
 
-const mstp = state => ({
+const mstp = state => {
+  console.log('reducer++++++++++++++++',state.groceries)
+return {
   currentUser: state.session.user,
   groceries: state.groceries 
-})
+}
+}
 
 const mdtp = dispatch => ({
   deleteGroceryItem: item => dispatch(deleteGroceryItem(item)),

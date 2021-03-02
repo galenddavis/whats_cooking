@@ -17,14 +17,13 @@ export const receiveGroceryItem = (item) => ({
   item
 })
 
-
-
 export const addGroceryItem = item => dispatch => {
   return APIGroceries.addGroceryItem(item)
-  .then(groceryItem => dispatch(addGroceryItem(groceryItem)))
+  .then(groceryItem => dispatch(receiveGroceryItem(groceryItem)))
   
 }
 export const fetchGroceryList = (userId) => dispatch => {
+  // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!',userId)
   return APIGroceries.fetchGroceryList(userId)
   .then(groceryItems => dispatch(receiveGroceries(groceryItems)))
 }
@@ -32,5 +31,5 @@ export const fetchGroceryList = (userId) => dispatch => {
 export const deleteGroceryItem = itemId => dispatch => {
   debugger
   return APIGroceries.deleteGroceryItem(itemId)
-  .then(item => dispatch(removeGroceryItem(item)) )
+  .then(item => dispatch(removeGroceryItem(item.data._id)) )
 }

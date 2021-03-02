@@ -5,38 +5,33 @@ class GroceryList extends React.Component {
   constructor(props){
     super(props)
     this.mappedItems = this.mappedItems.bind(this);
-    this.state = {list: this.props.groceries.data};
-    this.deleteItem = this.deleteItem.bind(this);
   }
 
   componentDidMount() {
+    debugger
     this.props.fetchGroceryList(this.props.currentUser.id)
   }
 
-  deleteItem(item){
-    console.log(this.props.groceries.data)
-    const newList = this.props.deleteGroceryItem(item)
-    this.setState({list: newList}
-    )
-    console.log(this.state)
-  }
-
   mappedItems() {
-    console.log(this.props.groceries)
-    const items = this.props.groceries.data.map((item) => {
-      return <GroceryListItem state={this.state} item={item} deleteGroceryItem={this.deleteItem}/>
-    })
-    
+    console.log('groceriesooooooooooooooo',this.props.groceries)
+    console.log('groceriesooooooooooooooo dataaaaaaaaa',this.props.groceries.data)
+    const items = this.props.groceries.data.data !== undefined ?  this.props.groceries.data.data.map((item) => {
+      return <GroceryListItem item={item} deleteGroceryItem={this.props.deleteGroceryItem}/>
+    }) : null;
     return items;
   }
 
   render(){
-    console.log(this.props.groceries)
+    debugger
+    //   const items = this.props.groceries.data !== undefined ?  this.props.groceries.data.map((item) => {
+    //   return <GroceryListItem item={item} deleteGroceryItem={this.props.deleteGroceryItem}/>
+    // }) : null;
+    console.log('more groceriesssssssssssssssssss-',this.props.groceries)
     return (
       <div>
         <ul>
-          {/* {this.props.groceries ==={} ? this.test() : this.mappedItems() } */}
           {this.mappedItems()}
+          {/* {items} */}
         </ul>
       </div>
     )

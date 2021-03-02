@@ -19,7 +19,7 @@ class RecipeShowComponent extends React.Component {
     grocerylist() {
         let match;
         this.props.recipe.forEach(food => {
-            debugger
+            // debugger
             if (this.props.dish.id === food.id) {
                 match = food
             }
@@ -40,7 +40,7 @@ class RecipeShowComponent extends React.Component {
 
         let match;
         recipe.forEach(food => {
-            debugger
+            // debugger
             if (this.props.dish.id === food.id) {
                 match = food
             }
