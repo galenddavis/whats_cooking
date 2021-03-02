@@ -23,8 +23,8 @@ const App = () => (
             <Switch>
                 <Route exact path='/' component={MainPage} />
                 <Route path="/index" component={RecipeIndex} />
-                <ProtectedRoute exact path="/recipes" component = {ProfileContainer}/>
-                <ProtectedRoute exact path="/profile" component = {GroceriesContainer}/>
+                <ProtectedRoute exact path="/profile" component = {ProfileContainer}/>
+                <ProtectedRoute exact path="/profile" component = {GroceriesContainer} />
                 {/* <Route path='/search' component={RecipesContainer} /> */}
             </Switch>
         </div>

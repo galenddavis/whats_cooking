@@ -19,6 +19,7 @@
 }
 
 .list {
+    margin-top: 25px;
     padding: 5px 0px; 
     // background-color: white;
     background-color: rgb(125, 204, 211);
@@ -28,6 +29,8 @@
     // box-shadow: 0px 5px 0px;
     box-shadow: 0px 1px 4px;
     transform: rotate(2deg);
+    overflow-y: scroll;
+    max-height: 700px;
 }
 
 .list-item {
