@@ -5,7 +5,6 @@ import {REMOVEGROCERYITEM,
 
    const groceryReducer = (state ={data: []}, action ) => {
      Object.freeze(state);
-
      switch (action.type) {
        case RECIEVE_GROCERY_ITEM:
          return action.item

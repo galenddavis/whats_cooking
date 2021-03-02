@@ -10,6 +10,8 @@ import RecipeIndex from './recipes/recipes_index_container'
 import Footer from './footer/footer';
 import RecipesModal from './modal/recipeModal'
 import GroceriesContainer from './groceries/groceries_container'
+import ProfileContainer from './profile/profile_container'
+
 
 const App = () => (
     <div>
@@ -21,7 +23,7 @@ const App = () => (
             <Switch>
                 <Route exact path='/' component={MainPage} />
                 <Route path="/index" component={RecipeIndex} />
-                {/* <ProtectedRoute exact path="/profile" component = {ProfileContainer}/> */}
+                <ProtectedRoute exact path="/recipes" component = {ProfileContainer}/>
                 <ProtectedRoute exact path="/profile" component = {GroceriesContainer}/>
                 {/* <Route path='/search' component={RecipesContainer} /> */}
             </Switch>

@@ -26,6 +26,7 @@ export const fetchGroceryList = (userId) => dispatch => {
   // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!',userId)
   return APIGroceries.fetchGroceryList(userId)
   .then(groceryItems => dispatch(receiveGroceries(groceryItems)))
+  .catch(err => console.log(err))
 }
 
 export const deleteGroceryItem = itemId => dispatch => {

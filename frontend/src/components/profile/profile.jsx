@@ -1,45 +1,45 @@
 import React from 'react';
-import UserRecipes from './user_recipes';
+import UserRecipeList from '../user_recipe/user_recipe_list';
 
 class Profile extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            recipes: [],
-        }
+        this.getUserRecipes = this.getUserRecipes.bind(this);
     }
     
     componentWillMount() {
         debugger
-        // console.log(this.props.currentUser.id)
-        // this.props.fetchUserRecipes(this.props.currentUser.id);
-        this.props.fetchGroceryList(this.props.currentUser.id)
+        this.props.fetchUserRecipes(this.props.currentUser.id);
     }
-
     componenentWillReceiveProps(nextState) {
-        this.setState({recipes: nextState.recipes});
+      this.setState({recipes: nextState.recipes});
     }
-    
-    render() {
-        let {groceries} = this.props;
+    getUserRecipes() {
+        let {recipes} = this.props;
+        console.log(recipes)
         debugger
-        // if (this.state.recipes.length === 0) {
-        //     return (
-        //         <div>Are you not eating dinner?</div>
-        //     )
-        // } else {
+        if (recipes.length === 0) {
             return (
-                <div>
-                    <h2>Saved Recipes</h2>
-                    <ul>
-                        {groceries}
-                    </ul>
-                    {this.state.recipes.map(recipe => (
-                        <UserRecipes key={recipe._id} recipeId ={recipe.recipeId} /> 
-                    ))}
-                </div>
-            );
-        // }
+              <div>No Recipes Saved :(</div>
+            )
+        } else {
+            debugger
+            const userRecipes = recipes.map(recipe => {
+              return <UserRecipeList recipe = {recipe} deleteRecipe = {this.props.deleteRecipe}/>
+            })
+          return userRecipes
+        }
+    }
+    render() {
+      debugger
+      return (
+        <div>
+            <h1>Saved Recipes</h1>
+            <ul>
+                <li>{this.getUserRecipes()}</li>
+            </ul>
+        </div>
+      );
     }
 }
 

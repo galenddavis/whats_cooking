@@ -1,31 +1,53 @@
-
-import * as RecipApiUtil from '../util/recipes_util';
+import * as RecipeAPIUtil from '../util/recipes_util';
 
 export const RECEIVE_USER_RECIPES = 'RECEIVE_USER_RECIPES'
 export const REMOVE_USER_RECIPE = 'REMOVE_USER_RECIPE'
+export const RECEIVE_USER_RECIPE = 'RECEIVE_USER_RECIPE'
 
 export const receiveUserRecipes = recipes => {
-    return {
-        type: RECEIVE_USER_RECIPES,
-        recipes
-    }
+  debugger
+  return {
+    type: RECEIVE_USER_RECIPES,
+    recipes
+  }
 }
 
 export const removeUserRecipe = recipeId => {
-    return {
-        type: REMOVE_USER_RECIPE,
-        recipeId
-    }
+  console.log('recipe action--------------------', recipeId)
+  return {
+    type: REMOVE_USER_RECIPE,
+    recipeId
+  }
 }
 
-export const fetchUserRecipes = id => dispatch => (
-    RecipApiUtil.getUserRecipes(id)
-        .then(recipes => dispatch(receiveUserRecipes(recipes)))
-        .catch(err => console.log(err))
-)
+export const receiveUserRecipe = recipe => {
+  return {
+    type: RECEIVE_USER_RECIPE,
+    recipe
+  }
+}
 
-export const deleteRecipe = id => dispatch => (
-    RecipApiUtil.destroyUserRecipe(id)
-        .then(recipeId => dispatch(removeUserRecipe(recipeId)))
-        .catch(err => console.log(err))
-)
+export const fetchUserRecipes = id => dispatch => {
+  debugger
+  return RecipeAPIUtil.getUserRecipes(id)
+    .then(recipes => dispatch(receiveUserRecipes(recipes)))
+    .catch(err => console.log(err))        
+}
+
+export const deleteRecipe = id => dispatch => {
+  debugger
+  return RecipeAPIUtil.destroyUserRecipe(id)
+    .then(id => {
+      console.log("recipe thunk--------------------",id)
+      debugger
+      return dispatch(removeUserRecipe(id))})
+    .catch(err => console.log(err))
+}
+
+export const addRecipe = recipe => dispatch => {
+  debugger
+  return RecipeAPIUtil.addRecipe(recipe)
+      .then(recipe => dispatch(addRecipe(recipe)))
+      .catch(err => console.log(err))
+    
+}
