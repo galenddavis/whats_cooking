@@ -10,10 +10,17 @@ class RecipeShowComponent extends React.Component {
             
         }
         this.grocerylist = this.grocerylist.bind(this)
+        this.saveRecipe = this.saveRecipe.bind(this)
     }
 
     componentWillUnmount() {
         this.setState({isLoading: true})
+    }
+
+    saveRecipe() {
+        debugger
+        let recipe = this.props.dish
+        this.props.addRecipe(recipe)
     }
 
     grocerylist() {
@@ -71,8 +78,8 @@ class RecipeShowComponent extends React.Component {
                         </div>
                         <div className='buttons'>
 
-                            <button onClick={this.grocerylist}>Add to Grocery List</button>
-                            <button>Save this Recipe!</button>
+                            <button onClick={() => this.grocerylist()}>Add to Grocery List</button>
+                            <button onClick={() => this.saveRecipe()}>Save this Recipe!</button>
                         </div>
                     </section>
                     <section className='recipe'>
