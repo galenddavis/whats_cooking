@@ -5,8 +5,9 @@ import { withRouter } from 'react-router-dom';
 
 import NavBar from './navbar';
 
-const mSTP = state => ({
-    loggedIn: state.session.isAuthenticated
+const mSTP = (state, ownProps) => ({
+    loggedIn: state.session.isAuthenticated,
+    currentPath: ownProps.history.location.pathname
 });
 
 const mDTP = dispatch => ({
