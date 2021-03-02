@@ -43,7 +43,9 @@ passport.authenticate("jwt", { session: false}),
     debugger
     console.log(req.params)
       Recipe.findByIdAndRemove(req.params.recipeId)
-      .then(id => res.json(id))
+      .then(id => {
+        console.log('backend --------------------',id)
+        return res.json(id)})
       .catch(err => res.status(400).json(err));
   })
 

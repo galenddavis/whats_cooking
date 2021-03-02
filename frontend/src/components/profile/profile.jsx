@@ -9,55 +9,37 @@ class Profile extends React.Component {
     
     componentWillMount() {
         debugger
-        // console.log(this.props.currentUser.id)
         this.props.fetchUserRecipes(this.props.currentUser.id);
-        // this.props.fetchGroceryList(this.props.currentUser.id)
     }
-
     componenentWillReceiveProps(nextState) {
-        this.setState({recipes: nextState.recipes});
+      this.setState({recipes: nextState.recipes});
     }
-
     getUserRecipes() {
         let {recipes} = this.props;
         console.log(recipes)
         debugger
         if (recipes.length === 0) {
             return (
-                <div>No Recipes Saved :(</div>
+              <div>No Recipes Saved :(</div>
             )
         } else {
             debugger
             const userRecipes = recipes.map(recipe => {
-                return <UserRecipeList recipe = {recipe} deleteRecipe = {this.props.deleteRecipe}/>
+              return <UserRecipeList recipe = {recipe} deleteRecipe = {this.props.deleteRecipe}/>
             })
-            return userRecipes
+          return userRecipes
         }
     }
-    
     render() {
-        let {groceries} = this.props;
-        debugger
-        // if (this.state.recipes.length === 0) {
-        //     return (
-        //         <div>Are you not eating dinner?</div>
-        //     )
-        // } else {
-            return (
-                <div>
-                    <h1>Saved Recipes</h1>
-                    <ul>
-                        {/* {groceries} */}
-                    </ul>
-                    <ul>
-                        {this.getUserRecipes()}
-                    </ul>
-                    {/* {this.state.recipes.map(recipe => (
-                        <UserRecipes key={recipe._id} recipeId ={recipe.recipeId} /> 
-                    ))} */}
-                </div>
-            );
-        // }
+      debugger
+      return (
+        <div>
+            <h1>Saved Recipes</h1>
+            <ul>
+                {this.getUserRecipes()}
+            </ul>
+        </div>
+      );
     }
 }
 
