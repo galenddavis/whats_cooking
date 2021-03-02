@@ -23,14 +23,12 @@ export const addGroceryItem = item => dispatch => {
   
 }
 export const fetchGroceryList = (userId) => dispatch => {
-  // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!',userId)
   return APIGroceries.fetchGroceryList(userId)
   .then(groceryItems => dispatch(receiveGroceries(groceryItems)))
   .catch(err => console.log(err))
 }
 
 export const deleteGroceryItem = itemId => dispatch => {
-  debugger
   return APIGroceries.deleteGroceryItem(itemId)
   .then(item => dispatch(removeGroceryItem(item.data._id)) )
 }

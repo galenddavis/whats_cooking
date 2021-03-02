@@ -19,7 +19,6 @@ passport.authenticate("jwt", { session: false}),
 router.post("/",
 passport.authenticate("jwt", { session: false}),
 (req, res) => {
-  debugger
   Recipe.findOne({recipeTitle: req.body.title})
   .then(title => {
     if(title){
@@ -30,9 +29,7 @@ passport.authenticate("jwt", { session: false}),
         recipeSource: req.body.sourceUrl,
         recipeImage: req.body.image
       })
-        console.log(newRecipe)
         newRecipe.save()
-        // .then(recipe => res.json(recipe))
         .catch(err => res.status(400).json(err));
       }
   })
@@ -42,11 +39,8 @@ passport.authenticate("jwt", { session: false}),
 router.delete("/:recipeId",
 passport.authenticate("jwt", { session: false}),
   (req,res) => {
-    debugger
-    console.log(req.params)
       Recipe.findByIdAndRemove(req.params.recipeId)
       .then(id => {
-        console.log('backend --------------------',id)
         return res.json(id)})
       .catch(err => res.status(400).json(err));
   })

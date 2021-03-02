@@ -26,15 +26,12 @@ router.get('/search', async (req, res, next) => {
 
 router.get('/info', async (req, res, next) => {
     try{
-        debugger
         const id = req.query.id
         const params = newURLSearchParams({
             apiKey: keys.spoonAPI,
             includeNutrition: false
         })
         const request = await axios.get(`${infoUrl}${id}information${params}`)
-        console.log(request)
-        debugger
         res.json(request.data)
     } catch(error) {
         next(error)

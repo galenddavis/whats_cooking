@@ -12,8 +12,7 @@ function recipesModal({ addRecipe, addGroceryItem, modal, openModal, closeModal,
 
     let component;
     switch (modal) {
-        case `recipe`:
-            debugger
+        case `recipe`: 
             component = <RecipeShowComponent 
                 openModal = {openModal}
                 dish={info} 
@@ -23,6 +22,7 @@ function recipesModal({ addRecipe, addGroceryItem, modal, openModal, closeModal,
                 recipe={recipes}
                 closeModal={closeModal}/>;
             break;
+            
         default:
             return null;
     }
@@ -39,7 +39,6 @@ function recipesModal({ addRecipe, addGroceryItem, modal, openModal, closeModal,
 
 
 const mSTP = state => {
-    debugger
     return {
         modal: state.ui.recipes, 
         recipes: state.recipes.recipes.data,
@@ -49,7 +48,6 @@ const mSTP = state => {
 };
 
 const mDTP = dispatch => {
-    debugger
     return {
         closeModal: () => dispatch(closeModal()),
         openRecipeModal: modal => dispatch(openRecipeModal(modal)),

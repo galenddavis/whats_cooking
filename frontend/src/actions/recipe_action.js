@@ -5,7 +5,6 @@ export const REMOVE_USER_RECIPE = 'REMOVE_USER_RECIPE'
 export const RECEIVE_USER_RECIPE = 'RECEIVE_USER_RECIPE'
 
 export const receiveUserRecipes = recipes => {
-  debugger
   return {
     type: RECEIVE_USER_RECIPES,
     recipes
@@ -28,24 +27,19 @@ export const receiveUserRecipe = recipe => {
 }
 
 export const fetchUserRecipes = id => dispatch => {
-  debugger
   return RecipeAPIUtil.getUserRecipes(id)
     .then(recipes => dispatch(receiveUserRecipes(recipes)))
     .catch(err => console.log(err))        
 }
 
 export const deleteRecipe = id => dispatch => {
-  debugger
   return RecipeAPIUtil.destroyUserRecipe(id)
     .then(id => {
-      console.log("recipe thunk--------------------",id)
-      debugger
       return dispatch(removeUserRecipe(id))})
     .catch(err => console.log(err))
 }
 
 export const addRecipe = recipe => dispatch => {
-  debugger
   return RecipeAPIUtil.addRecipe(recipe)
       .then(recipe => dispatch(addRecipe(recipe)))
       .catch(err => console.log(err))

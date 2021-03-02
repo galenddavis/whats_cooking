@@ -3,7 +3,6 @@ export const CLOSE_MODAL = 'CLOSE_MODAL';
 export const OPEN_RECIPE_MODAL = 'OPEN_RECIPE_MODAL';
 
 export const openModal = modal => {
-    debugger
     return {
         type: OPEN_MODAL,
         modal
@@ -11,7 +10,6 @@ export const openModal = modal => {
 };
 
 export const openRecipeModal = modal => {
-    debugger
     return {
         type: OPEN_RECIPE_MODAL,
         modal

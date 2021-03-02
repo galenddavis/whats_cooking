@@ -8,13 +8,10 @@ class GroceryList extends React.Component {
   }
 
   componentDidMount() {
-    debugger
     this.props.fetchGroceryList(this.props.currentUser.id)
   }
 
   mappedItems() {
-    console.log('groceriesooooooooooooooo',this.props.groceries)
-    console.log('groceriesooooooooooooooo dataaaaaaaaa',this.props.groceries.data)
     const items = this.props.groceries.data.data !== undefined ?  this.props.groceries.data.data.map((item) => {
       return <GroceryListItem item={item} deleteGroceryItem={this.props.deleteGroceryItem}/>
     }) : null;
@@ -22,17 +19,11 @@ class GroceryList extends React.Component {
   }
 
   render(){
-    debugger
-    //   const items = this.props.groceries.data !== undefined ?  this.props.groceries.data.map((item) => {
-    //   return <GroceryListItem item={item} deleteGroceryItem={this.props.deleteGroceryItem}/>
-    // }) : null;
-    console.log('more groceriesssssssssssssssssss-',this.props.groceries)
     return (
       <div className='grocery'>
         <h1>Grocery List</h1>
         <ul className='list'>
           {this.mappedItems()}
-          {/* {items} */}
         </ul>
       </div>
     )

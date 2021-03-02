@@ -29,19 +29,17 @@ class SessionForm extends React.Component {
     }
   }
   handleSubmit(event) {
-    // debugger
-      
       event.preventDefault();
       const chef = Object.assign({}, this.state);
       this.props.processForm(chef).then(this.close)
   }
+
   close() {
-    // debugger
     if (this.props.user === true) {
-      // debugger
       this.props.closeModal()
     }
   }
+
   render() {
 
       const errors = this.props.errors.map(error => {
@@ -52,13 +50,13 @@ class SessionForm extends React.Component {
       const showErrors = this.props.errors.length > 0 ? <ul className='errors-container'>{errors}</ul> : null
 
     const signupForm = <label>Username
-                <input
-        type="text"
-        value={this.state.username}
-        onChange={this.update("username")}
-        required
-      />
-    </label>
+                        <input
+                            type="text"
+                            value={this.state.username}
+                            onChange={this.update("username")}
+                            required
+                          />
+                        </label>
 
       return (
         <div>

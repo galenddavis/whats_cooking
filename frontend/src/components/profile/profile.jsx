@@ -9,22 +9,21 @@ class Profile extends React.Component {
     }
     
     componentWillMount() {
-        debugger
         this.props.fetchUserRecipes(this.props.currentUser.id);
     }
+
     componenentWillReceiveProps(nextState) {
       this.setState({recipes: nextState.recipes});
     }
+
     getUserRecipes() {
         let {recipes} = this.props;
-        console.log(recipes)
-        debugger
+
         if (recipes.length === 0) {
             return (
               <div>No Recipes Saved :(</div>
             )
         } else {
-            debugger
             const userRecipes = recipes.map(recipe => {
               return <UserRecipeList recipe = {recipe} deleteRecipe = {this.props.deleteRecipe}/>
             })
@@ -32,7 +31,6 @@ class Profile extends React.Component {
         }
     }
     render() {
-      debugger
       return (
         <div className='user-profile'>
           <section>

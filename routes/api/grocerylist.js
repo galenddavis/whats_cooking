@@ -18,7 +18,6 @@ passport.authenticate("jwt", { session: false }),
   Groceries.findOne({name: req.body.name})
   .then(name => {
     if(name){
-      // console.log('..................................', name)
     } else {
       const newGrocery = new Groceries({
       user: req.user.id,
@@ -34,14 +33,10 @@ passport.authenticate("jwt", { session: false }),
 router.delete("/:_id", //turky Id 
 passport.authenticate("jwt", {session:false}),
 (req,res) => {
-  console.log(req.params)
-  debugger
   Groceries.findByIdAndRemove(req.params._id)
   .then((groceries) => {
-    // console.log("=======================",groceries )
     return res.json(groceries)
   })
-  // .then(id => res.json(id))
   .catch(err => res.status(400).json(err));
 })
 

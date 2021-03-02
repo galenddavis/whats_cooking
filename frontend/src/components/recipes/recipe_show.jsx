@@ -21,22 +21,18 @@ class RecipeShowComponent extends React.Component {
 
     saveRecipe() {
         this.recipeToggle();
-        debugger
         let recipe = this.props.dish
         this.props.addRecipe(recipe)
     }
 
     grocerylist() {
         this.groceryToggle();
-
         let match;
         this.props.recipe.forEach(food => {
-            // debugger
             if (this.props.dish.id === food.id) {
                 match = food
             }
         })
-        console.log(this.props.user)
         if (!this.props.user) {
             this.props.openModal();
         } else {
@@ -56,14 +52,12 @@ class RecipeShowComponent extends React.Component {
         recipeSubmit.classList.toggle('recipe-button-active');
     }
     
-
-
     render() {
         let { dish, recipe } = this.props;
 
         let match;
         recipe.forEach(food => {
-            // debugger
+            // 
             if (this.props.dish.id === food.id) {
                 match = food
             }
@@ -78,7 +72,6 @@ class RecipeShowComponent extends React.Component {
                 <h1>Loading Recipe Info...</h1>
             </div>)
         } else {
-            
             return (
                 <div className='recipe-show'>
                     <section className='ingredients'>

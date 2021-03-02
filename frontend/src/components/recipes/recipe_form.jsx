@@ -42,10 +42,6 @@ class Recipes extends React.Component {
       }
     };
   }
-  //
-  // let copy = Object.assign([], this.state)
-  // copy.push(field)
-  // return e => this.setState(copy)
 
   handleSubmit(event) {
     event.preventDefault();
@@ -54,7 +50,6 @@ class Recipes extends React.Component {
   }
 
   handleCheck(e) {
-      // debugger
     if (this.state.chicken === false) {
         this.setState( {chickenchecked: e.target.chickenchecked = true });
     } else {
@@ -62,21 +57,8 @@ class Recipes extends React.Component {
     }
   }
 
-//   uncheckAll(){
-//     ('input[type="checkbox"]:checked').prop('checked',false);
-//   }
-
-   
-    // uncheckAll(){
-    //    let items = document.getElementById('radio');
-    //    for (let i = 0; i < items.length; i++){
-    //      if (items[i].type === 'checkbox')
-    //      items[i].checked = false
-    //    }
-    // }
    
   render() {
-  // debugger
 
     return (
       <div className="sidebar-body">

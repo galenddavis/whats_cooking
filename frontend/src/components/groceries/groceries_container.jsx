@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom'
 import GroceryList from './groceries_list'
 
 const mstp = state => {
-  console.log('reducer++++++++++++++++',state.groceries)
 return {
   currentUser: state.session.user,
   groceries: state.groceries 
