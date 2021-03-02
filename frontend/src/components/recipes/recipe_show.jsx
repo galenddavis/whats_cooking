@@ -1,5 +1,5 @@
 import React from 'react';
-import { getInfo } from '../../actions/search_actions';
+import { Link } from 'react-router-dom'
 
 class RecipeShowComponent extends React.Component {
     constructor(props) {
@@ -10,13 +10,23 @@ class RecipeShowComponent extends React.Component {
             
         }
         this.grocerylist = this.grocerylist.bind(this)
+        this.saveRecipe = this.saveRecipe.bind(this)
     }
 
     componentWillUnmount() {
         this.setState({isLoading: true})
     }
 
+    saveRecipe() {
+        debugger
+        let recipe = this.props.dish
+        this.props.addRecipe(recipe)
+    }
+
     grocerylist() {
+        const formSubmit = document.querySelector('.form-button')
+        formSubmit.classList.toggle('form-button-active');
+
         let match;
         this.props.recipe.forEach(food => {
             // debugger
@@ -68,11 +78,13 @@ class RecipeShowComponent extends React.Component {
                             <ul>
                                 {ingredients}
                             </ul>
+                            <h3><Link to='/profile' className=''>Profile</Link></h3>
+                            
                         </div>
                         <div className='buttons'>
 
-                            <button onClick={this.grocerylist}>Add to Grocery List</button>
-                            <button>Save this Recipe!</button>
+                            <button onClick={this.grocerylist} className='form-button'>Add to Grocery List</button>
+                            <button onClick={() => this.saveRecipe()}>Save this Recipe!</button>
                         </div>
                     </section>
                     <section className='recipe'>

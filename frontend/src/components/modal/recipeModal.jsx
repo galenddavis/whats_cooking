@@ -2,9 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { openModal, closeModal, openRecipeModal } from '../../actions/modal_actions';
 import { addGroceryItem } from '../../actions/grocery_action';
+import { addRecipe } from '../../actions/recipe_action';
 import RecipeShowComponent from '../recipes/recipe_show';
 
-function recipesModal({ addGroceryItem, modal, openModal, closeModal, openRecipeModal, info, recipes, user }) {
+function recipesModal({ addRecipe, addGroceryItem, modal, openModal, closeModal, openRecipeModal, info, recipes, user }) {
     if (!modal) {
         return null;
     }
@@ -18,6 +19,7 @@ function recipesModal({ addGroceryItem, modal, openModal, closeModal, openRecipe
                 dish={info} 
                 user = {user}
                 addGroceryItem ={addGroceryItem}
+                addRecipe = {addRecipe}
                 recipe={recipes}/>;
             break;
         default:
@@ -51,7 +53,8 @@ const mDTP = dispatch => {
         closeModal: () => dispatch(closeModal()),
         openRecipeModal: modal => dispatch(openRecipeModal(modal)),
         openModal: () => dispatch(openModal('signup')),
-        addGroceryItem: item => dispatch(addGroceryItem(item))
+        addGroceryItem: item => dispatch(addGroceryItem(item)),
+        addRecipe: recipe => dispatch(addRecipe(recipe))
     };
 };
 

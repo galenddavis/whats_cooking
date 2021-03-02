@@ -44,6 +44,7 @@
     ul {
       height: 100px;
       overflow-y: scroll;
+      margin-bottom: 20px;
       
     }
   }
@@ -117,9 +118,14 @@
       padding: 8px;
     }
 
+    .form-button-active {
+      background-color: #fa8072;
+      // color: black;
+    }
 
   }
 }
+
 
 
 

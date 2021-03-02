@@ -34,8 +34,8 @@ class NavBar extends React.Component {
     render() {
         const authButtons = this.props.loggedIn ? (
             <div className='session-button'>
-                <h1 onClick={this.logoutUser}>Log Out</h1>
-                <h1 onClick={this.logoutUser}>Log Out</h1>
+                <h2><Link to='/profile'>Profile</Link></h2>
+                <h2 onClick={this.logoutUser}>Log Out</h2>
             </div>
         ) : (
             <div className='session-button'>

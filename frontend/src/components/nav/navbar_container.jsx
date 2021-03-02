@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import { logout, login } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
-import { fetchUserRecipes } from '../../actions/recipe_action'
 import { withRouter } from 'react-router-dom';
 
 import NavBar from './navbar';
