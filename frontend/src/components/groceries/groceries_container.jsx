@@ -1,15 +1,18 @@
 import { connect } from 'react-redux';
-import { removeGroceryItem, fetchGroceryList } from '../../actions/grocery_action';
+import { deleteGroceryItem, fetchGroceryList } from '../../actions/grocery_action';
 import { withRouter } from 'react-router-dom'
 import GroceryList from './groceries_list'
 
-const mstp = state => ({
+const mstp = state => {
+  console.log('reducer++++++++++++++++',state.groceries)
+return {
   currentUser: state.session.user,
   groceries: state.groceries 
-})
+}
+}
 
 const mdtp = dispatch => ({
-  removeGroceryItem: item => dispatch(removeGroceryItem(item)),
+  deleteGroceryItem: item => dispatch(deleteGroceryItem(item)),
   fetchGroceryList: (id) => dispatch(fetchGroceryList(id))
 })
 

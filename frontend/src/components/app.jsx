@@ -12,6 +12,7 @@ import RecipesModal from './modal/recipeModal'
 import ProfileContainer from './profile/profile_container'
 import GroceriesContainer from './groceries/groceries_container'
 
+
 const App = () => (
     <div>
         <Modal />
@@ -22,7 +23,7 @@ const App = () => (
             <Switch>
                 <Route exact path='/' component={MainPage} />
                 <Route path="/index" component={RecipeIndex} />
-                {/* <ProtectedRoute exact path="/profile" component = {ProfileContainer}/> */}
+                <ProtectedRoute exact path="/recipes" component = {ProfileContainer}/>
                 <ProtectedRoute exact path="/profile" component = {GroceriesContainer}/>
                 {/* <Route path='/search' component={RecipesContainer} /> */}
             </Switch>
