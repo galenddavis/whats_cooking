@@ -9,8 +9,10 @@ class RecipeShowComponent extends React.Component {
             isLoading: true,
             
         }
-        this.grocerylist = this.grocerylist.bind(this)
-        this.saveRecipe = this.saveRecipe.bind(this)
+        this.grocerylist = this.grocerylist.bind(this);
+        this.saveRecipe = this.saveRecipe.bind(this);
+        this.groceryToggle = this.groceryToggle.bind(this);
+        this.recipeToggle = this.recipeToggle.bind(this);
     }
 
     componentWillUnmount() {
@@ -18,14 +20,14 @@ class RecipeShowComponent extends React.Component {
     }
 
     saveRecipe() {
+        this.recipeToggle();
         debugger
         let recipe = this.props.dish
         this.props.addRecipe(recipe)
     }
 
     grocerylist() {
-        const formSubmit = document.querySelector('.form-button')
-        formSubmit.classList.toggle('form-button-active');
+        this.groceryToggle();
 
         let match;
         this.props.recipe.forEach(food => {
@@ -43,6 +45,17 @@ class RecipeShowComponent extends React.Component {
           })
         }
     }
+
+    groceryToggle() {
+        const grocerySubmit = document.getElementById('grocery-button')
+        grocerySubmit.classList.toggle('grocery-button-active');
+    }
+
+    recipeToggle() {
+        const recipeSubmit = document.getElementById('recipe-button')
+        recipeSubmit.classList.toggle('recipe-button-active');
+    }
+    
 
 
     render() {
@@ -78,13 +91,12 @@ class RecipeShowComponent extends React.Component {
                             <ul>
                                 {ingredients}
                             </ul>
-                            <h3><Link to='/profile' className=''>Profile</Link></h3>
+                            <h3 onClick={() => this.props.closeModal()}><Link to='/profile' className=''>Profile</Link></h3>
                             
                         </div>
                         <div className='buttons'>
-
-                            <button onClick={this.grocerylist} className='form-button'>Add to Grocery List</button>
-                            <button onClick={() => this.saveRecipe()}>Save this Recipe!</button>
+                            <button onClick={this.grocerylist} id='grocery-button'>Add to Grocery List</button>
+                            <button onClick={() => this.saveRecipe()} id='recipe-button'>Save this Recipe!</button>
                         </div>
                     </section>
                     <section className='recipe'>
