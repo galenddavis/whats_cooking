@@ -1,8 +1,6 @@
 # whats_cooking
 
-![website-img](https://user-images.githubusercontent.com/66323451/108756260-46a6d100-7516-11eb-8cf6-3a9dc38f0a18.png)
-
-
+![Screen Shot 2021-03-02 at 5 47 28 PM](https://user-images.githubusercontent.com/66323451/109725616-64f87680-7b7f-11eb-80ff-3a7fb6ceac0f.png)
 ## Background and Overview
 
 What's Cooking? is a minimal viable product that addresses the age old question of what's for dinner. With our app, you select what ingredients you already have and returns recipes that match the ingredients selected. 
@@ -11,9 +9,12 @@ The site will allow users to enter ingredients and search recipes without being 
 ## Functionality and MVPs
 
 On top of basic user auth we will be building: 
-* A way for a user to save a list of ingredients that they have in their home. 
+* A way for a user to save a list of ingredients that they have in their home.
+ ![Screen Shot 2021-03-02 at 5 45 36 PM](https://user-images.githubusercontent.com/66323451/109725434-25318f00-7b7f-11eb-9dfa-3fe1856be701.png) 
 * A search function using a recipe site API to find the closest matching recipes. 
-* Functionality that gives users a list of ingredients they are missing from a selected recipe. 
+ ![Screen Shot 2021-03-02 at 5 44 01 PM](https://user-images.githubusercontent.com/66323451/109725317-f3b8c380-7b7e-11eb-98c1-231c864ddd65.png)
+* Functionality that gives users a list of ingredients they are missing from a selected recipe.
+ ![Screen Shot 2021-03-02 at 5 38 40 PM](https://user-images.githubusercontent.com/66323451/109724865-3fb73880-7b7e-11eb-9786-5db9451f06ec.png) 
 * With time permitting, we want to build a mailer that will send a user a list of the remaining ingredients they need to purchase for their selected recipe.  
 
 
