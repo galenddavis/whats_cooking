@@ -8,34 +8,36 @@ router.get("/test", (req, res) => {
 });
 
 router.get("/user/:user_id",
-
 passport.authenticate("jwt", { session: false}),
-
 (req, res) => {
- 
-    Recipe.find({user: req.params.user_id})
-        .sort({ date: -1 })
-        .then(recipes => res.json(recipes))
-        .catch(err => res.status(400).json(err));
+  Recipe.find({user: req.params.user_id})
+    .sort({ date: -1 })
+    .then(recipes => res.json(recipes))
+    .catch(err => res.status(400).json(err));
 })
 
 router.post("/",
 passport.authenticate("jwt", { session: false}),
 (req, res) => {
   debugger
-  
-  const newRecipe = new Recipe({
-    user: req.user.id,
-    recipeTitle: req.body.title,
-    recipeSource: req.body.sourceUrl,
-    recipeImage: req.body.image
+  Recipe.findOne({recipeTitle: req.body.title})
+  .then(title => {
+    if(title){
+    } else {
+        const newRecipe = new Recipe({
+        user: req.user.id,
+        recipeTitle: req.body.title,
+        recipeSource: req.body.sourceUrl,
+        recipeImage: req.body.image
+      })
+        console.log(newRecipe)
+        newRecipe.save()
+        // .then(recipe => res.json(recipe))
+        .catch(err => res.status(400).json(err));
+      }
   })
-  
-  console.log(newRecipe)
-  newRecipe.save()
-  // .then(recipe => res.json(recipe))
-  .catch(err => res.status(400).json(err));
 })
+ 
 
 router.delete("/:recipeId",
 passport.authenticate("jwt", { session: false}),
