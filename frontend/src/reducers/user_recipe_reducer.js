@@ -13,7 +13,6 @@ const UserRecipeReducer = (state = { user: []}, action) => {
             console.log('stateeeeeeeeeeeeeeeeeeeeee', state)
             // return {data}
             // delete nextState[action.recipeId.data._id]
-            
             return {user: nextState.user.filter(recipe => recipe._id !== action.recipeId.data._id)}
         default:
             return state;

@@ -36,7 +36,7 @@ class Profile extends React.Component {
         <div>
             <h1>Saved Recipes</h1>
             <ul>
-                {this.getUserRecipes()}
+                <li>{this.getUserRecipes()}</li>
             </ul>
         </div>
       );

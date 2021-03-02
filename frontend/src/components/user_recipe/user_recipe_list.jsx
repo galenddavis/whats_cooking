@@ -5,6 +5,7 @@ const UserRecipeList = ({recipe, deleteRecipe}) => {
     return (
         <div>
             <p>{recipe.recipeTitle}</p>
+            <a href={recipe.recipeSource}><img src={recipe.recipeImage} alt={recipe.recipeTitle}/> </a>
             <button onClick={() => deleteRecipe(recipe._id)}>Delete Recipe</button>
         </div>
     )
