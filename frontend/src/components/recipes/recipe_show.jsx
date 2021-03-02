@@ -1,5 +1,4 @@
 import React from 'react';
-import { getInfo } from '../../actions/search_actions';
 import { Link } from 'react-router-dom'
 
 class RecipeShowComponent extends React.Component {
@@ -18,6 +17,9 @@ class RecipeShowComponent extends React.Component {
     }
 
     grocerylist() {
+        const formSubmit = document.querySelector('.form-button')
+        formSubmit.classList.toggle('form-button-active');
+
         let match;
         this.props.recipe.forEach(food => {
             // debugger
@@ -74,7 +76,7 @@ class RecipeShowComponent extends React.Component {
                         </div>
                         <div className='buttons'>
 
-                            <button onClick={this.grocerylist}>Add to Grocery List</button>
+                            <button onClick={this.grocerylist} className='form-button'>Add to Grocery List</button>
                             <button>Save this Recipe!</button>
                         </div>
                     </section>

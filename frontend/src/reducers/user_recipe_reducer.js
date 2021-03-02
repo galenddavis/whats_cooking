@@ -6,6 +6,7 @@ const UserRecipeReducer = (state = { user: {}}, action) => {
     switch(action.type) {
         case RECEIVE_USER_RECIPES:
             nextState.user = action.recipes.data;
+            return nextState
         case REMOVE_USER_RECIPE:
             delete nextState[action.recipeId]
             return nextState
