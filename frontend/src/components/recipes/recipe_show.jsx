@@ -1,5 +1,6 @@
 import React from 'react';
 import { getInfo } from '../../actions/search_actions';
+import { Link } from 'react-router-dom'
 
 class RecipeShowComponent extends React.Component {
     constructor(props) {
@@ -68,6 +69,8 @@ class RecipeShowComponent extends React.Component {
                             <ul>
                                 {ingredients}
                             </ul>
+                            <h3><Link to='/profile' className=''>Profile</Link></h3>
+                            
                         </div>
                         <div className='buttons'>
 
