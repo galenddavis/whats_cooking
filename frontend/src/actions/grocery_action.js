@@ -23,6 +23,7 @@ export const addGroceryItem = item => dispatch => {
   
 }
 export const fetchGroceryList = (userId) => dispatch => {
+  // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!',userId)
   return APIGroceries.fetchGroceryList(userId)
   .then(groceryItems => dispatch(receiveGroceries(groceryItems)))
 }
