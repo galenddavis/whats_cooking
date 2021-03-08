@@ -11,12 +11,12 @@ const Footer = () => {
         <section className="footer-mern">
           <h3>this site uses</h3>
           <div>
-            <i className="fab fa-envira">MongoDB</i>
+            <i className="fab fa-envira"><h1>MongoDB</h1></i>
             <label>
               E<h3>Express</h3>
             </label>
-            <i className="fab fa-react">React</i>
-            <i className="fab fa-node-js">Node</i>
+            <i className="fab fa-react"><h1>React</h1></i>
+            <i className="fab fa-node-js"><h1>Node</h1></i>
           </div>
         </section>
         <section className="footer-personal">

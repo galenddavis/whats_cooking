@@ -24,7 +24,7 @@ class RecipeIndexItem extends React.Component {
         <img src={dish.image} alt={dish.title} onClick={() => this.getInfo(dish.id)} />
         <section className='details'>
           <h1>{dish.title}</h1>
-          <h1><i className="fas fa-heart"></i> {dish.likes}</h1>
+          {/* <h1><i className="fas fa-heart"></i> {dish.likes}</h1> */}
         </section>
       </li>
     </div>
