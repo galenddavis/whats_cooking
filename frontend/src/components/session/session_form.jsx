@@ -82,6 +82,7 @@ class SessionForm extends React.Component {
                 />
               </label>
               <input type="submit" value='Lets Get Cookin!' id='modal-submit' />
+              <h2 className="demo" onClick={() => this.props.login({ username: 'user2', email: 'user2@email.com', password: 'Starwars' }).then(this.close)}>Demo Login</h2>
             </section>
           </form>
         </div>

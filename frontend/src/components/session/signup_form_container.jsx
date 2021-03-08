@@ -14,7 +14,8 @@ const mDTP = (dispatch) => ({
   closeModal: () => dispatch(closeModal()),
   openModal: () => dispatch(openModal('signup')),
   login: (user) => dispatch(login(user)),
-  removeErrors: () => dispatch(removeErrors())
+  removeErrors: () => dispatch(removeErrors()),
+  login: (user) => dispatch(login(user))
 });
 
 export default connect(mSTP, mDTP)(SessionForm)
