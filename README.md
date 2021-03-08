@@ -11,10 +11,16 @@ The site will allow users to enter ingredients and search recipes without being 
 On top of basic user auth we will be building: 
 * A way for a user to save a list of ingredients that they have in their home.
  ![Screen Shot 2021-03-02 at 5 45 36 PM](https://user-images.githubusercontent.com/66323451/109725434-25318f00-7b7f-11eb-9dfa-3fe1856be701.png) 
+ ![Screen Shot 2021-03-08 at 10 53 22 AM](https://user-images.githubusercontent.com/66323451/110345688-db242f80-7ffc-11eb-9ab2-97e4460ba530.png)
+
 * A search function using a recipe site API to find the closest matching recipes. 
  ![Screen Shot 2021-03-02 at 5 44 01 PM](https://user-images.githubusercontent.com/66323451/109725317-f3b8c380-7b7e-11eb-98c1-231c864ddd65.png)
+ ![Screen Shot 2021-03-08 at 10 32 36 AM](https://user-images.githubusercontent.com/66323451/110345882-03ac2980-7ffd-11eb-85e4-00422bf83d66.png)
+
 * Functionality that gives users a list of ingredients they are missing from a selected recipe.
  ![Screen Shot 2021-03-02 at 5 38 40 PM](https://user-images.githubusercontent.com/66323451/109724865-3fb73880-7b7e-11eb-9786-5db9451f06ec.png) 
+ ![Screen Shot 2021-03-08 at 11 04 29 AM](https://user-images.githubusercontent.com/66323451/110346951-17a45b00-7ffe-11eb-8beb-aba5e7161b4f.png)
+
 * With time permitting, we want to build a mailer that will send a user a list of the remaining ingredients they need to purchase for their selected recipe.  
 
 
