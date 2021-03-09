@@ -6,6 +6,7 @@ class NavBar extends React.Component {
         super(props);
         this.logoutUser = this.logoutUser.bind(this);
         this.sidebarSlide = this.sidebarSlide.bind(this);
+        this.returnHome = this.returnHome.bind(this);
     }
 
     logoutUser(event) {
@@ -20,11 +21,30 @@ class NavBar extends React.Component {
     sidebarSlide = () => {  
         const slidebar = document.querySelector('.sidebar-parent')
         slidebar.classList.toggle('sidebar-parent-active');
+        const text = document.querySelector('.animation')
         
+        if (this.props.currentPath === '/' && text.className === 'animation') {
+            // text.classList.remove('animation');
+            text.classList.add('animation-active');
+        } else if (this.props.currentPath === '/' && text.className === 'animation animation-active') {
+            text.classList.remove("animation-active")
+            // text.classList.add('animation');
+        }
+    }
+
+    returnHome() {
+        const slidebar = document.querySelector('.sidebar-parent')
+        
+        if (slidebar.className === 'sidebar-parent sidebar-parent-active') {
+            slidebar.classList.remove('sidebar-parent-active');
+        } else if (this.props.currentPath === '/' && slidebar.className === 'sidebar-parent') {
+            slidebar.classList.add("sidebar-parent-active")
+        }
+
         if (this.props.currentPath === '/') {
             const text = document.querySelector('.animation')
             text.classList.toggle('animation-active');
-        }
+        }      
     }
 
     render() {
@@ -51,7 +71,7 @@ class NavBar extends React.Component {
                     <div className='bun'></div>
                 </section>
                 
-                <Link to='/' onClick={this.sidebarSlide} className='logo'>What's Cooking</Link>
+                <Link to='/' onClick={this.returnHome} className='logo'>What's Cooking</Link>
                 {authButtons}
             </div>
         )
